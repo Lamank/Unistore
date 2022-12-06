@@ -1,0 +1,69 @@
+# version: '3.1'
+# services :
+#   postgres:
+#     image: postgres:15-alpine
+#     restart: always
+#     ports:
+#       - "5432:5432"
+#     environment:
+#       POSTGRES_USER: unistore
+#       POSTGRES_PASSWORD: 'unistore'
+#       POSTGRES_DB: unistore
+#       POSTGRES_EXTRA_OPTS: -Z6 --schema=public --blobs
+#       SCHEDULE: daily
+#       BACKUP_KEEP_DAYS: 7
+#       BACKUP_KEEP_WEEKS: 4
+#       BACKUP_KEEP_MONTHS: 6
+#       HEALTHCHECK_PORT: 8080
+  
+#   redis:
+#     image: redis:6.2.7-alpine3.16
+#     restart: always
+#     container-name: e-commerce-unistore-wolwes-redis-1
+#     ports:
+#       - "6379:6379"
+  
+  # e-commerce-unistore-app-1:
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile
+  #     ports:
+  #       - "8000:8000"
+  #     restart: always
+  #     command: sh -c "python manage.py migrate && gu "
+
+  
+# # docker exec -t 4b3a1837042d pg_dumpall -c -U unistore > dumps/dump_`date +%d-%m-%Y"_"%H_%M_%S`.sql
+# # cat dumps/dump_14-11-2022_11_18_38.sql | docker exec -i 4b3a1837042d  psql -U unistore
+
+version: '3.1'
+services :
+  postgres:
+    image: postgres:15-alpine
+    restart: always
+    container_name: db
+    ports:
+      - "5432:5432"
+    
+    environment:
+      POSTGRES_USER: unistore 
+      POSTGRES_PASSWORD: 'unistore'
+      POSTGRES_DB: unistore
+      POSTGRES_EXTRA_OPTS: -Z9 --schema=public --blobs
+      SCHEDULE: every 0h30m00s
+      BACKUP_KEEP_DAYS: 7
+      BACKUP_KEEP_WEEKS: 4
+      BACKUP_KEEP_MONTHS: 6
+      HEALTHCHECK_PORT: 81
+
+    # volumes:
+    #   - /src/dumps/:/data
+
+
+  admin:
+    image: adminer
+    restart: always
+    depends_on: 
+      - postgres
+    ports:
+      - 8080:8080
