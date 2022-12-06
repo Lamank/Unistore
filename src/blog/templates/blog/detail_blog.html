@@ -1,0 +1,260 @@
+{% extends "core/base.html" %}
+
+{% load static %}
+{% load social_share %}
+{% block head %}
+
+
+<!-- Bootstrap -->
+
+<link href="{% static 'css/carousel.css' %}" rel="stylesheet">
+<style>
+  button span{
+    display: flex;
+    height: 35px;
+    align-items: center;
+    min-width: 95px;
+    font-size: 14px;
+  }
+  .btn span i{
+    margin-right: 7px;
+  }
+  .btn span a{
+    color: #eee;
+  }
+  .btn span a:hover{
+    color: #eee;
+    text-decoration: none;
+  }
+  .whatsapp{
+    background-color: 	#25be5d; 
+    border-color: 	#25be5d; margin-top: 10px;
+  }
+  .whatsapp:hover{
+    background-color: 	#31ce6a; 
+    border-color: 	#1fa852; margin-top: 10px;
+  }
+</style>
+{% endblock %}
+
+<!-- block content start -->
+{% block content %}
+
+<div class="blog-item">
+  <img src="{{ media }}" alt="{{ blog.title }}" />
+  <div class="container">
+    <br><br>
+
+    <div class="row">
+      <div class="col-sm-8 col-sm-offset-2" >
+        <h1>{{ blog.title | title }}</h1>
+        <br>
+
+        <div style="background-color: #f7f7f7; font-size:17px; border: 1px solid #f7f5f5; border-radius: 5px; padding: 30px;">
+          {% for line in description %}
+          <p>{{ line }} <br></p>
+          {% endfor %}
+         
+         
+        </div>
+        <br>
+        
+        <button class="btn btn-primary btn-sm facebook" > 
+          <span>
+            <i class="ion-social-facebook"></i> {% post_to_facebook object_or_url "Share" %}
+          </span>
+        </button>
+        <button class="btn btn-primary btn-sm twitter"> 
+          <span>
+            <i class="ion-social-twitter"></i>  {% post_to_twitter object_or_url %}
+          </span>
+        </button>
+        <button class="btn btn-primary btn-sm whatsapp">
+          <span>
+            <i class="ion-social-whatsapp"></i> {% post_to_whatsapp  object_or_url "Whatsapp" %} 
+          </span>
+        </button>
+        <hr>
+        <div class="comments" style="background-color: #f7f7f7; border: 1px solid #f7f5f5; border-radius: 5px; padding: 30px;">
+          <h2 class="h3">What do you think? (#{{comments.count}})</h2>
+        <hr>
+
+          {% for comment in comments %}
+          <blockquote >
+            <div style="font-size: 17px;">
+              <div >
+                <label style="font-size: 18px;">{{comment.author.username|title}} </label>
+                <span style="margin: 0 10px">|</span>
+                <span style="color: rgb(80, 80, 80);">{{comment.created_at|timesince}} ago</span>
+              </div>
+              <p>
+                {{comment.comment | capfirst}}  
+              </p>
+              <p style="font-size: 16px;">
+                {% if comment.children.count > 0%}
+                {{comment.children.count }} Comment{% if comment.children.count > 1 %}s {% endif %}  |
+                {% endif %}
+                {% if request.user.is_authenticated %}
+                <a href="#" class="comment-reply-btn">Reply</a>
+                {% endif %}
+              </p>
+             
+            </div>
+           
+            <div class="comment-reply" style="display: none;">
+              {% for child_comment in comment.children %}
+              <blockquote style="margin-bottom: 10px;">
+                <div style="font-size: 17px; margin: 5px 0;">
+                  <div >
+                    <label style="font-size: 18px;">{{child_comment.author.username|title}} </label>
+                    <span style="margin: 0 10px">|</span>
+                    <span style="color: rgb(80, 80, 80);">{{child_comment.created_at|timesince}} ago</span>
+                  </div>
+                  <p>
+                    {{child_comment.comment | capfirst}}  
+                  </p>
+                
+                </div>
+             
+
+              </blockquote>
+              {%endfor%}
+              <div class="container-fluid">
+                <form class="join" id="form-comment" method="post">
+                  {% csrf_token %}
+                  <div class="row">
+                    <div class="col-sm-10">
+                      {{form.comment}}
+                      <br>
+                    </div>
+                    
+                    <div class="col-sm-8">
+                      <div class="align-left">
+                        <br>
+                        <input type="hidden" name="parent_id" id="parent" value="{{comment.id}}">
+                        <button type="submit" class="btn btn-primary btn-sm"> <i class="ion-android-send"></i>
+                          Reply</button>
+                        <br><br>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            
+          </blockquote>
+          <hr style="border-top: 2.5px solid #eee;">
+          {% endfor %}
+          
+          {% if request.user.is_authenticated  %}
+          <button class="btn btn-default btn-sm" data-toggle="modal" data-target="#Modal-Comment"> 
+            <i class="ion-chatbox-working"></i> Add comment
+          </button>
+        {% else %}
+          <button class="btn btn-default btn-sm" id="comment_btn"> 
+            <i class="ion-chatbox-working"></i> Add comment
+
+          </button>
+          <div class="alert alert-info" id="info-register" style="display: none;" role="alert">
+            You must register to write a comment. Please
+            <a href="/users/register/" class="alert-link">Register</a>
+          </div>
+        {% endif %}
+        </div>
+
+      
+        
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<br><br>
+<div class="modal fade" id="Modal-Comment" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header align-center">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i
+              class="ion-android-close"></i></span></button>
+        <h1 class="p modal-title">Add your comment</h1>
+      </div>
+      <div class="modal-body">
+        <div class="container-fluid">
+          <form class="join comment-form" id="comment-form" action="" method="post">
+            {% csrf_token %}
+            <div class="row">
+              <div class="col-sm-12">
+                {{form.comment}}
+                <br>
+              </div>
+              <div class="col-sm-12">
+                <div class="align-center">
+                  <br>
+                  <button type="submit" class="btn btn-primary btn-sm"> <i class="ion-android-send"></i> Send</button>
+                  <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal"> <i
+                      class="ion-android-share"></i> No, thanks </button>
+                  <br><br>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block footer %}
+  <script src="https://code.jquery.com/jquery-3.5.1.js" 
+          integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" 
+            crossorigin="anonymous"></script>
+<script type="text/javascript">
+  
+  $('.comment-reply-btn').click(function (event) {
+
+    event.preventDefault();
+    console.log($(this).parent().parent().next(".comment-reply"));
+    $(this).parent().parent().next(".comment-reply").fadeToggle();
+  });
+
+  $('#comment_btn').click(function() {
+    $('#comment_btn').hide();
+    $('#info-register').show();
+  });
+
+  {% comment %} $(document).on('submit','#comment-form',function(e){
+    e.preventDefault();
+    $.ajax({
+        type:'POST',
+        url:'{% url "blog:blog-detail" slug=blog.slug %}',
+        data:
+        {
+            comment:$("#comment").val(),
+            parent:$('#parent').val(),
+            csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val()
+        },
+        success:function(){
+                  alert('Saved');
+                    }
+      })
+  });  
+
+  $(document).on('submit','#form-comment',function(e){
+    e.preventDefault();
+    $.ajax({
+        type:'POST',
+        url:'{% url "blog:blog-detail" slug=blog.slug  %}',
+        data:
+        {
+            comment:$("#comment").val(),
+            parent:$('#parent').val(),
+            csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val()
+        },
+      })
+  });   {% endcomment %}
+</script>
+
+
+
+{%endblock%}

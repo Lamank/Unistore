@@ -1,0 +1,231 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-09-14 20:10+0400\n"
+"PO-Revision-Date: 2022-11-23 18:52+0400\n"
+"Last-Translator:   <admin@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Translated-Using: django-rosetta 0.9.8\n"
+
+#: core/templates/core/base.html:274
+msgid "Home"
+msgstr "Ev"
+
+#: core/templates/core/base.html:283
+msgid "Blog"
+msgstr "Bloq"
+
+#: core/templates/core/base.html:293 core/templates/core/base.html:408
+msgid "Products"
+msgstr "Məhsullar"
+
+#: core/templates/core/base.html:297 core/templates/core/index.html:45
+msgid "More"
+msgstr "Daha çox"
+
+#: core/templates/core/base.html:299
+msgid "Checkout"
+msgstr "Yoxla"
+
+#: core/templates/core/base.html:300 core/templates/core/base.html:420
+msgid "FAQ"
+msgstr "Faq"
+
+#: core/templates/core/base.html:301 core/templates/core/base.html:421
+msgid "Contacts"
+msgstr "Kontaktlar"
+
+#: core/templates/core/base.html:302
+msgid "Favorites"
+msgstr "Favoritlər"
+
+#: core/templates/core/base.html:307 core/templates/core/base.html:308
+msgid "Search"
+msgstr "Axtarış"
+
+#: core/templates/core/base.html:329
+msgid "Logout"
+msgstr "Çıxış"
+
+#: core/templates/core/base.html:365
+msgid "free"
+msgstr "sərbəst"
+
+#: core/templates/core/base.html:365
+msgid "support"
+msgstr "dəstək vermək"
+
+#: core/templates/core/base.html:371
+msgid "Low price"
+msgstr "Aşağı qiymət"
+
+#: core/templates/core/base.html:371 core/templates/core/base.html:383
+msgid "guarantee"
+msgstr "zəmanət vermək"
+
+#: core/templates/core/base.html:377
+msgid "Manufacturer’s"
+msgstr "İstehsalçının"
+
+#: core/templates/core/base.html:377
+msgid "warranty"
+msgstr "zəmanət"
+
+#: core/templates/core/base.html:383
+msgid "Full refund"
+msgstr "Tam geri qaytarma"
+
+#: core/templates/core/base.html:399
+msgid "Information"
+msgstr "Məlumat"
+
+#: core/templates/core/base.html:411
+#| msgid "laptops"
+msgid "Laptops"
+msgstr "Laptoplar"
+
+#: core/templates/core/base.html:412 core/templates/core/index.html:245
+msgid "Tablets"
+msgstr "Tabletlər"
+
+#: core/templates/core/base.html:413
+msgid "Servers"
+msgstr "Serverlər"
+
+#: core/templates/core/base.html:417 core/templates/core/base.html:464
+msgid "Support"
+msgstr "Dəstək vermək"
+
+#: core/templates/core/base.html:425
+msgid "Location"
+msgstr "Yer"
+
+#: core/templates/core/base.html:430
+msgid "Language"
+msgstr "Dil"
+
+#: core/templates/core/base.html:434 unistore/settings.py:145
+msgid "English"
+msgstr "Ingilis"
+
+#: core/templates/core/base.html:435 unistore/settings.py:146
+msgid "Azerbaijani"
+msgstr "Azərbaycan "
+
+#: core/templates/core/base.html:443
+msgid "Currency"
+msgstr "Valyuta"
+
+#: core/templates/core/base.html:447
+msgid "Euro"
+msgstr "Avro"
+
+#: core/templates/core/base.html:477
+msgid "Pay your order in the most convenient way"
+msgstr "Sifarişinizi ən əlverişli şəkildə ödəyin"
+
+#: core/templates/core/index.html:39
+msgid "Provide lightweight and powerull"
+msgstr "Yüngül və powerull təmin edin"
+
+#: core/templates/core/index.html:42
+msgid "New amazing"
+msgstr "Yeni heyrətamizdir"
+
+#: core/templates/core/index.html:42 core/templates/core/index.html:45
+msgid "laptops"
+msgstr "laptoplar"
+
+#: core/templates/core/index.html:65
+msgid "Device is designed for the creative people"
+msgstr "Cihaz yaradıcı insanlar üçün hazırlanmışdır"
+
+#: core/templates/core/index.html:71
+msgid "View products"
+msgstr "Məhsullara baxın"
+
+#: core/templates/core/index.html:91
+msgid "Luxury watches, business tablets and 3D touch:"
+msgstr "Lüks saatlar, iş planşetləri və 3D touch:"
+
+#: core/templates/core/index.html:91
+msgid "How Apple plans to stay ahead in mobile."
+msgstr "Apple necə də mobil qalmağı planlaşdırır."
+
+#: core/templates/core/index.html:94
+msgid "Brand new day"
+msgstr "Yeni gün"
+
+#: core/templates/core/index.html:94
+msgid "for business"
+msgstr "iş üçün"
+
+#: core/templates/core/index.html:97 core/templates/core/index.html:301
+#: core/templates/core/index.html:324
+msgid "View article"
+msgstr "Məqaləyə baxın"
+
+#: core/templates/core/index.html:127 core/templates/core/index.html:139
+#: core/templates/core/index.html:153 core/templates/core/index.html:165
+msgid "Buy now"
+msgstr "Artıq almaq"
+
+#: core/templates/core/index.html:179
+msgid "Desktops"
+msgstr "Masaüstlərin"
+
+#: core/templates/core/index.html:194 core/templates/core/index.html:227
+#: core/templates/core/index.html:260
+msgid "Details"
+msgstr "Təfərrüatlar"
+
+#: core/templates/core/index.html:195 core/templates/core/index.html:228
+#: core/templates/core/index.html:261
+msgid "Add to cart"
+msgstr "Səbətə əlavə et"
+
+#: core/templates/core/index.html:205
+msgid "View all desktops"
+msgstr "Bütün masaüstlərini görün"
+
+#: core/templates/core/index.html:212
+msgid "Hybrid devices"
+msgstr "Hibrid cihazları"
+
+#: core/templates/core/index.html:237
+msgid "View all devices"
+msgstr "Bütün cihazlara baxın"
+
+#: core/templates/core/index.html:270
+msgid "View all tablets"
+msgstr "Bütün tabletlərə baxın"
+
+#: core/templates/core/index.html:278
+msgid "Blog Headlines"
+msgstr "Blog başlıqları"
+
+#: core/templates/core/index.html:333
+msgid "View all articels"
+msgstr "Bütün məqalələrə baxın"
+
+#: core/templates/core/subscriber.html:6
+msgid "Join our newsletter"
+msgstr "Bülletenimizə qoşulun"
+
+#: core/templates/core/subscriber.html:7
+msgid "Get more information and receive special discounts for our products."
+msgstr ""
+"Daha çox məlumat əldə edin və məhsullarımız üçün xüsusi endirimlər əldə "
+"edin."

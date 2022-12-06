@@ -1,0 +1,227 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-10-06 19:58+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: core/templates/core/base.html:276
+msgid "Home"
+msgstr ""
+
+#: core/templates/core/base.html:285
+msgid "Blog"
+msgstr ""
+
+#: core/templates/core/base.html:295 core/templates/core/base.html:416
+msgid "Products"
+msgstr ""
+
+#: core/templates/core/base.html:299 core/templates/core/index.html:60
+msgid "More"
+msgstr ""
+
+#: core/templates/core/base.html:301
+msgid "Checkout"
+msgstr ""
+
+#: core/templates/core/base.html:302 core/templates/core/base.html:428
+msgid "FAQ"
+msgstr ""
+
+#: core/templates/core/base.html:303 core/templates/core/base.html:429
+msgid "Contacts"
+msgstr ""
+
+#: core/templates/core/base.html:304
+msgid "Favorites"
+msgstr ""
+
+#: core/templates/core/base.html:309 core/templates/core/base.html:310
+msgid "Search"
+msgstr ""
+
+#: core/templates/core/base.html:337
+msgid "Logout"
+msgstr ""
+
+#: core/templates/core/base.html:373
+msgid "free"
+msgstr ""
+
+#: core/templates/core/base.html:373
+msgid "support"
+msgstr ""
+
+#: core/templates/core/base.html:379
+msgid "Low price"
+msgstr ""
+
+#: core/templates/core/base.html:379 core/templates/core/base.html:391
+msgid "guarantee"
+msgstr ""
+
+#: core/templates/core/base.html:385
+msgid "Manufacturer’s"
+msgstr ""
+
+#: core/templates/core/base.html:385
+msgid "warranty"
+msgstr ""
+
+#: core/templates/core/base.html:391
+msgid "Full refund"
+msgstr ""
+
+#: core/templates/core/base.html:407
+msgid "Information"
+msgstr ""
+
+#: core/templates/core/base.html:419
+msgid "Laptops"
+msgstr ""
+
+#: core/templates/core/base.html:420 core/templates/core/index.html:260
+msgid "Tablets"
+msgstr ""
+
+#: core/templates/core/base.html:421
+msgid "Servers"
+msgstr ""
+
+#: core/templates/core/base.html:425 core/templates/core/base.html:480
+msgid "Support"
+msgstr ""
+
+#: core/templates/core/base.html:433
+msgid "Location"
+msgstr ""
+
+#: core/templates/core/base.html:438
+msgid "Language"
+msgstr ""
+
+#: core/templates/core/base.html:459
+msgid "Currency"
+msgstr ""
+
+#: core/templates/core/base.html:463
+msgid "Euro"
+msgstr ""
+
+#: core/templates/core/base.html:493
+msgid "Pay your order in the most convenient way"
+msgstr ""
+
+#: core/templates/core/index.html:54
+msgid "Provide lightweight and powerull"
+msgstr ""
+
+#: core/templates/core/index.html:57
+msgid "New amazing"
+msgstr ""
+
+#: core/templates/core/index.html:57 core/templates/core/index.html:60
+msgid "laptops"
+msgstr ""
+
+#: core/templates/core/index.html:80
+msgid "Device is designed for the creative people"
+msgstr ""
+
+#: core/templates/core/index.html:86
+msgid "View products"
+msgstr ""
+
+#: core/templates/core/index.html:106
+msgid "Luxury watches, business tablets and 3D touch:"
+msgstr ""
+
+#: core/templates/core/index.html:106
+msgid "How Apple plans to stay ahead in mobile."
+msgstr ""
+
+#: core/templates/core/index.html:109
+msgid "Brand new day"
+msgstr ""
+
+#: core/templates/core/index.html:109
+msgid "for business"
+msgstr ""
+
+#: core/templates/core/index.html:112 core/templates/core/index.html:316
+#: core/templates/core/index.html:339
+msgid "View article"
+msgstr ""
+
+#: core/templates/core/index.html:142 core/templates/core/index.html:154
+#: core/templates/core/index.html:168 core/templates/core/index.html:180
+msgid "Buy now"
+msgstr ""
+
+#: core/templates/core/index.html:194
+msgid "Desktops"
+msgstr ""
+
+#: core/templates/core/index.html:209 core/templates/core/index.html:242
+#: core/templates/core/index.html:275
+msgid "Details"
+msgstr ""
+
+#: core/templates/core/index.html:210 core/templates/core/index.html:243
+#: core/templates/core/index.html:276
+msgid "Add to cart"
+msgstr ""
+
+#: core/templates/core/index.html:220
+msgid "View all desktops"
+msgstr ""
+
+#: core/templates/core/index.html:227
+msgid "Hybrid devices"
+msgstr ""
+
+#: core/templates/core/index.html:252
+msgid "View all devices"
+msgstr ""
+
+#: core/templates/core/index.html:285
+msgid "View all tablets"
+msgstr ""
+
+#: core/templates/core/index.html:293
+msgid "Blog Headlines"
+msgstr ""
+
+#: core/templates/core/index.html:348
+msgid "View all articels"
+msgstr ""
+
+#: core/templates/core/subscriber.html:6
+msgid "Join our newsletter"
+msgstr ""
+
+#: core/templates/core/subscriber.html:7
+msgid "Get more information and receive special discounts for our products."
+msgstr ""
+
+#: unistore/settings.py:159
+msgid "English"
+msgstr ""
+
+#: unistore/settings.py:160
+msgid "Azerbaijani"
+msgstr ""

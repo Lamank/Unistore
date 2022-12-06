@@ -1,0 +1,341 @@
+{% extends "core/base.html" %}
+{% load static %}
+{% load i18n %}
+{% load my_tags %}
+{% block head %}
+
+
+
+
+    <!-- Bootstrap -->
+   
+    <link href="{% static 'css/carousel.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+   
+    <link href="{% static 'css/custom-scroll/jquery.mCustomScrollbar.css' %}" rel="stylesheet">
+    
+    <style>
+      .body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .image-height{
+        height: 250px;
+
+      }
+      .image-height img{
+        height: 100% !important;
+      }
+      .detailsButton{
+        text-align: center !important;
+      }
+      .fontSize{
+        font-size: 18px;
+      }
+    </style>
+
+{%endblock%}
+{%block content%}
+  
+
+    <header>
+      <div class="carousel" data-count="2" data-current="1">
+
+        <div class="items">
+          <button class="btn btn-control" data-direction="right"> <i class="ion-ios-arrow-right"></i></button>
+          <button class="btn btn-control" data-direction="left"> <i class="ion-ios-arrow-left"></i></button>
+          
+          
+          <div class="item center" data-marker="1">
+            <img src="{{ first_campaign.image.url }}" alt="Background" class="background hidden-xs hidden-sm"/>
+            <img src="{{ first_campaign.image.url }}" alt="Background" class="background visible-sm"/>
+            <img src="{{ first_campaign.image.url }}" alt="Background" class="background visible-xs"/>
+
+            <div class="content">
+              <div class="outside-content">
+                <div class="inside-content">
+                  <div class="container align-right ">
+
+                    <!-- <h1 class="h3 colorful blue hidden-xs">{{ first_campaign.percent }}</h1>  -->
+
+                    <hr class="offset-sm">
+                    <h2 class="h1 lg upp colorful blue" style="width: 450px">{{ first_campaign.description }}</h2>
+                    <hr class="offset-md">
+                    <hr class="offset-md">
+                    <a href="/products/?campaign={{ first_campaign.id }}" data-value="{{ first_campaign.id }}" rel="nofollow" class="btn btn-primary btn-lg black campaign"> {% trans "More"%} </a>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          {% comment %} <div class="item" data-marker="2">
+            <img src="{{ second_campaign.image.url }}" alt="Background" class="background hidden-xs hidden-sm"/>
+            <img src="{{ second_campaign.image.url }}" alt="Background" class="background visible-sm"/>
+            <img src="{{ second_campaign.image.url }}" alt="Background" class="background visible-xs"/>
+
+            <div class="content">
+              <div class="outside-content">
+                <div class="inside-content">
+                  <div class="container ">
+
+                    <h1 class="h3 colorful blue hidden-xs">{{ second_campaign.description }}</h1>
+                    <hr class="offset-sm">
+
+                    <h2 class="h1 lg upp colorful blue">{{ second_campaign }}</h2>
+                    <hr class="offset-md">
+                    <hr class="offset-md">
+                    <a href="/products/prod5" rel="nofollow" class="btn btn-primary btn-lg black"> {% trans "View products" %} </a>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> {% endcomment %}
+
+          <div class="item" data-marker="2">
+            <img src="{{ third_campaign.image.url }}" alt="Background" class="background hidden-xs hidden-sm"/>
+            <img src="{{ third_campaign.image.url }}" alt="Background" class="background visible-sm"/>
+            <img src="{{ third_campaign.image.url }}" alt="Background" class="background visible-xs"/>
+
+            <!-- <img src="assets/img/carousel/ipadair2.jpg" alt="Apple Devices" title="Apple Devices" class="item-right hidden-xs"/> -->
+
+            <div class="content">
+              <div class="outside-content">
+                <div class="inside-content">
+                  <div class="container align-right">
+                  
+                    <h1 class="h3 colorful blue hidden-xs">{{ third_campaign.description }} <br> </h1>
+
+                    <hr class="offset-sm">
+                    <h2 class="h1 lg upp colorful blue">{{ third_campaign | title }} <br class="hidden-xs"></h2>
+                    <hr class="offset-md">
+                    <hr class="offset-md">
+                    <a href="/products/?campaign={{ third_campaign.id }}" rel="nofollow" class="btn btn-primary btn-lg black"> {% trans "View products" %} </a>
+                      
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <ul class="markers">
+          <li data-marker="1" data-style="white" class="active"></li>
+          <li data-marker="2" data-style="white"></li>
+          {% comment %} <li data-marker="3" data-style="white"></li> {% endcomment %}
+        </ul>
+
+      </div>
+    </header>
+    <hr class="offset-lg">
+    <hr class="offset-lg">
+
+    <div class="bars">
+      <div class="container">
+        <div class="row">
+          {% for obj in popular_prods %}
+          <div class="col-sm-6 col-md-4 padding padding-xs">
+            <div class="bar medium" data-background="{{ obj.main_image.url}}">
+              <h3 class="title black">{{ obj | title }}</h3>
+
+              <div class="wrapper">
+                <div class="content">
+                  <hr class="offset-sm">
+                  <a href="{% url 'product:product-detail' slug=obj.slug %}" rel="nofollow" class="btn btn-default black"> {% trans "Buy now" %} </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+
+          {% comment %} <div class="col-sm-6 col-md-4 no-padding padding-xs">
+            <div class="bar medium" data-background="{{ popular_prods.0 }}">
+              <h3 class="title black">{{ popular_prods.0.product | title }}</h3>
+
+              <div class="wrapper">
+                <div class="content">
+                  <hr class="offset-sm">
+                  <a href="{% url 'product:product-detail' slug=popular_prods.0.product.slug %}" rel="nofollow" class="btn btn-default black"> {% trans "Buy now" %} </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 no-padding hidden-xs hidden-sm">
+            <div class="bar medium" data-background="{{ popular_prods.3 }}">
+              <h3 class="title black">{{ popular_prods.3.product | title }}</h3>
+              
+              <div class="wrapper">
+                <div class="content">
+                  <hr class="offset-sm">
+                  <a href="{% url 'product:product-detail' slug=popular_prods.3.product.slug %}" rel="nofollow" class="btn btn-primary black"> {% trans "Buy now" %} </a>
+                </div>
+              </div>
+            </div>
+          </div> {% endcomment %}
+        </div>
+      </div>
+    </div>
+    <hr class="offset-lg">
+    <hr class="offset-md">
+
+
+    <section id="productsGrid">
+      {% for category in categories %}
+        <section class="products">
+          <div class="container">
+            <h2 class="h2 upp align-center"> {{ category.category__name }} </h2>
+            <hr class="offset-lg">
+
+            <div class="row">
+              {% for obj in product_list %}
+                {% if obj.category.id == category.category %}
+                  <div class="col-sm-6 col-md-3 product">
+                    <div class="body">
+
+                          <a href="#favorites" class="favorites" data-favorite="inactive"><i class="ion-ios-heart-outline"></i></a>
+
+                      <a href="{% url 'product:product-detail' slug=obj.slug %}" class="image-height"><img src="{{ obj.main_image.url }}" alt="{{ obj.title }}"/></a>
+
+                      <div class="content align-center">
+                        
+                        <h2 class="h3 productName">{{ obj.title | title }}</h2>
+                        {% if obj.campaign.percent %}
+                        <p class="price ">${{ obj.price|discount:obj.campaign.percent }}</p> 
+                        <p class="price through">${{ obj.price }}</p>
+                        {% else %}
+                        <p class="price">${{ obj.price }}</p>
+                        {% endif %}
+                        <hr class="offset-sm">
+
+                        <button class="btn btn-link detailsButton"> <a class="fontSize" href="{% url 'product:product-detail' slug=obj.slug %}"> <i class="ion-android-open"></i> {% trans "Details" %} </a> </button>
+                        {% comment %} <button class="btn btn-primary btn-sm rounded addToCart"> <i class="ion-bag"></i> {% trans "Add to cart" %}</button> {% endcomment %}
+                      </div>
+                    </div>
+                  </div>
+                
+                  {% endif %} 
+              {% endfor %}
+
+            </div>
+
+            <div class="align-right align-center-xs">
+              <hr class="offset-sm">
+              <a href="/products/?category={{ category.category }}"> <h5 class="upp">{% trans "View all " %}{{category.category__name}} </h5> </a>
+            </div>
+          </div>
+        </section>
+      {% endfor %}
+    </section>
+
+    
+    {% comment %} <section id="productsGrid">
+      {% for category in categories %}
+        <section class="products">
+          <div class="container">
+            <h2 class="h2 upp align-center"> {{ category.category__name }} </h2>
+            <hr class="offset-lg">
+
+            <div class="row">
+              {% for obj in product_list %}
+                {% if obj.category.id == category.category %}
+                  <div class="col-sm-6 col-md-3 product">
+                    <div class="body">
+
+                          <a href="#favorites" class="favorites" data-favorite="inactive"><i class="ion-ios-heart-outline"></i></a>
+
+                    <div class="content align-center">
+                      {% if obj.campaign.percent %}
+                      <p class="price ">${{ obj.price|discount:obj.campaign.percent }}</p> 
+                      <p class="price through">${{ obj.price }}</p>
+                      {% else %}
+                      <p class="price">${{ obj.price }}</p>
+                      {% endif %}
+                      <!-- <p class="price">${{ obj.price }}</p> -->
+                      <h2 class="h3 productName">{{ obj.title | title }}</h2>
+                      <hr class="offset-sm">
+
+                      <div class="content align-center">
+                        <p class="price">${{ obj.price }}</p>
+                        <h2 class="h3 productName">{{ obj.title | title }}</h2>
+                        <hr class="offset-sm">
+
+                        <button class="btn btn-link detailsButton"> <a class="fontSize" href="{% url 'product:product-detail' slug=obj.slug %}"> <i class="ion-android-open"></i> {% trans "Details" %} </a> </button>
+                        {% comment %} <button class="btn btn-primary btn-sm rounded addToCart"> <i class="ion-bag"></i> {% trans "Add to cart" %}</button> {% endcomment %}
+                      {% comment %} </div>
+                    </div>
+                  </div>
+                
+                  {% endif %} 
+              {% endfor %}
+
+            </div>
+
+            <div class="align-right align-center-xs">
+              <hr class="offset-sm">
+              <a href="/products/?category={{ category.category }}"> <h5 class="upp">{% trans "View all " %}{{category.category__name}} </h5> </a>
+            </div>
+          </div>
+        </section>
+      {% endfor %}
+    </section> {% endcomment %} 
+
+
+    <section class="blog">
+      <div class="container">
+        <h2 class="h2 upp align-center"> {% trans "Blog Headlines" %} </h2>
+        <hr class="offset-lg">
+
+        <div class="row">
+          {% for blog in blogs %}
+          <div class="col-sm-6 col-md-6 item">
+
+            <div class="body">
+              <a href="{% url 'blog:blog-detail' slug=blog.slug %}" class="view"><i class="ion-ios-book-outline"></i></a>
+              <a href="{% url 'blog:blog-detail' slug=blog.slug %}">
+                <img src="{{ blog.main_image.url }}" title="{{ blog }}" alt="{{ blog }}">
+              </a>
+
+              <div class="caption">
+                <h2 class="h3">{{ blog| title }}</h2>
+                <label> {{ blog.created_at }}</label>
+                <hr class="offset-sm">
+
+                <p>
+                  {{ blog.description | truncatewords:40 }}
+                </p>
+                <hr class="offset-sm">
+
+                <a href="{% url 'blog:blog-detail' slug=blog.slug %}"> {% trans "View article" %} </a>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+
+        <div class="align-right align-center-xs">
+          <hr class="offset-sm">
+          <a href="{% url 'blog:blog' %}"> <h5 class="upp">{% trans "View all articels" %} </h5> </a>
+        </div>
+      </div>
+    </section>
+
+
+    <hr class="offset-lg">
+    <hr class="offset-sm">
+   {%endblock%}
+ {%block footer%}
+    <script type="text/javascript" src="{% static 'js/carousel.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.touchSwipe.min.js' %}"></script>
+
+    <script type="text/javascript" src="{% static 'js/custom-scroll/jquery.mCustomScrollbar.concat.min.js' %}"></script>
+
+
+    <script type="text/javascript" src="{% static 'js/jquery-ui-1.11.4.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.ui.touch-punch.js' %}"></script>
+
+    <script type="text/javascript" src="{% static 'js/wishlist.js' %}"></script>
+
+{% endblock footer %}

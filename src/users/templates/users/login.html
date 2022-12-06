@@ -1,0 +1,112 @@
+{% extends "core/base.html" %}
+
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="http:////netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+<style>
+   
+    .fb-color {
+        background-color: #3C599F;
+    }
+
+    .social-login {
+        border-radius: 50%;
+        color: #fff;
+        box-shadow: 1px 1px 3px #333;
+        width: 50px;
+        height: 50px;
+        line-height: 50px !important;
+        text-align: center;
+        transition: all 0.3s ease-in-out;
+        font-size: 1.8em;
+    }
+    .google-color {
+    background-color: #CF3D2E;
+    }
+    .form-parent{
+        width: 40%;
+        background-color: rgb(210, 215, 216);
+        border-radius: 10px;
+        height: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .form-parent form{
+        width: 80%;
+    }
+    .form-group input{
+        border-radius: 10px;
+    }
+    .logo h2{
+        text-align: center;
+        color: #3C599F;
+        font-weight:800;
+        font-size: 40px;
+    }
+    .logo:hover{
+        text-decoration: none;
+        
+    }
+    .centered{
+        text-align: center;
+    }
+    .login-center{
+        display: flex;
+        justify-content: space-between;
+    }
+   
+   
+</style>
+{% endblock %}
+{% block content %}
+<section class="ftco-section contact-section register" style="margin: 60px auto 50px;">
+    <div class="container">
+        <div class="row block-9" style="display: flex; justify-content: center;">
+            <div class="form-parent">
+                <form action="{% url 'users:user-login' %}" class="bg-light p-5 contact-form" method="post">
+                    {% csrf_token %}
+                    <a class="center logo" href="/"> 
+                        <h2 >
+                            Unistore
+                        </h2>
+                       
+                    </a>
+                      <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Email or Username" name="username" autofocus="" autocapitalize="none" autocomplete="username" maxlength="150" required="" id="id_username">
+                        
+                    </div>
+                    <div class="form-group">
+                        
+                        <input type="password" name="password" class="form-control" placeholder="Password" autocomplete="current-password" required="" id="id_password">
+                    
+                    </div>  
+                    <div class="centered">
+                        <div class="form-group login-center text-center">
+                      
+                            <a href="{% url 'users:password_reset' %}" class="forgot-password">Forgot password?</a>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="Login" class="btn btn-primary py-3 px-5" style="width: 100%;">
+                          
+                        </div>
+                        <div class="form-group">
+                            <a href="/users/register/" class="">Don't have an account? Sign up</a>
+                        </div>
+                        <div class="form-group center">
+                            <a href="/users/login-user/" class="social"><i class="fa fa-facebook social-login fb-color"></i></a>
+                            <a href="/users/login-user/" class="social"><i class="fa fa-google-plus social-login google-color"></i></a>
+                        </div>
+                    </div>
+                   
+                </form>
+
+
+              
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

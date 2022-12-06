@@ -1,0 +1,17 @@
+.parent {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+#prod_image {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+#campaign_image {
+    position: absolute;
+    top: -37px;
+    right: -8px;
+    height: 117px !important; 
+    width: 100px !important;
+  }

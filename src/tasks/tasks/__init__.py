@@ -1,0 +1,2 @@
+from .subscriber_notifications import send_popular_products_to_subscribers
+from .notifications import send_new_product_notifications

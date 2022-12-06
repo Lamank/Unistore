@@ -1,0 +1,209 @@
+{% extends "core/base.html" %}
+
+{% load static %}
+{% load my_tags %}
+{% block head %}
+
+
+
+    <link href="{% static 'css/carousel.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+   
+    <link href="{% static 'css/custom-scroll/jquery.mCustomScrollbar.css' %}" rel="stylesheet">
+
+  
+
+    {% endblock %}
+    {% block content %}
+
+
+    <div class="white">
+        <div class="container checkout">
+            <h1>Checkout order</h1>
+            <hr class="offset-sm">
+        </div>
+    </div>
+    <hr class="offset-md">
+
+    <div class="container checkout">
+        <form action="" id="checkout-form" method="post">
+          {% csrf_token %}
+        <div class="row">
+            <div class="col-md-7">
+                  <div class="row group">
+                    <div class="col-sm-4"><h2 class="h4">{{form.reciever.label}}</h2></div>
+                    <div class="col-sm-8"> 
+                      {{form.reciever}}
+
+                      {% comment %} <input type="text" class="form-control" name="receiver" value="John Doe" required="" placeholder="" /> {% endcomment %}
+                    </div>
+                  </div>
+
+                  <div class="row group">
+                    <div class="col-sm-4"><h2 class="h4">{{form.phone.label}}</h2></div>
+                    <div class="col-sm-8">
+                      {{form.phone}}
+                       {% comment %} <input type="text" class="form-control" name="phone" value="+45 (555) 8546-25-77" required="" placeholder="" /> {% endcomment %}
+                      </div>
+                  </div>
+
+                  <div class="row group">
+                    <div class="col-sm-4"><h2 class="h4">{{form.email.label}}</h2></div>
+                    <div class="col-sm-8"> 
+                      {{form.email}}
+                      {% comment %} <input type="email" class="form-control" name="email" value="john@yahoo.com" required="" placeholder="" /> {% endcomment %}
+                    </div>
+                  </div>
+
+                  <div class="row group">
+                    <div class="col-sm-4"><h2 class="h4">Choose country</h2></div>
+                    <div class="col-sm-8">
+                      <!-- <input type="text" class="form-control" name="country" value="" required="" placeholder="" /> -->
+
+                      <div class="group-select justify" tabindex='1'>
+                        {{form.country}}
+                      </div>
+                    </div>
+                  </div>
+
+                  <br><br>
+                  <div class="">
+                    <div class="row">
+                      <div class="col-sm-4">
+                        <h2 class="h4">{{form.city.label}}</h2>
+                        {{form.city}}
+                        {% comment %} <input type="text" class="form-control" name="city" value="" required="" placeholder="" /> {% endcomment %}
+                      </div>
+                      <div class="col-sm-4">
+                        <h2 class="h4">{{form.street.label}}</h2>
+                        {{form.street}}
+                        {% comment %} <input type="text" class="form-control" name="street" value="" required="" placeholder="" /> {% endcomment %}
+                      </div>
+                      <div class="col-sm-2">
+                        <h2 class="h4">{{form.building.label}}</h2>
+                        {{form.building}}
+                        {% comment %} <input type="text" class="form-control" name="bilding" value="" required="" placeholder="" /> {% endcomment %}
+                      </div>
+                      <div class="col-sm-2">
+                        <h2 class="h4">{{form.zip.label}}</h2>
+                        {{form.zip}}
+                        {% comment %} <input type="text" class="form-control" name="zip" value="" required="" placeholder="" /> {% endcomment %}
+                      </div>
+                    </div>
+                  </div>
+                  <br>
+
+
+                  <div class="row group">
+                    <div class="col-sm-4"><h2 class="h4">{{form.payment.label}}</h2></div>
+                    <div class="col-sm-8">
+                      <div class="group-select justify" tabindex='1'>
+                       {{form.payment}} 
+                           {% comment %} <input class="form-control select" id="payment" name="payment" value="Cash on Delivery" placeholder="" required="" />
+                            
+                           <ul class="dropdown">
+                            <li data-value="Cash on Delivery">Cash on Delivery</li>
+                            <li data-value="Credit Card">Credit Card</li>
+                            <li data-value="Paypall">Paypall</li>  
+                          </ul>   {% endcomment %}
+                          {% comment %} {{form.payment.errors}} {% endcomment %}
+                          <div class="arrow bold"><i class="ion-chevron-down"></i></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row group">
+                    <div class="col-sm-4"><h2 class="h4">{{form.promo_code.label}}</h2></div>
+                    
+                    <div class="col-sm-8">
+                      {{form.promo_code}}
+                       {% comment %} <input type="text" class="form-control" name="promo" value="" required="" placeholder="" /> {% endcomment %}
+                      </div>
+                  </div>
+
+
+                  <hr class="offset-lg visible-xs visible-sm">
+                  <hr class="offset-lg visible-xs">
+            </div>
+
+            <div class="col-md-5 white">
+                <hr class="offset-md visible-xs visible-sm">
+                <div class="checkout-cart">
+                    <div class="content">
+                      {% for cart_item in cart_items %}
+                      <div class="media">
+                        <div class="media-left">
+                          <a href="#">
+                            <img class="media-object" src="{{ cart_item.product.main_image.url }}" alt="{{ cart_item.product.title }}"/>
+                          </a>
+                        </div>
+                        <div class="media-body">
+                          <h2 class="h4 media-heading">{{ cart_item.product.title | title}}</h2>
+                          <label>{{ cart_item.product.category | title}}</label>
+                          {% if cart_item.product.campaign.percent %}
+                            <p>$ <span>{{ cart_item.product.price|discount:cart_item.product.campaign.percent }}</span></p> 
+                            {% else %}
+                            <p>$ <span>{{ cart_item.product.price }}</span></p>
+                          {% endif %}
+                          <p class="price">Total: $ <span>{{ cart_item.get_total }}</span></p>
+                        </div>
+                        <div class="controls">
+                          <div class="input-group">
+                            <span class="input-group-btn">
+                              <button class="btn btn-default btn-sm" type="button" data-action="minus"><i class="ion-minus-round"></i></button>
+                            </span>
+                            <input type="text" class="form-control input-sm" placeholder="Qty" id="quantity" value="{{cart_item.quantity}}" readonly="">
+                            <span class="input-group-btn">
+                              <button class="btn btn-default btn-sm" type="button" data-action="plus"><i class="ion-plus-round"></i></button>
+                            </span>
+                          </div><!-- /input-group -->
+
+                          <a href="#remove"> <i class="ion-trash-b"></i> Remove </a>
+                        </div>
+                      </div>
+                      {% endfor %}
+                      
+
+                    </div>
+                </div>
+                <hr class="offset-md visible-xs visible-sm">
+            </div>
+
+            <hr class="offset-lg hidden-xs">
+
+            <div class="col-sm-12 white">
+                <hr class="offset-md">
+                <div class="row">
+                    <div class="col-xs-6 col-md-4">
+                        <h2 class="h4 no-margin total">Total: $ <span>{{cart.get_cart_total}}</span></h2>
+                    </div>
+                    <div class="col-md-4 hidden-xs">
+                    </div>
+                    <div class="col-xs-6 col-md-4">
+                        <button class="btn btn-primary pull-right" id="confirm" type="submit">Confirm order</button>
+                    </div>
+                </div>
+                <hr class="offset-md">
+            </div>
+
+        </div>
+        </form>
+    </div>
+
+    <hr class="offset-lg">
+    <hr class="offset-sm">
+    {%endblock%}
+
+
+    {%block footer%}
+   
+   
+    <script src="{% static 'js/checkout.js' %}"></script>
+
+    <script type="text/javascript" src="{% static 'js/custom-scroll/jquery.mCustomScrollbar.concat.min.js' %}"></script>
+
+    <script type="text/javascript" src="{% static 'js/jquery-ui-1.11.4.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.ui.touch-punch.js' %}"></script>
+
+
+    {%endblock%}

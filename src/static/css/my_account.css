@@ -1,0 +1,119 @@
+/*-------------------------------------
+[ 6.8 My account ]
+---------------------------------------*/
+.my-account-page .panel .account-title label {
+	cursor: pointer;
+	display: block;
+	margin: 0;
+	padding: 5px 10px;
+	border: 1px solid #ccc;
+	text-transform: uppercase;
+}
+.my-account-page .bulling-title h5 {
+	border-bottom: 1px solid #f5f5f5;
+	padding: 10px 0;
+}
+.my-account-page .panel .single-log-info {
+	border-top:0;
+	padding: 10px;
+}
+.my-account-page .prayment-dsc span,.my-right-side a{
+	background: #fe5858  none repeat scroll 0 0;
+	border-radius: 5px;
+	color: #fff;
+	display: block;
+	font-size: 17px;
+	margin-top: 10px;
+	padding: 10px;
+}
+.my-account-page .prament-area .submit-text {padding: 0 0 10px;}
+.my-account-page .red-color {color:#f13340;}
+.my-account-page .single-log-info .input-text textarea {height:auto;}
+.my-account-page .prayment-dsc,.blog-style .l-blog-text .banner a img {
+  width: 100%;
+}
+.my-account-page .account-title.collapse label{color:#fe5858;}
+.my-account-page select {width: 100%;}
+.my-account-page .sing-checkbox label:first-child,.my-account-page .panel-group {margin-bottom: 0;}
+.my-account-page .social-label {display: block;}
+.my-account-page .mr-mrs label input {margin-right: 2px;}
+.my-account-page .custom-input input, .my-account-page .custom-input textarea {
+    margin-bottom: 10px;
+}
+.my-account-page li.panel {
+    display: block;
+    float: none;
+}
+.sing-checkbox input {
+    margin-right: 5px;
+    width: auto;
+}
+.sing-checkbox > label {font-size: 12px;}
+.sing-checkbox > label:first-child {margin-right: 15px;}
+select:focus{outline:none!important;border-color:transparent;border:0;}
+/*-------------------------------------
+[ 6.9 Order complete ]
+---------------------------------------*/
+.pages .pay-details table tbody tr td{border-bottom:0;}
+.order-complete .pay-details ,.checkout .pay-details {
+    margin: 0 0 -15px;
+}
+.order-complete table thead tr th,.checkout table thead tr th {
+    padding-left: 30px;
+    text-align: left;
+}
+.order-complete table thead tr td ,.checkout table thead tr td {
+    padding-right: 30px;
+    text-align: right;
+}
+.complete-title > p {
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 60px;
+	margin-bottom: 40px;
+}
+.complete-title > p,.log-title > h3,.reviews-tab li.active a,.checkout .medium-a  ,.pages.cart-page table tbody tr td:nth-child(4) strong,table thead tr th,.order-complete table thead tr td,table td .submit-text > a {
+	color: #333;
+}
+.order-no ul li {
+	float: left;
+	font-size: 16px;
+	font-weight: 600;
+	margin: 0 10px;
+	padding: 40px 0;
+	text-transform: uppercase;
+	width: 23.24%;
+}
+.order-no span {
+	display: block;
+	font-size: 13px;
+	margin-top: 12px;
+}
+.order-no{padding-bottom:60px;}
+.padding60{padding:60px;}
+.padding60,.order-no ul li,.complete-title > p,.pages .custom-select option,.input-mail > input, .product-details .custom-mess textarea,.contact-details  {background:#fff;}
+.log-title > h3 {
+    font-size: 20px;
+    font-weight: 800;
+}
+.order-address,.log-title > h3 {margin-bottom: 30px;}
+.order-address:last-child {margin-bottom: 0px;}
+.order-address p span ,.order-details .por-dse span {text-transform: uppercase;}
+.order-details .por-dse li {
+	color: #666;
+	float: none;
+	font-weight: 600;
+	margin-bottom: 7px;
+}
+.order-details .por-dse span {
+	display: inline-block;
+	width: 80px;
+}
+
+.password-change{
+    margin: 30px 0 20px;
+}
+
+.password-change input:first-child{
+    display: block;
+}

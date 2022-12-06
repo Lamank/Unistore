@@ -1,0 +1,48 @@
+
+    {% extends "core/base.html" %}
+
+    {% load static %}
+
+    {% block head %}
+    <link href="{% static 'css/order-success.css' %}" rel="stylesheet">
+    {% endblock head%}
+    {% block content %}
+    
+    <section id="order-success">
+        <div class="background row">
+            <div class="col">
+                <img id="success-img" src="{% static 'img/bars/success.png' %}" alt="">
+                <h2>Thank You</h2>
+                <p class="success-message">Payment is Successfully proccessed and your order is on the way</p>
+                
+            </div>
+            <hr>
+            <div class="col">
+                <p class="order-id">Your order number is <span>#{{ detail.id }}</span></p>
+            </div>
+            <hr>
+            <div class="col order-table">
+                <table>
+                    <tr>
+                        <td>Order Total: </td>
+                        <td class="info">{{ detail.total }}</td>
+                        
+                    </tr>
+                    <tr>
+                        <td>Payment method: </td>
+                        <td class="info">{{ payment }}</td>
+                        
+                    </tr>
+                </table>
+            </div>
+            <div class="col buttons">
+                <a href="#" class="btn-account">My Account</a>
+                <a href="{% url 'product:product-list' %}" class="btn-continue">Continue shopping</a>
+            </div>
+        </div>
+    </section>
+
+    {% endblock content %}
+    {% block footer %}
+ 
+    {% endblock footer %}

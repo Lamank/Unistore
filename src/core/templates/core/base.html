@@ -1,0 +1,447 @@
+{% load static %}
+{% load i18n %}
+
+{% get_current_language as LANGUAGE_CODE %}
+{% get_available_languages as LANGUAGES %}
+{% get_language_info_list for LANGUAGES as languages %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {{ request.user.id|json_script:"user_id" }}
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="Sunrise.Digital">
+  <link rel="shortcut icon" type="image/x-icon" href="./favicon.png">
+  <!-- Bootstrap -->
+  <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+  <link href="{% static 'css/custom.css' %}" rel="stylesheet">
+
+  <link href="{% static 'ionicons-2.0.1/css/ionicons.css' %}" rel="stylesheet">
+
+  <link href='https://fonts.googleapis.com/css?family=Catamaran:400,100,300' rel='stylesheet' type='text/css'>
+  <link href="{% static 'css/campaign.css' %}" rel="stylesheet">
+  {% block head %}
+
+  {% endblock %}
+</head>
+
+<body>
+
+  <div class="cart" data-toggle="inactive">
+    <div class="label">
+      <i class="ion-bag"></i> 0
+    </div>
+
+    <div class="overlay"></div>
+
+    <div class="window">
+      <div class="title">
+        <button type="button" class="close"><i class="ion-android-close"></i></button>
+        <h4>Shopping cart</h4>
+      </div>
+
+      <div class="content" id="cart">
+
+      </div>
+
+      <div class="checkout container-fluid">
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 align-right">
+            <a class="btn btn-primary" href="{% url 'users:checkout' %}"> Checkout order </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <nav class="navbar navbar-default">
+    <div class="container" style="width: 100%;padding: 0 35px;">
+     
+      <div id="navbar" class="navbar-collapse collapse" style="display: flex !important; justify-content: space-between; padding: 0;">
+       
+  
+        <ul class="nav navbar-nav navbar-left">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+              aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="{% url 'core:home' %}"> <i class="ion-cube"></i> Unistore</a>
+          </div>
+          <li 
+          {% if "blog" not in request.path and "products" not in request.path and "users" not in request.path and "contact" not in request.path %} class="active" {% else %} class="" {% endif %}>
+          <a href="{% url 'core:home' %}"> {% trans "Home" %}</a></li>
+          <li {% if "blog" in request.path %} class="active" {% else %} class="" {% endif %}>
+            <a href="{% url 'blog:blog' %}">{% trans "Blog" %}</a></li>
+
+          <li {% if "products" in request.path %} class="active" {% else %} class="" {% endif %}>
+            <a href="{% url 'product:product-list' %}">{% trans "Products"%}</a></li>
+
+          <li class="dropdown">
+            <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+              aria-expanded="false">{% trans "More" %} <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="{% url 'core:faq' %}">{% trans "FAQ" %}</a></li>
+              <li><a href="{% url 'core:contact' %}">{% trans "Contacts" %}</a></li>
+              <li><a href="{% url 'core:about' %}">{% trans "About" %}</a></li>
+            </ul>
+          </li>
+
+        </ul>
+
+        <ul class="nav navbar-nav navbar-center" style="height: 50px; display: flex; align-items: center;">
+          <li style="text-align: center;">
+            <form class="form-inline" action="/search/" method="get">
+              <input name="query" style="width: 350px; text-align: center;" class="form-control mr-sm-2" type="search"
+                placeholder="{% trans 'Search' %}" aria-label="Search">
+              {% comment %} <button class="btn btn-outline-success my-2 my-sm-0" type="submit">{% trans "Search"
+                %}</button> {% endcomment %}
+              <button class="search-btn" style="border: none;" type="submit"> <img
+                  src="https://img.icons8.com/ios/50/000000/search--v1.png" width="30" /></button>
+            </form>
+
+          </li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+          <!-- {% if username %}
+          <span class="navbar-text" style="color: white;"><strong>{{ username|upper }}</strong></span>
+            <li><a href="/users/logout/"> <i class="ion-android-person"></i> Logout </a></li>
+            <li><a href="/users/password">Change Password</a></li>
+          {% else %}
+          <li><a href="{% url 'users:login' %}"> <i class="ion-android-person"></i> Login </a></li>
+          <li><a href="/users/register"> Sign Up</a></li> 
+        
+            {% endif %}
+        -->
+          {% if request.user.is_authenticated %}
+          <li class="dropdown">
+            <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+              aria-expanded="false">
+                {% if request.user.username == 'admin' %} Admin
+                {% else %}
+                {{ request.user.first_name|title}} {{ request.user.last_name|title}}
+                {% endif %} <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="{% url 'users:password-change' %}">{% trans "Password Change" %}</a></li>
+              <li><a href="{% url 'users:checkout' %}">{% trans "Checkout" %}</a></li>
+              <li id="favoritesPageLiTag" style="display: flex;"><a href="{% url 'users:wishlist' %}">{% trans "Favorites" %} </a></li>
+              <li><a href="{% url 'users:logout' %}">{% trans "Logout" %} </a></li>
+            </ul>
+          </li>
+          {% comment %} <span class="navbar-text" style="color: white;">
+            <strong>
+              {% if request.user.username == 'admin' %} Admin
+              {% else %}
+              {{ request.user.first_name|title}} {{ request.user.last_name|title}}
+              {% endif %}
+            </strong></span>
+          <li><a href="/users/logout/"> <i class="ion-android-person"></i> {% trans "Logout" %} </a></li> {% endcomment %}
+          {% else %}
+          <li>
+            <a href="{% url 'users:register' %}"> <i class="ion-person"></i> Registration</a>
+          </li>
+          <li>
+            <a href="{% url 'users:user-login' %}"> <i class="ion-unlocked"></i> Sign In</a>
+          </li>
+          {% endif %}
+
+
+
+
+        </ul>
+      </div>
+      <!--/.nav-collapse -->
+    </div>
+    <!--/.container-fluid -->
+  </nav>
+
+  <main>
+    {%block content%}
+    {%endblock%}
+  </main>
+
+
+  <footer>
+
+    <div class="about">
+      <div class="container">
+        <div class="row">
+          <hr class="offset-md">
+
+          <div class="col-xs-6 col-sm-3">
+            <div class="item">
+              <i class="ion-ios-telephone-outline"></i>
+              <h1>24/7 {% trans "free" %} <br> <span>{% trans "support" %}</span></h1>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-3">
+            <div class="item">
+              <i class="ion-ios-star-outline"></i>
+              <h1>{% trans "Low price" %} <br> <span>{% trans "guarantee" %}</span></h1>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-3">
+            <div class="item">
+              <i class="ion-ios-gear-outline"></i>
+              <h1> {% trans "Manufacturer’s" %} <br> <span>{% trans "warranty" %}</span></h1>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-3">
+            <div class="item">
+              <i class="ion-ios-loop"></i>
+              <h1> {% trans "Full refund" %} <br> <span>{% trans "guarantee" %}</span> </h1>
+            </div>
+          </div>
+
+          <hr class="offset-md">
+        </div>
+      </div>
+    </div>
+    {% include 'core/subscriber.html' %}
+
+
+    <div class="container">
+      <hr class="offset-md">
+
+      <div class="row menu">
+        <div class="col-sm-3 col-md-2">
+          <h1 class="h4">{% trans "Information" %} <i class="ion-plus-round hidden-sm hidden-md hidden-lg"></i> </h1>
+          <div class="list-group">
+            <a href="{% url 'core:about' %}" class="list-group-item">About</a>
+          </div> 
+        </div>
+        <div class="col-sm-3 col-md-2">
+          <h1 class="h4">{% trans "Products" %} <i class="ion-plus-round hidden-sm hidden-md hidden-lg"></i> </h1>
+
+          <div class="list-group">
+            <a href="/products/?category=1" class="list-group-item">{% trans "Laptop" %}</a>
+            <a href="/products/?category=4" class="list-group-item">{% trans "Desktop" %}</a>
+          </div>
+        </div>
+        <div class="col-sm-3 col-md-2">
+          <h1 class="h4">{% trans "Support" %} <i class="ion-plus-round hidden-sm hidden-md hidden-lg"></i> </h1>
+
+          <div class="list-group">
+            <a href="{% url 'core:faq' %}" class="list-group-item">{% trans "FAQ" %}</a>
+            <a href="{% url 'core:contact' %}" class="list-group-item">{% trans "Contacts" %}</a>
+          </div>
+        </div>
+        <div class="col-sm-3 col-md-2">
+          <h1 class="h4">{% trans "Location" %}</h1>
+
+          <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              {% trans "Language" %}
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+              <li><a href="/"> <img src="{% static 'img/flags/gb.png' %}" alt="Eng" />
+                {% trans "English" %}</a></li>
+              <li><a href="/az/"> <img src="{% static 'img/flags/az.png' %}" alt="Az" /> 
+                {% trans "Azerbaijani" %}</a></li> 
+
+
+              {% comment %} {% for language in languages %}
+              <li><a href="/{{ language.code }}/"> <img src="{% static 'img/flags/az.png' %}" alt="Eng" /> {{
+                  language.name_local }} </a></li>
+              {% endfor %} {% endcomment %}
+
+              
+            </ul>
+          </div>
+          <hr class="offset-xs">
+{% comment %} 
+          <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              {% trans "Currency" %}
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+              <li><a href="#Euro"><i class="ion-social-euro"></i> {% trans "Euro" %}</a></li>
+              <li><a href="#Dollar"><i class="ion-social-usd"></i> Dollar</a></li>
+              <li><a href="#Azn"><i class="ion-social-bitcoin"></i> Azn</a></li>
+            </ul>
+          </div> {% endcomment %}
+
+        </div>
+        <div class="col-sm-3 col-md-3 col-md-offset-1 align-right hidden-sm hidden-xs">
+          <h1 class="h4">Unistore Pro, Inc.</h1>
+
+          <address>
+            1305 Market Street, Suite 800<br>
+            San Francisco, CA 94102<br>
+            <abbr title="Phone">P:</abbr> (123) 456-7890
+          </address>
+
+          <address>
+            <strong>{% trans "Support" %}</strong><br>
+            <a href="mailto:#">sup@example.com</a>
+          </address>
+
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-9 col-md-9 payments">
+          <p>{% trans "Pay your order in the most convenient way" %}</p>
+
+          <div class="payment-icons">
+            <img src="{% static 'img/payments/paypal.svg' %}" alt="paypal">
+            <img src="{% static 'img/payments/visa.svg' %}" alt="visa">
+            <img src="{% static 'img/payments/master-card.svg' %}" alt="mc">
+            <img src="{% static 'img/payments/discover.svg' %}" alt="discover">
+            <img src="{% static 'img/payments/american-express.svg' %}" alt="ae">
+          </div>
+          <br>
+
+        </div>
+        <div class="col-sm-3 col-md-3 align-right align-center-xs">
+          <hr class="offset-sm hidden-sm">
+          <hr class="offset-sm">
+          <p>Unistore Pro © 2016 <br>
+            <hr class="offset-lg visible-xs">
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <div class="modal fade" id="Modal-Registration" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i
+                class="ion-android-close"></i></span></button>
+        </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-sm-6 col-sm-offset-3">
+                <h2 class="modal-title text-center">Registration</h2>
+                <br>
+
+                <form class="join" method="post">
+
+                  <!-- {% csrf_token %}
+                  {{ user_registration_form }} -->
+
+                  <!-- <input type="text" name="name" value="" placeholder="Name" required="" class="form-control" />
+                  <br>
+
+                  <input type="email" name="email" value="" placeholder="E-mail" required="" class="form-control" />
+                  <br>
+
+                  <input type="password" name="password" value="" placeholder="Password" required=""
+                    class="form-control" />
+                  <br>
+
+                  <input type="text" name="confirm" value="" placeholder="Password again" required=""
+                    class="form-control" />
+                  <br> -->
+
+                  <button type="submit" class="btn btn-primary btn-sm">Ok</button> &nbsp;&nbsp;
+                  <a href="#">Terms ></a>
+
+                  <br><br>
+                  <p>
+                    By creating an account you will be able to shop faster, be up to date on an order's status, and keep
+                    track of the orders you have previously made.
+                  </p>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="Modal-ForgotPassword" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i
+                class="ion-android-close"></i></span></button>
+        </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-sm-6">
+                <h4 class="modal-title">Forgot Your Password?</h4>
+                <br>
+
+                <form class="join" action="index.php" method="post">
+                  <input type="email" name="email" value="" placeholder="E-mail" required="" class="form-control" />
+                  <br>
+
+                  <button type="submit" class="btn btn-primary btn-sm">Continue</button>
+                  <a href="#Sign-In" data-action="Sign-In">Back ></a>
+                </form>
+              </div>
+              <div class="col-sm-6">
+                <br><br>
+                <p>
+                  Enter the e-mail address associated with your account. Click submit to have your password e-mailed to
+                  you.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="Modal-Gallery" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i
+                class="ion-android-close"></i></span></button>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="{% static 'js/jquery-latest.min.js' %}"></script>
+
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'js/core.js' %}"></script>
+  <script src="{% static 'js/store.js' %}"></script>
+  <script src="{% static 'js/api.js' %}"></script>
+  <script src="{% static 'js/basket.js' %}"></script>
+  <script src="{% static 'js/subscriber.js' %}"></script>
+ 
+  <script src="{% static 'js/product-filter.js' %}"></script>
+  <script src="{% static 'js/wishlistItemCount.js' %}"></script>
+
+  {%block footer%}
+
+  {%endblock%}
+</body>

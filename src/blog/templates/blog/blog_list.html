@@ -1,0 +1,132 @@
+{% extends "core/base.html" %}
+
+{% load static %}
+
+{% block head %}
+
+
+<!-- Bootstrap -->
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+
+<link href="{% static 'css/custom-scroll/jquery.mCustomScrollbar.css' %}" rel="stylesheet">
+
+
+
+{% endblock %}
+{% block content %}
+
+<div class="tags">
+  <div class="container">
+    <p>Search by tags</p>
+    <div class="btn-group" data-toggle="buttons">
+      <label class="btn btn-default btn-sm active">
+        <input type="radio" name="options" id="option1" data-value="all" checked> All items
+      </label>
+      {% for tag in tags %}
+      <label class="btn btn-default btn-sm">
+        <input type="radio" name="options" data-value="{{ tag.id }}"> 
+        {{ tag.name | title }}
+      </label>
+
+      {% endfor %}
+    </div>
+  </div>
+</div>
+<hr class="offset-md">
+
+<div class="blog">
+  <div class="container">
+    <div class="row" id="blogFilter">
+      {% for blog in page_obj %}
+      <div class="col-sm-6 col-md-6 item">
+
+        <div class="body">
+          <a href="{% url 'blog:blog-detail' slug=blog.slug %}" class="view"><i class="ion-ios-book-outline"></i></a>
+
+          <a href="{% url 'blog:blog-detail' slug=blog.slug %}">
+            <img src="{{ blog.main_image.url }}" title="Apple Devices" alt="Apple Devices" style="height: 500px;">
+          </a>
+
+          <div class="caption">
+            <h1 class="h3">{{ blog.title | title}}</h1>
+            <label> {{ blog.created_at}}</label>
+            <hr class="offset-sm">
+
+            <p>
+              {{ blog.description|truncatewords:60 }}
+            </p>
+            <hr class="offset-sm">
+
+            <a href="% url 'blog:blog-detail' slug=blog.slug %}"> View article <i class="ion-ios-arrow-right"></i> </a>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+
+    </div>
+
+    <nav>
+      <ul class="pagination">
+        {% if page_obj.has_previous %}
+        <li>
+          <a href="?page={{ page_obj.previous_page_number }}" aria-label="Previous">
+            <span aria-hidden="true"><i class="ion-ios-arrow-left"></i></span>
+          </a>
+        </li>
+        {% endif %}
+        {% if page_obj.number > 3 %}
+        <li class="?page=1"><a href="?page=1">1 </a></li>
+        {% endif %}
+        {% if page_obj.number > 4 %}
+        <li class="disabled"><a href="#">..</a></li>
+        {% endif %}
+
+        {%for num in page_obj.paginator.page_range%}
+        {% if page_obj.number == num %}
+        <li class="active"><a href="#">{{ num }} </a></li>
+        {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %} <li class=""><a
+            href="?page={{ num }}">{{ num }} </a></li>
+          {% endif %}
+          {%endfor%}
+
+          {% if page_obj.has_next %}
+
+          {% if page_obj.number < page_obj.paginator.num_pages|add:'-3' %} <li class="disabled"><a href="#">..</a>
+            </li>
+            <li> <a href="?page={{ page_obj.paginator.num_pages }}">{{ page_obj.paginator.num_pages }} </a></li>
+            {% elif page_obj.number < page_obj.paginator.num_pages|add:'-2' %} <li><a
+                href="?page={{ page_obj.paginator.num_pages }}">{{ page_obj.paginator.num_pages }}</a></li>
+              {% endif %}
+              <li>
+                <a href="?page={{ page_obj.next_page_number }}" aria-label="Next">
+                  <span aria-hidden="true"><i class="ion-ios-arrow-right"></i></span>
+                </a>
+              </li>
+              {% endif %}
+      </ul>
+
+    </nav>
+
+  </div>
+</div>
+
+<hr class="offset-lg">
+<hr class="offset-sm">
+
+
+
+{%endblock%}
+
+
+
+
+{%block footer%}
+
+<script type="text/javascript" src="{% static 'js/custom-scroll/jquery.mCustomScrollbar.concat.min.js' %}"></script>
+
+<script type="text/javascript" src="{% static 'js/jquery-ui-1.11.4.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/jquery.ui.touch-punch.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/blog-filter.js' %}"></script>
+
+
+{%endblock%}

@@ -1,0 +1,304 @@
+{% extends "core/base.html" %}
+{% load static %}
+{% load widget_tweaks %}
+{% load my_tags %}
+{% block head %}
+
+
+
+
+<link href="{% static 'css/carousel.css' %}" rel="stylesheet">
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+
+<link href="{% static 'css/custom-scroll/jquery.mCustomScrollbar.css' %}" rel="stylesheet">
+
+<style>
+  .body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .image-height{
+    height: 250px;
+
+  }
+
+</style>
+
+{%endblock%}
+{%block content%}
+
+<div class="tags">
+  <div class="container">
+    <div class="btn-group pull-right sorting">
+      <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+        aria-expanded="false">
+        <i class="ion-arrow-down-b"></i> Sorting by name
+      </button>
+
+      <ul class="dropdown-menu">
+        <li class="inactive"><a href="#" data-filter="title" data-value="asc"> <i class="ion-arrow-down-c"></i> Name [A-Z]</a></li>
+        <li class="inactive"><a href="#" data-filter="title" data-value="desc"> <i class="ion-arrow-up-c"></i> Name [Z-A]</a></li>
+        <li class="inactive"><a href="#" data-filter="price" data-value="asc"> <i class="ion-arrow-down-c"></i> Price [Low-High]</a></li>
+        <li class="inactive"><a href="#" data-filter="price" data-value="desc"> <i class="ion-arrow-up-c"></i> Price [High-Low]</a></li>
+      </ul>
+    </div>
+
+    <p>Search by tags</p>
+    <div class="btn-group search_category" data-toggle="buttons">
+
+      <label class="btn btn-default btn-sm active">
+        <input type="radio" data-value="all" > All products
+      </label>
+      {%for tag in tags %}
+      <label class="btn btn-default btn-sm" >
+        <input type="radio" name="options" data-value="{{ tag.id }}"> 
+        {{ tag.name | title }}
+      </label>
+      {%endfor%}
+     <!-- 
+     <label class="btn btn-default btn-sm">
+        <input type="radio" name="options" id="option2"> Desktops
+      </label>
+    
+      <label class="btn btn-default btn-sm">
+        <input type="radio" name="options" id="option3"> Laptops
+      </label>
+      <label class="btn btn-default btn-sm">
+        <input type="radio" name="options" id="option4"> Tablets
+      </label>
+      <label class="btn btn-default btn-sm">
+        <input type="radio" name="options" id="option5"> Hybrids
+      </label> -->
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <!-- Filter -->
+    <div class="col-sm-4 col-md-3">
+      <hr class="offset-lg">
+
+      <div class="filter">
+        
+        <div class="item">
+          <div class="title">
+            <a href="#clear" data-action="open" class="down"> <i class="ion-android-arrow-dropdown"></i> Open</a>
+            <a href="#clear" data-action="clear"> <i class="ion-ios-trash-outline"></i> Clear</a>
+            <h1 class="h4">Type</h1>
+          </div>
+          
+          <div class="controls">
+           
+            {% for category in categories %}
+              <div class="checkbox-group filter-checkbox" data-filter="category" data-status="inactive">
+                <div  class="checkbox"><i class="ion-android-done"></i></div>
+                <div class="label" data-value="{{ category.id }}">{{ category.name | title }}</div>
+                <input class="fltr-checkbox" type="checkbox" name="checkbox" data-filter="category" value="{{ category.id }}">
+              </div>
+            {% endfor %}
+            
+            <!-- <div class="checkbox-group" data-status="inactive">
+              <div class="checkbox"><i class="ion-android-done"></i></div>
+              <div class="label" data-value="Desktops">Desktops</div>
+              <input type="checkbox" name="checkbox" value="">
+            </div>
+
+            <div class="checkbox-group" data-status="inactive">
+              <div class="checkbox"><i class="ion-android-done"></i></div>
+              <div class="label" data-value="Laptops">Laptops</div>
+              <input type="checkbox" name="checkbox" value="">
+            </div>
+
+            <div class="checkbox-group" data-status="inactive">
+              <div class="checkbox"><i class="ion-android-done"></i></div>
+              <div class="label" data-value="Tablets">Tablets</div>
+              <input type="checkbox" name="checkbox" value="">
+            </div>
+
+            <div class="checkbox-group" data-status="inactive">
+              <div class="checkbox"><i class="ion-android-done"></i></div>
+              <div class="label" data-value="Hybrid">Hybrids</div>
+              <input type="checkbox" name="checkbox" value="">
+            </div> -->
+          </div>
+        </div>
+
+        <br>
+
+        <div class="item">
+          <div class="title">
+            <a href="#clear" data-action="open" class="down"> <i class="ion-android-arrow-dropdown"></i> Open</a>
+            <a href="#clear" data-action="clear"> <i class="ion-ios-trash-outline"></i> Clear</a>
+            <h1 class="h4">Screen</h1>
+          </div>
+
+          <div class="controls grid">
+            {% for size in sizes %}
+              <div class="checkbox-group filter-checkbox" data-filter="size" data-status="inactive">
+                <div class="checkbox"><i class="ion-android-done"></i></div>
+                <div class="label" data-value="{{ size.id }} in">{{ size.size }} in</div>
+                <input class="fltr-checkbox" type="checkbox" name="checkbox" data-filter="size" value="{{ size.id }}">
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+
+        <br>
+
+        <div class="item">
+          <div class="title">
+            <a href="#clear" data-action="open" class="down"> <i class="ion-android-arrow-dropdown"></i> Open</a>
+            <a href="#clear" data-action="clear-price"> <i class="ion-ios-trash-outline"></i> Clear</a>
+            <h1 class="h4">Price</h1>
+          </div>
+
+          <div class="controls">
+            <p id="max-price" style="display: none;">{{max.price__max}}</p>
+
+            <br>
+            <div id="slider-price"></div>
+            <br>
+            <p id="amount"></p>
+            
+          </div>
+          
+        </div>
+        <br>
+
+        <div class="item">
+          <div class="title">
+            <a href="#clear" data-action="open" class="down"> <i class="ion-android-arrow-dropdown"></i> Open</a>
+            <a href="#clear" data-action="clear"> <i class="ion-ios-trash-outline"></i> Clear</a>
+            <h1 class="h4">Manufacturer</h1>
+          </div>
+
+          <div class="controls">
+            {% for manufacturer in manufacturers %}
+              <div class="checkbox-group filter-checkbox" data-filter="brand" data-status="inactive">
+                <div class="checkbox"><i class="ion-android-done"></i></div>
+                <div class="label" data-value="{{ manufacturer.id }}">{{ manufacturer.name | title }}</div>
+                <input class="fltr-checkbox" type="checkbox" name="checkbox" data-filter="brand" value="{{ manufacturer.id }}">
+              </div>
+            {% endfor %}
+            
+          </div>
+        </div>
+
+      </form>
+      </div>
+    </div>
+    <!-- /// -->
+
+    <!-- Products -->
+    <div class="col-sm-8 col-md-9">
+      <hr class="offset-lg">
+
+      <div class="products">
+        <div class="row" id="filtered_products">
+      
+          {% for product in object_list %}
+          
+          <div class="col-sm-6 col-md-4 product">
+            <div class="body parent">
+              <a href="#favorites" class="favorites" data-favorite="inactive"><i class="ion-ios-heart-outline"></i></a>
+              
+              
+              <a href="{% url 'product:product-detail' slug=product.slug %}" class="image-height " id="prod_image">
+
+                <img src="{{ product.main_image.url }}"  alt="{{product}}"> 
+              </a>
+              {% if product.campaign.id == 2 %} 
+              <img src="{{ campaign.extra_image.url }}" id="campaign_image" alt="{{product}}"> 
+              {% endif %}
+               
+              <div class="content">
+                <h1 class="h3 productName">{{ product | title }}</h1>
+                {% comment %} <p class="price">{{ product.price }}</p> {% endcomment %}
+                {% if product.campaign.percent %}
+                <p class="price ">${{ product.price|discount:product.campaign.percent }}</p> 
+                <p class="price through">${{ product.price }}</p>
+                {% else %}
+                <p class="price">${{ product.price }}</p>
+                {% endif %}
+                <label>{{ product.brand.name | title }} </label>
+                <a href="{% url 'product:product-detail' slug=product.slug %}">
+                  <button class="btn btn-link" formaction=""> <i class="ion-android-open"></i> Details</button>
+                </a>
+                <button class="btn btn-primary btn-sm rounded addToCart"> <i class="ion-bag"></i> Add to cart</button>
+              </div>
+            </div>
+          </div>
+         
+          
+          {% endfor %}
+          
+        </div>
+      </div>
+
+      <!-- Pagination -->
+      <nav>
+        <ul class="pagination">
+          {% if page_obj.has_previous %}
+          <li>
+            <a href="?{% param_replace page=page_obj.previous_page_number %}" aria-label="Previous">
+              <span aria-hidden="true"><i class="ion-ios-arrow-left"></i></span>
+            </a>
+          </li>
+          {% endif %}
+          {% if page_obj.number > 3 %}
+          <li class=""><a href="?{% param_replace page=1 %}">1 </a></li>
+          {% endif %}
+          {% if page_obj.number > 4 %}
+          <li class="disabled"><a href="#">..</a></li>
+          {% endif %}
+
+          {%for num in page_obj.paginator.page_range%}
+          {% if page_obj.number == num %}
+          <li class="active"><a href="#">{{ num }} </a></li>
+          {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %} <li class=""><a
+              href="?{% param_replace page=num %}">{{ num }} </a></li>
+          {% endif %}
+            {%endfor%}
+            
+            {% if page_obj.has_next %}
+
+            {% if page_obj.number < page_obj.paginator.num_pages|add:'-3' %} <li class="disabled"><a href="#">..</a>
+              </li>
+              <li> <a href="?{% param_replace page=page_obj.paginator.num_pages %}">{{ page_obj.paginator.num_pages }} </a></li>
+              {% elif page_obj.number < page_obj.paginator.num_pages|add:'-2' %} <li><a
+                  href="?{% param_replace page=page_obj.paginator.num_pages %}">{{ page_obj.paginator.num_pages }}</a></li>
+                {% endif %}
+                <li>
+                  <a href="?{% param_replace page=page_obj.next_page_number %}" aria-label="Next">
+                    <span aria-hidden="true"><i class="ion-ios-arrow-right"></i></span>
+                  </a>
+                </li>
+                {% endif %}
+        </ul>
+      </nav>
+    </div>
+    <!-- /// -->
+  </div>
+</div>
+
+
+
+
+<hr class="offset-lg">
+<hr class="offset-sm">
+
+{% endblock %}
+
+{% block footer %}
+
+<script type="text/javascript" src="{% static 'js/custom-scroll/jquery.mCustomScrollbar.concat.min.js' %}"></script>
+
+<script type="text/javascript" src="{% static 'js/jquery-ui-1.11.4.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/jquery.ui.touch-punch.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/slider-price.js' %}"></script> 
+<script type="text/javascript" src="{% static 'js/product-filter.js' %}"></script>  
+<script type="text/javascript" src="{% static 'js/productListAddWishlist.js' %}"></script>  
+
+{% endblock %}
