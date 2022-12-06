@@ -41,6 +41,7 @@ class ProductListCreateView(generics.ListCreateAPIView):
         order_by = self.request.query_params.get("order")
         value = self.request.query_params.get("value")
         campaign = self.request.query_params.get("campaign")
+        print(self.request.query_params)
         if tag:
             if tag != "all":
                 queryset = queryset.filter(tags__id=tag)

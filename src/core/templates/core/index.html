@@ -203,7 +203,7 @@
                         
                         <h2 class="h3 productName">{{ obj.title | title }}</h2>
                         {% if obj.campaign.percent %}
-                        <p class="price ">${{ obj.price|discount:obj.campaign.percent }}</p> 
+                        <p class="price ">${{ obj.discounted_price | floatformat:2 }}</p> 
                         <p class="price through">${{ obj.price }}</p>
                         {% else %}
                         <p class="price">${{ obj.price }}</p>

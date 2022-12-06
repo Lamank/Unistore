@@ -49,7 +49,10 @@ class CartItem(models.Model):
 
     @property
     def get_total(self):
-        total = self.product.price * self.quantity
+        if self.product.discounted_price != 0.0:
+            total = round((self.product.discounted_price * self.quantity), 2)
+        else:
+            total = round((self.product.price * self.quantity), 2)
         return total
 
     def __str__(self) -> str:

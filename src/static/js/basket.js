@@ -44,7 +44,15 @@ const user_id = JSON.parse(document.getElementById('user_id').textContent);
 
                 }
             });
-  
+            let percent = ""
+            if(product.discounted_price === 0.0){
+              percent =  `<p class="price">${product.price} </p>`
+             
+            }else{
+              percent = `
+              <p class="price ">${Number(product.discounted_price).toFixed(2)}</p> 
+              `
+            }
               cart.firstChild.firstChild.innerHTML += `
               <div class="media">
                 <div class="media-left">
@@ -55,7 +63,7 @@ const user_id = JSON.parse(document.getElementById('user_id').textContent);
                 <div class="media-body">
                   <h2 class="h4 media-heading">${product.title}</h2>
                   <label>${category.name}</label>
-                  <p class="price">$${product.price}</p>
+                  ${percent}
                 </div>
                 <div class="controls">
                   <div class="input-group">

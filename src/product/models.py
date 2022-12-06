@@ -12,6 +12,7 @@ class Product(models.Model):
     title = models.CharField(max_length=150)
     description = models.TextField()
     price = models.FloatField()
+    discounted_price = models.FloatField(null=True, blank=True, default=0.0)
     slug = models.SlugField(max_length=250, null=True, blank=True)
     quantity = models.PositiveIntegerField(null=True, blank=True)
     main_image = models.ImageField(upload_to="uploads/%Y/%m/%d/", null=True)
@@ -62,8 +63,12 @@ class Product(models.Model):
 def pre_save_receiver(sender, instance, *args, **kwargs):
     if not instance.slug:
         instance.slug = unique_slug_generator(instance)
-
+    if instance.campaign:
+        discounted_price = instance.price - (instance.price * instance.campaign.percent)/100
+        instance.discounted_price = round(discounted_price, 2)
 pre_save.connect(pre_save_receiver, sender=Product)
+
+
 
 
 class Category(models.Model):

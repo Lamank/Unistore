@@ -1,6 +1,6 @@
 
 var _filterObj = {};
-
+var urlstring = ""
 
 $('.filter-checkbox, #slider-price').on('click', function(){
   
@@ -52,9 +52,11 @@ $(".title").on("click", "a", function(){
 
 
 if (window.performance) {
-    let urlstring = window.location.href.split("?")[1];
-    urlstring = "?" + urlstring
+    let string = window.location.href.split("?")[1];
+    urlstring = "?" + string
 
+    console.log('urlstring',urlstring.length);
+        
     fetch_function(urlstring)
 }
 
@@ -101,11 +103,10 @@ function fetch_function(urlstring){
                 if (data[i]["campaign"] && data[i]["campaign"]['name'] == "Black Friday" ) {
                     img = `<img src="${ data[i]["campaign"].extra_image }" id="campaign_image" alt="${ data[i].title }"> `
                 } 
-                if(data[i]["campaign"] && data[i]["campaign"]["percent"]){
+                if(data[i]['discounted_price'] != 0.0){
                    
-                    let sale = Number(data[i].price * (100 - (data[i]["campaign"]["percent"]))/100).toFixed(2);
                     percent = `
-                    <p class="price ">${ sale }</p> 
+                    <p class="price ">${ Number(data[i].discounted_price).toFixed(2) }</p> 
                     <p class="price through">${ data[i].price }</p>
                     `
                 }

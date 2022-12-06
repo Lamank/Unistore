@@ -217,7 +217,7 @@
                 <h1 class="h3 productName">{{ product | title }}</h1>
                 {% comment %} <p class="price">{{ product.price }}</p> {% endcomment %}
                 {% if product.campaign.percent %}
-                <p class="price ">${{ product.price|discount:product.campaign.percent }}</p> 
+                <p class="price ">${{ product.discounted_price | floatformat:2 }}</p> 
                 <p class="price through">${{ product.price }}</p>
                 {% else %}
                 <p class="price">${{ product.price }}</p>

@@ -99,6 +99,7 @@ class ProductSerializer(serializers.ModelSerializer):
             'title',
             'description',
             'price',
+            'discounted_price',
             'slug',
             'quantity',
             'main_image',
