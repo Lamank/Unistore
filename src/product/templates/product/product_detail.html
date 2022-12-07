@@ -105,7 +105,7 @@
           <hr class="offset-xs visible-sm">
 
           {% if product.campaign.percent %}
-            <p class="price ">${{ product.price|discount:product.campaign.percent }}</p> 
+            <p class="price ">${{ product.discounted_price | floatformat:2 }}</p> 
             <p class="price through">${{ product.price }}</p>
           {% else %}
           <p class="price">${{ product.price }}</p>
@@ -310,7 +310,12 @@
             <img src="{{ campaign.extra_image.url }}" id="campaign_image" alt="{{product}}"> 
             {% endif %}
             <div class="content align-center">
-              <p class="price">${{ product.price }}</p>
+              {% if product.campaign.percent %}
+                <p class="price ">${{ product.discounted_price | floatformat:2 }}</p> 
+                <p class="price through">${{ product.price }}</p>
+              {% else %}
+                <p class="price">${{ product.price }}</p>
+              {% endif %}
               <h2 class="h3 wishlistCheckProductName">{{ product.title }}</h2>
               <hr class="offset-sm">
 

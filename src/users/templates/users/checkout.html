@@ -131,7 +131,7 @@
                 <div class="checkout-cart">
                     <div class="content">
                       {% for cart_item in cart_items %}
-                      <div class="media">
+                      <div class="media" data-item="{{cart_item.id}}">
                         <div class="media-left">
                           <a href="#">
                             <img class="media-object" src="{{ cart_item.product.main_image.url }}" alt="{{ cart_item.product.title }}"/>
@@ -141,11 +141,11 @@
                           <h2 class="h4 media-heading">{{ cart_item.product.title | title}}</h2>
                           <label>{{ cart_item.product.category | title}}</label>
                           {% if cart_item.product.campaign.percent %}
-                            <p>$ <span>{{ cart_item.product.price|discount:cart_item.product.campaign.percent }}</span></p> 
+                            <p>$ <span class="item-price">{{ cart_item.product.discounted_price | floatformat:2 }}</span></p> 
                             {% else %}
-                            <p>$ <span>{{ cart_item.product.price }}</span></p>
+                            <p>$ <span class="item-price">{{ cart_item.product.price }}</span></p>
                           {% endif %}
-                          <p class="price">Total: $ <span>{{ cart_item.get_total }}</span></p>
+                          <p>Total: $ <span class="subtotal-price">{{ cart_item.get_total }}</span></p>
                         </div>
                         <div class="controls">
                           <div class="input-group">
