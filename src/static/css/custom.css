@@ -630,11 +630,9 @@
 				/* Favorites */
 					.products .product a.favorites{
 						position: absolute;
-						top: 55px;
-						left: 0;
-						right: 0;
-						margin-left: auto;
-						margin-right: auto;
+						top: 5px;
+						left: 5px;
+						z-index: 999;
 						width: 50px;
 						height: 50px;
 						border-radius: 50px;

@@ -28,6 +28,30 @@
   {% block head %}
 
   {% endblock %}
+
+  <style>
+    .clearfix:before, .clearfix:after, .dl-horizontal dd:before, .dl-horizontal dd:after, .container:before, .container:after, .container-fluid:before, .container-fluid:after, .row:before, .row:after, .form-horizontal .form-group:before, .form-horizontal .form-group:after, .btn-toolbar:before, .btn-toolbar:after, .btn-group-vertical > .btn-group:before, .btn-group-vertical > .btn-group:after, .nav:before, .nav:after, .navbar:before, .navbar:after, .navbar-header:before, .navbar-header:after, .navbar-collapse:before, .navbar-collapse:after, .pager:before, .pager:after, .panel-body:before, .panel-body:after, .modal-header:before, .modal-header:after, .modal-footer:before, .modal-footer:after{
+      content: none !important;
+    }
+
+    .navbar {
+      position: sticky;
+      top: 0px;
+      background-color: #2F2E2E;
+    }
+
+    @media only screen and (min-width: 1000px) {
+      .product {
+        max-width: 25% !important;
+      }  
+    }
+
+
+    .pagination {
+      position: absolute;
+      bottom: -70px;
+    }
+  </style>
 </head>
 
 <body>
@@ -61,7 +85,7 @@
 
 
   <nav class="navbar navbar-default">
-    <div class="container" style="width: 100%;padding: 0 35px;">
+    <div class="container">
      
       <div id="navbar" class="navbar-collapse collapse" style="display: flex !important; justify-content: space-between; padding: 0;">
        
