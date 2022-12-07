@@ -1,3 +1,4 @@
+from email.policy import default
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 
@@ -66,6 +67,7 @@ class Order(models.Model):
 
     status = models.CharField(
         choices=Status.choices,
+        default='on_processing',
         max_length=13,
     )
     products = models.ManyToManyField(
@@ -96,7 +98,7 @@ class Order(models.Model):
 class OrderItem(models.Model):
     order = models.ForeignKey('users.Order', on_delete=models.CASCADE)
     product = models.ForeignKey('product.Product', on_delete=models.CASCADE)
-    # quantity = models.PositiveIntegerField()
+    quantity = models.PositiveIntegerField(default=1)
     created_at = models.DateField(auto_now_add=True)
     modified_at = models.DateField(auto_now=True)
 

@@ -51,14 +51,14 @@ $(".title").on("click", "a", function(){
 
 
 
-if (window.performance) {
-    let string = window.location.href.split("?")[1];
-    urlstring = "?" + string
+// if (window.performance) {
+//     let string = window.location.href.split("?")[1];
+//     urlstring = "?" + string
 
-    console.log('urlstring',urlstring.length);
+//     console.log('urlstring',urlstring.length);
         
-    fetch_function(urlstring)
-}
+//     fetch_function(urlstring)
+// }
 
 function generate_url() {
     urlstring = "";
@@ -146,7 +146,7 @@ function fetch_function(urlstring){
         $("#filtered_products").html(htmlString)
     }).then(responseJson => {
         var wishProductNames = document.querySelectorAll(".productName");
-        console.log(wishProductNames);
+        // console.log(wishProductNames);
         fetch('http://127.0.0.1:8000/api/wishlist/').then((response) => response.json()).then(wishItem => wishItem.map(item => {
             if (wishProductNames[0].parentNode != null){
                 for (product of wishProductNames) {

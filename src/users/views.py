@@ -178,6 +178,7 @@ def activate(request: HttpRequest, uidb64, token) -> HttpResponse:
         user.is_active = True
         user.save()
         create_cart_after_user_registered(user=user)
+        
         # return HttpResponse('Thank you for your email confirmation. Now you can <a href="/users/user-login/">login your account</a>') 
         return redirect(reverse('users:user-login'))
     else:

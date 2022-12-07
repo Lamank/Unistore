@@ -6,10 +6,10 @@ const user_id = JSON.parse(document.getElementById('user_id').textContent);
   await delay(500);
   var productNames = document.querySelectorAll(".productName");
   console.log("USER_ID: " + user_id);
-  console.log(productNames);
+  // console.log(productNames);
 
 
-  console.log(basket);
+  // console.log(basket);
   if (basket == null) {
     basket = [];
   }
@@ -24,8 +24,8 @@ const user_id = JSON.parse(document.getElementById('user_id').textContent);
     basket.forEach(product => {
       if (product.user_id === user_id){
         counter++;
-        console.log(product.user_id + " " + product.title + " " + user_id);
-        console.log(counter);
+        // console.log(product.user_id + " " + product.title + " " + user_id);
+        // console.log(counter);
         fetch('http://127.0.0.1:8000/api/category/').then((response) => response.json())
         .then((data) => data.map((category) => {
 
@@ -82,8 +82,8 @@ const user_id = JSON.parse(document.getElementById('user_id').textContent);
               </div>`;
             }
             productDataCountInBasket = basket.length;
-            console.log(productDataCountInBasket);
-            console.log(counter);
+            // console.log(productDataCountInBasket);
+            // console.log(counter);
             productCountInBasket.lastChild.textContent = ` ${counter}\n    `;
           
         }));}
@@ -107,19 +107,19 @@ function removeObjectWithId(arr, id) {
 if (_pj.in_es6("products", window.location.href)){
   function removeFromCart(element){
     var productNames = document.querySelectorAll(".productName");
-    console.log(productNames);
+    // console.log(productNames);
     var removedProduct = element.parentElement.previousElementSibling.firstElementChild.innerHTML;
-    console.log(removedProduct);
+    // console.log(removedProduct);
     // var basket = JSON.parse(localStorage.getItem("basket"));
-    console.log(basket);
-    console.log(removedProduct);
+    // console.log(basket);
+    // console.log(removedProduct);
     localStorage.removeItem("basket");
     productNames.forEach(product => {
-      console.log(product);
-      console.log(85);
+      // console.log(product);
+      // console.log(85);
       if (removedProduct.toLowerCase() == product.innerHTML.toLocaleLowerCase()){
         console.log(window.location.href);
-        console.log("86");
+        // console.log("86");
         if ( product.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.disabled == true ){
           product.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.disabled = false;
           product.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.innerHTML = "Add to Cart";

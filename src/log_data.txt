@@ -39126,3 +39126,4291 @@ ip_address: 127.0.0.1
 run_time: 0.017447948455810547
 Time: 2022-12-07 12:09:06.721031
 --------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /users/checkout/
+ip_address: 127.0.0.1
+run_time: 0.15581631660461426
+Time: 2022-12-07 14:48:33.636201
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.021550655364990234
+Time: 2022-12-07 14:48:33.713570
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/product/?undefined
+ip_address: 127.0.0.1
+run_time: 0.13816499710083008
+Time: 2022-12-07 14:48:33.819951
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.015149116516113281
+Time: 2022-12-07 14:48:33.838332
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.060836076736450195
+Time: 2022-12-07 14:48:34.252990
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.035176992416381836
+Time: 2022-12-07 14:48:34.297364
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.021124839782714844
+Time: 2022-12-07 14:48:34.325305
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.018149137496948242
+Time: 2022-12-07 14:48:34.347769
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.015704870223999023
+Time: 2022-12-07 14:48:34.367042
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /users/checkout/
+ip_address: 127.0.0.1
+run_time: 0.13789701461791992
+Time: 2022-12-07 14:48:47.381589
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.016245126724243164
+Time: 2022-12-07 14:48:47.435183
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/product/?undefined
+ip_address: 127.0.0.1
+run_time: 0.14007782936096191
+Time: 2022-12-07 14:48:47.558120
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.017483949661254883
+Time: 2022-12-07 14:48:47.578866
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.045649051666259766
+Time: 2022-12-07 14:48:47.974185
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.03169608116149902
+Time: 2022-12-07 14:48:48.013015
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.02609992027282715
+Time: 2022-12-07 14:48:48.045945
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.020982027053833008
+Time: 2022-12-07 14:48:48.073419
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.018951892852783203
+Time: 2022-12-07 14:48:48.100062
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /admin/users/orderitem/
+ip_address: 127.0.0.1
+run_time: 0.09828472137451172
+Time: 2022-12-07 14:52:14.228146
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /favicon.ico
+ip_address: 127.0.0.1
+run_time: 0.016093015670776367
+Time: 2022-12-07 14:52:14.304697
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /admin/users/orderitem/
+ip_address: 127.0.0.1
+run_time: 0.03870797157287598
+Time: 2022-12-07 14:52:15.046257
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /admin/users/orderitem/
+ip_address: 127.0.0.1
+run_time: 0.11401700973510742
+Time: 2022-12-07 14:52:32.015427
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /admin/jsi18n/
+ip_address: 127.0.0.1
+run_time: 0.02877497673034668
+Time: 2022-12-07 14:52:32.054998
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /admin/users/order/
+ip_address: 127.0.0.1
+run_time: 0.10881304740905762
+Time: 2022-12-07 14:52:38.826778
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /admin/jsi18n/
+ip_address: 127.0.0.1
+run_time: 0.0335538387298584
+Time: 2022-12-07 14:52:38.872378
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /admin/users/order/
+ip_address: 127.0.0.1
+run_time: 0.09261298179626465
+Time: 2022-12-07 14:52:46.592077
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /admin/jsi18n/
+ip_address: 127.0.0.1
+run_time: 0.022669076919555664
+Time: 2022-12-07 14:52:46.626872
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/order/
+ip_address: 127.0.0.1
+run_time: 0.09102487564086914
+Time: 2022-12-07 14:55:38.961474
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/schema/swagger-ui/
+ip_address: 127.0.0.1
+run_time: 0.04483604431152344
+Time: 2022-12-07 14:55:46.355168
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/schema/
+ip_address: 127.0.0.1
+run_time: 0.09816503524780273
+Time: 2022-12-07 14:55:46.567110
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /users/checkout/
+ip_address: 127.0.0.1
+run_time: 0.12961602210998535
+Time: 2022-12-07 15:19:38.559207
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.02033519744873047
+Time: 2022-12-07 15:19:38.624602
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/product/?undefined
+ip_address: 127.0.0.1
+run_time: 0.18644189834594727
+Time: 2022-12-07 15:19:38.789897
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.016272783279418945
+Time: 2022-12-07 15:19:38.810215
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.030071735382080078
+Time: 2022-12-07 15:19:39.141731
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.014738082885742188
+Time: 2022-12-07 15:19:39.158308
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.015100955963134766
+Time: 2022-12-07 15:19:39.174979
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.015089988708496094
+Time: 2022-12-07 15:19:39.192846
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.01719379425048828
+Time: 2022-12-07 15:19:39.212470
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /users/checkout/
+ip_address: 127.0.0.1
+run_time: 0.13486790657043457
+Time: 2022-12-07 15:23:37.194787
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.021448373794555664
+Time: 2022-12-07 15:23:37.268845
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/product/?undefined
+ip_address: 127.0.0.1
+run_time: 0.18550682067871094
+Time: 2022-12-07 15:23:37.426867
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.015419960021972656
+Time: 2022-12-07 15:23:37.445830
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.03540825843811035
+Time: 2022-12-07 15:23:37.778668
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.027321815490722656
+Time: 2022-12-07 15:23:37.808124
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.025722742080688477
+Time: 2022-12-07 15:23:37.835789
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.02477121353149414
+Time: 2022-12-07 15:23:37.863540
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.018719911575317383
+Time: 2022-12-07 15:23:37.884770
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /users/checkout/
+ip_address: 127.0.0.1
+run_time: 0.11952805519104004
+Time: 2022-12-07 15:25:02.712750
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.01612401008605957
+Time: 2022-12-07 15:25:02.772607
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/product/?undefined
+ip_address: 127.0.0.1
+run_time: 0.16938495635986328
+Time: 2022-12-07 15:25:02.925345
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.02264094352722168
+Time: 2022-12-07 15:25:02.952597
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.03640103340148926
+Time: 2022-12-07 15:25:03.297873
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.022951126098632812
+Time: 2022-12-07 15:25:03.323016
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.018045902252197266
+Time: 2022-12-07 15:25:03.343137
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.015666961669921875
+Time: 2022-12-07 15:25:03.360499
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.015262126922607422
+Time: 2022-12-07 15:25:03.377609
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /users/checkout/
+ip_address: 127.0.0.1
+run_time: 0.16365313529968262
+Time: 2022-12-07 15:25:35.456006
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.023569107055664062
+Time: 2022-12-07 15:25:35.525392
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/product/?undefined
+ip_address: 127.0.0.1
+run_time: 0.1728358268737793
+Time: 2022-12-07 15:25:35.673950
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.014570236206054688
+Time: 2022-12-07 15:25:35.691939
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.03439688682556152
+Time: 2022-12-07 15:25:36.043072
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.022635221481323242
+Time: 2022-12-07 15:25:36.067931
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.017464876174926758
+Time: 2022-12-07 15:25:36.089454
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.017862319946289062
+Time: 2022-12-07 15:25:36.108987
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.02906179428100586
+Time: 2022-12-07 15:25:36.140870
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /users/checkout/
+ip_address: 127.0.0.1
+run_time: 0.1429729461669922
+Time: 2022-12-07 15:28:40.385344
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.019932270050048828
+Time: 2022-12-07 15:28:40.461335
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/product/?undefined
+ip_address: 127.0.0.1
+run_time: 0.18809986114501953
+Time: 2022-12-07 15:28:40.628936
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.015944957733154297
+Time: 2022-12-07 15:28:40.649046
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.033117055892944336
+Time: 2022-12-07 15:28:40.976769
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.015637874603271484
+Time: 2022-12-07 15:28:40.994003
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.017084121704101562
+Time: 2022-12-07 15:28:41.013507
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.01592278480529785
+Time: 2022-12-07 15:28:41.031674
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.015436172485351562
+Time: 2022-12-07 15:28:41.049023
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /users/checkout/
+ip_address: 127.0.0.1
+run_time: 0.10704612731933594
+Time: 2022-12-07 15:29:51.910905
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.016800642013549805
+Time: 2022-12-07 15:29:51.968622
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/product/?undefined
+ip_address: 127.0.0.1
+run_time: 0.15625214576721191
+Time: 2022-12-07 15:29:52.107319
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.014597892761230469
+Time: 2022-12-07 15:29:52.125347
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.030893802642822266
+Time: 2022-12-07 15:29:52.483313
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.023363828659057617
+Time: 2022-12-07 15:29:52.509119
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.021535873413085938
+Time: 2022-12-07 15:29:52.533747
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.0199129581451416
+Time: 2022-12-07 15:29:52.555932
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.0228118896484375
+Time: 2022-12-07 15:29:52.581984
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /users/checkout/
+ip_address: 127.0.0.1
+run_time: 0.11561918258666992
+Time: 2022-12-07 15:34:42.213776
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.017138004302978516
+Time: 2022-12-07 15:34:42.276963
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/product/?undefined
+ip_address: 127.0.0.1
+run_time: 0.17705392837524414
+Time: 2022-12-07 15:34:42.436284
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.01692509651184082
+Time: 2022-12-07 15:34:42.457236
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.045060157775878906
+Time: 2022-12-07 15:34:42.812858
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.024944305419921875
+Time: 2022-12-07 15:34:42.841157
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.02173900604248047
+Time: 2022-12-07 15:34:42.866528
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.01892399787902832
+Time: 2022-12-07 15:34:42.887677
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.018968820571899414
+Time: 2022-12-07 15:34:42.909149
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /users/checkout/
+ip_address: 127.0.0.1
+run_time: 0.15542006492614746
+Time: 2022-12-07 15:37:08.356045
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.02427387237548828
+Time: 2022-12-07 15:37:08.428546
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/product/?undefined
+ip_address: 127.0.0.1
+run_time: 0.1631472110748291
+Time: 2022-12-07 15:37:08.566759
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.015418052673339844
+Time: 2022-12-07 15:37:08.585698
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.04878687858581543
+Time: 2022-12-07 15:37:08.964400
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.025111913681030273
+Time: 2022-12-07 15:37:08.991764
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.023703575134277344
+Time: 2022-12-07 15:37:09.017790
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.021167993545532227
+Time: 2022-12-07 15:37:09.041665
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.020132780075073242
+Time: 2022-12-07 15:37:09.064463
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /users/checkout/
+ip_address: 127.0.0.1
+run_time: 0.11743593215942383
+Time: 2022-12-07 15:39:03.567333
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.016865968704223633
+Time: 2022-12-07 15:39:03.619950
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/product/?undefined
+ip_address: 127.0.0.1
+run_time: 0.1528618335723877
+Time: 2022-12-07 15:39:03.755188
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.01581287384033203
+Time: 2022-12-07 15:39:03.775165
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.04036402702331543
+Time: 2022-12-07 15:39:04.148267
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.0228879451751709
+Time: 2022-12-07 15:39:04.174237
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.02277398109436035
+Time: 2022-12-07 15:39:04.199761
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.021780967712402344
+Time: 2022-12-07 15:39:04.224031
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.02646183967590332
+Time: 2022-12-07 15:39:04.257155
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /users/checkout/
+ip_address: 127.0.0.1
+run_time: 0.17091703414916992
+Time: 2022-12-07 15:39:30.901309
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.02598404884338379
+Time: 2022-12-07 15:39:30.975214
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/product/?undefined
+ip_address: 127.0.0.1
+run_time: 0.17318105697631836
+Time: 2022-12-07 15:39:31.123232
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.01562786102294922
+Time: 2022-12-07 15:39:31.142563
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.04892611503601074
+Time: 2022-12-07 15:39:31.505161
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.028291702270507812
+Time: 2022-12-07 15:39:31.541743
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.019138097763061523
+Time: 2022-12-07 15:39:31.564888
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.018800973892211914
+Time: 2022-12-07 15:39:31.585846
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.016407012939453125
+Time: 2022-12-07 15:39:31.605497
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/order-item/
+ip_address: 127.0.0.1
+run_time: 0.06184816360473633
+Time: 2022-12-07 15:41:01.810944
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /users/checkout/
+ip_address: 127.0.0.1
+run_time: 0.16273903846740723
+Time: 2022-12-07 15:41:40.913254
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.024274110794067383
+Time: 2022-12-07 15:41:40.984356
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/product/?undefined
+ip_address: 127.0.0.1
+run_time: 0.16917014122009277
+Time: 2022-12-07 15:41:41.128547
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.022325754165649414
+Time: 2022-12-07 15:41:41.156199
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.03913116455078125
+Time: 2022-12-07 15:41:41.501430
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.01865696907043457
+Time: 2022-12-07 15:41:41.522250
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.02112102508544922
+Time: 2022-12-07 15:41:41.546561
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.017698049545288086
+Time: 2022-12-07 15:41:41.567056
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.020559310913085938
+Time: 2022-12-07 15:41:41.590532
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /users/checkout/
+ip_address: 127.0.0.1
+run_time: 0.16415619850158691
+Time: 2022-12-07 15:50:05.150427
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.016825199127197266
+Time: 2022-12-07 15:50:05.217965
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/product/?undefined
+ip_address: 127.0.0.1
+run_time: 0.17036223411560059
+Time: 2022-12-07 15:50:05.370688
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.015980958938598633
+Time: 2022-12-07 15:50:05.390146
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.041748046875
+Time: 2022-12-07 15:50:05.746245
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.025831937789916992
+Time: 2022-12-07 15:50:05.774713
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.01948690414428711
+Time: 2022-12-07 15:50:05.798308
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.017243146896362305
+Time: 2022-12-07 15:50:05.817900
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.017580032348632812
+Time: 2022-12-07 15:50:05.838020
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /users/checkout/
+ip_address: 127.0.0.1
+run_time: 0.12906885147094727
+Time: 2022-12-07 15:50:07.436947
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.02061009407043457
+Time: 2022-12-07 15:50:07.500671
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/product/?undefined
+ip_address: 127.0.0.1
+run_time: 0.2005293369293213
+Time: 2022-12-07 15:50:07.680141
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.01986098289489746
+Time: 2022-12-07 15:50:07.706062
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.037809133529663086
+Time: 2022-12-07 15:50:08.017647
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.018852949142456055
+Time: 2022-12-07 15:50:08.038372
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.018909931182861328
+Time: 2022-12-07 15:50:08.058947
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.015651702880859375
+Time: 2022-12-07 15:50:08.076716
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.017555952072143555
+Time: 2022-12-07 15:50:08.095856
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /users/checkout/
+ip_address: 127.0.0.1
+run_time: 0.14880704879760742
+Time: 2022-12-07 15:51:27.930540
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.02651500701904297
+Time: 2022-12-07 15:51:28.005243
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/product/?undefined
+ip_address: 127.0.0.1
+run_time: 0.21303200721740723
+Time: 2022-12-07 15:51:28.190960
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.01820993423461914
+Time: 2022-12-07 15:51:28.213605
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.04457712173461914
+Time: 2022-12-07 15:51:28.526111
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.02474808692932129
+Time: 2022-12-07 15:51:28.553442
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.01890420913696289
+Time: 2022-12-07 15:51:28.574693
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.019842863082885742
+Time: 2022-12-07 15:51:28.601622
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.018693923950195312
+Time: 2022-12-07 15:51:28.621996
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/order/
+ip_address: 127.0.0.1
+run_time: 0.09729599952697754
+Time: 2022-12-07 15:51:53.729222
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/order-item/
+ip_address: 127.0.0.1
+run_time: 0.09149622917175293
+Time: 2022-12-07 15:55:35.694042
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/order-item/
+ip_address: 127.0.0.1
+run_time: 0.05132603645324707
+Time: 2022-12-07 15:56:30.015801
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /users/checkout/
+ip_address: 127.0.0.1
+run_time: 0.09108185768127441
+Time: 2022-12-07 15:59:58.761123
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.020157337188720703
+Time: 2022-12-07 15:59:58.822274
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/product/?undefined
+ip_address: 127.0.0.1
+run_time: 0.15839195251464844
+Time: 2022-12-07 15:59:58.961421
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.014026165008544922
+Time: 2022-12-07 15:59:58.979004
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.035005807876586914
+Time: 2022-12-07 15:59:59.337359
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.016671180725097656
+Time: 2022-12-07 15:59:59.356165
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.017534971237182617
+Time: 2022-12-07 15:59:59.376625
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.016382217407226562
+Time: 2022-12-07 15:59:59.395186
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.016080856323242188
+Time: 2022-12-07 15:59:59.412799
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /products/
+ip_address: 127.0.0.1
+run_time: 0.11899614334106445
+Time: 2022-12-07 16:00:06.293821
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /img/uploads/%25Y/%25m/%25d/uploads/2022/11/20/solo3-wireless.jpeg
+ip_address: 127.0.0.1
+run_time: 0.01785588264465332
+Time: 2022-12-07 16:00:06.345366
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.022315025329589844
+Time: 2022-12-07 16:00:06.401241
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/product/?undefined
+ip_address: 127.0.0.1
+run_time: 0.19412899017333984
+Time: 2022-12-07 16:00:06.571587
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/product/?undefined
+ip_address: 127.0.0.1
+run_time: 0.17265605926513672
+Time: 2022-12-07 16:00:06.746466
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.03973984718322754
+Time: 2022-12-07 16:00:07.024678
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.017112016677856445
+Time: 2022-12-07 16:00:07.043940
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.016851186752319336
+Time: 2022-12-07 16:00:07.063541
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.017740964889526367
+Time: 2022-12-07 16:00:07.084910
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.01610398292541504
+Time: 2022-12-07 16:00:07.103707
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.048287153244018555
+Time: 2022-12-07 16:00:07.588991
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.02112412452697754
+Time: 2022-12-07 16:00:07.612913
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/product/
+ip_address: 127.0.0.1
+run_time: 0.1435389518737793
+Time: 2022-12-07 16:00:09.229120
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.017529010772705078
+Time: 2022-12-07 16:00:09.253404
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/cart/
+ip_address: 127.0.0.1
+run_time: 0.017189979553222656
+Time: 2022-12-07 16:00:09.253468
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /users/checkout/
+ip_address: 127.0.0.1
+run_time: 0.1332690715789795
+Time: 2022-12-07 16:00:13.036556
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.021231889724731445
+Time: 2022-12-07 16:00:13.118873
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/product/?undefined
+ip_address: 127.0.0.1
+run_time: 0.22747397422790527
+Time: 2022-12-07 16:00:13.324380
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.020787954330444336
+Time: 2022-12-07 16:00:13.349870
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.033926963806152344
+Time: 2022-12-07 16:00:13.632347
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.01926279067993164
+Time: 2022-12-07 16:00:13.653357
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.019694089889526367
+Time: 2022-12-07 16:00:13.675074
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.016638994216918945
+Time: 2022-12-07 16:00:13.693851
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.017286062240600586
+Time: 2022-12-07 16:00:13.713451
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.01798391342163086
+Time: 2022-12-07 16:00:13.733798
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /users/checkout/
+ip_address: 127.0.0.1
+run_time: 0.13106203079223633
+Time: 2022-12-07 16:00:17.667031
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.02242422103881836
+Time: 2022-12-07 16:00:17.727374
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/product/?undefined
+ip_address: 127.0.0.1
+run_time: 0.15721511840820312
+Time: 2022-12-07 16:00:17.861479
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.015039920806884766
+Time: 2022-12-07 16:00:17.879764
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.03638291358947754
+Time: 2022-12-07 16:00:18.252237
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.026845216751098633
+Time: 2022-12-07 16:00:18.281806
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.022571086883544922
+Time: 2022-12-07 16:00:18.307304
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.01862025260925293
+Time: 2022-12-07 16:00:18.331191
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.02009296417236328
+Time: 2022-12-07 16:00:18.353438
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.017812013626098633
+Time: 2022-12-07 16:00:18.374146
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/cart-item/
+ip_address: 127.0.0.1
+run_time: 0.10705900192260742
+Time: 2022-12-07 16:00:55.828463
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/cart-item/13
+ip_address: 127.0.0.1
+run_time: 0.0685420036315918
+Time: 2022-12-07 16:01:07.386561
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/cart-item/14
+ip_address: 127.0.0.1
+run_time: 0.07030868530273438
+Time: 2022-12-07 16:02:08.070294
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /users/checkout/
+ip_address: 127.0.0.1
+run_time: 0.13303875923156738
+Time: 2022-12-07 16:02:42.152062
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.026140928268432617
+Time: 2022-12-07 16:02:42.218533
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/product/?undefined
+ip_address: 127.0.0.1
+run_time: 0.23249006271362305
+Time: 2022-12-07 16:02:42.424256
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.022358179092407227
+Time: 2022-12-07 16:02:42.450863
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.03915095329284668
+Time: 2022-12-07 16:02:42.736498
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.0229337215423584
+Time: 2022-12-07 16:02:42.761934
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.02570509910583496
+Time: 2022-12-07 16:02:42.790630
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.02014303207397461
+Time: 2022-12-07 16:02:42.814561
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.022331953048706055
+Time: 2022-12-07 16:02:42.840323
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.016510009765625
+Time: 2022-12-07 16:02:42.859189
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /users/checkout/
+ip_address: 127.0.0.1
+run_time: 0.11935901641845703
+Time: 2022-12-07 16:02:45.158995
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /img/uploads/%25Y/%25m/%25d/uploads/2022/11/20/hp-spectre-x360.jpg
+ip_address: 127.0.0.1
+run_time: 0.02805495262145996
+Time: 2022-12-07 16:02:45.234293
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /img/uploads/%25Y/%25m/%25d/uploads/2022/11/20/apple-imac-27-retina.jpg
+ip_address: 127.0.0.1
+run_time: 0.030366897583007812
+Time: 2022-12-07 16:02:45.237520
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.016160011291503906
+Time: 2022-12-07 16:02:45.298287
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/product/?undefined
+ip_address: 127.0.0.1
+run_time: 0.14107704162597656
+Time: 2022-12-07 16:02:45.422462
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.016752004623413086
+Time: 2022-12-07 16:02:45.442961
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /users/checkout/favicon.png
+ip_address: 127.0.0.1
+run_time: 0.027476072311401367
+Time: 2022-12-07 16:02:45.532123
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.03812003135681152
+Time: 2022-12-07 16:02:45.822729
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.02405834197998047
+Time: 2022-12-07 16:02:45.849389
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.02188396453857422
+Time: 2022-12-07 16:02:45.873557
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.02120375633239746
+Time: 2022-12-07 16:02:45.897120
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.014833927154541016
+Time: 2022-12-07 16:02:45.913635
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.016622066497802734
+Time: 2022-12-07 16:02:45.931737
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /users/checkout/
+ip_address: 127.0.0.1
+run_time: 0.10722470283508301
+Time: 2022-12-07 16:03:19.947649
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.03289794921875
+Time: 2022-12-07 16:03:20.051624
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/product/?undefined
+ip_address: 127.0.0.1
+run_time: 0.18652701377868652
+Time: 2022-12-07 16:03:20.203053
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.015478134155273438
+Time: 2022-12-07 16:03:20.222356
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.031141996383666992
+Time: 2022-12-07 16:03:20.523959
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.020409107208251953
+Time: 2022-12-07 16:03:20.546837
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.019793987274169922
+Time: 2022-12-07 16:03:20.569328
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.017239809036254883
+Time: 2022-12-07 16:03:20.588976
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.017941951751708984
+Time: 2022-12-07 16:03:20.610332
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.019768953323364258
+Time: 2022-12-07 16:03:20.632212
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /users/checkout/
+ip_address: 127.0.0.1
+run_time: 0.13020706176757812
+Time: 2022-12-07 16:03:21.658062
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /img/uploads/%25Y/%25m/%25d/uploads/2022/11/20/apple-imac-27-retina.jpg
+ip_address: 127.0.0.1
+run_time: 0.02663898468017578
+Time: 2022-12-07 16:03:21.727887
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /img/uploads/%25Y/%25m/%25d/uploads/2022/11/20/hp-spectre-x360.jpg
+ip_address: 127.0.0.1
+run_time: 0.03168177604675293
+Time: 2022-12-07 16:03:21.728774
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.020284175872802734
+Time: 2022-12-07 16:03:21.799901
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /users/checkout/favicon.png
+ip_address: 127.0.0.1
+run_time: 0.020735979080200195
+Time: 2022-12-07 16:03:21.876429
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/product/?undefined
+ip_address: 127.0.0.1
+run_time: 0.17516088485717773
+Time: 2022-12-07 16:03:21.954040
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.015758037567138672
+Time: 2022-12-07 16:03:21.973239
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.03819894790649414
+Time: 2022-12-07 16:03:22.317751
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.023003816604614258
+Time: 2022-12-07 16:03:22.344018
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.018726825714111328
+Time: 2022-12-07 16:03:22.366724
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.019613027572631836
+Time: 2022-12-07 16:03:22.388503
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.01690673828125
+Time: 2022-12-07 16:03:22.408006
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.01816701889038086
+Time: 2022-12-07 16:03:22.428714
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /users/checkout/
+ip_address: 127.0.0.1
+run_time: 0.15644478797912598
+Time: 2022-12-07 16:03:46.505212
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.023595094680786133
+Time: 2022-12-07 16:03:46.583367
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/product/?undefined
+ip_address: 127.0.0.1
+run_time: 0.18641901016235352
+Time: 2022-12-07 16:03:46.741990
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.017576217651367188
+Time: 2022-12-07 16:03:46.764116
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.045664072036743164
+Time: 2022-12-07 16:03:47.109842
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.018009185791015625
+Time: 2022-12-07 16:03:47.129905
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.014883995056152344
+Time: 2022-12-07 16:03:47.146449
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.014490842819213867
+Time: 2022-12-07 16:03:47.162469
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.014590978622436523
+Time: 2022-12-07 16:03:47.178538
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.014134883880615234
+Time: 2022-12-07 16:03:47.194250
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /users/checkout/
+ip_address: 127.0.0.1
+run_time: 0.11439895629882812
+Time: 2022-12-07 16:03:47.742532
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /img/uploads/%25Y/%25m/%25d/uploads/2022/11/20/apple-imac-27-retina.jpg
+ip_address: 127.0.0.1
+run_time: 0.03138089179992676
+Time: 2022-12-07 16:03:47.817840
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /img/uploads/%25Y/%25m/%25d/uploads/2022/11/20/hp-spectre-x360.jpg
+ip_address: 127.0.0.1
+run_time: 0.030612945556640625
+Time: 2022-12-07 16:03:47.817941
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.020740032196044922
+Time: 2022-12-07 16:03:47.886710
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /users/checkout/favicon.png
+ip_address: 127.0.0.1
+run_time: 0.01768779754638672
+Time: 2022-12-07 16:03:47.955924
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/product/?undefined
+ip_address: 127.0.0.1
+run_time: 0.15208721160888672
+Time: 2022-12-07 16:03:48.017231
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.016621112823486328
+Time: 2022-12-07 16:03:48.037192
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.03577589988708496
+Time: 2022-12-07 16:03:48.404796
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.02303290367126465
+Time: 2022-12-07 16:03:48.430033
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.020275115966796875
+Time: 2022-12-07 16:03:48.453048
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.02224111557006836
+Time: 2022-12-07 16:03:48.479354
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.0172879695892334
+Time: 2022-12-07 16:03:48.503548
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.019465923309326172
+Time: 2022-12-07 16:03:48.528895
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /users/checkout/
+ip_address: 127.0.0.1
+run_time: 0.14062905311584473
+Time: 2022-12-07 16:04:02.188442
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.027720928192138672
+Time: 2022-12-07 16:04:02.281001
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/product/?undefined
+ip_address: 127.0.0.1
+run_time: 0.19061803817749023
+Time: 2022-12-07 16:04:02.441220
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.02068305015563965
+Time: 2022-12-07 16:04:02.467554
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.04407811164855957
+Time: 2022-12-07 16:04:02.805030
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.023506879806518555
+Time: 2022-12-07 16:04:02.831183
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.0204617977142334
+Time: 2022-12-07 16:04:02.854373
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.017503023147583008
+Time: 2022-12-07 16:04:02.874267
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.023254871368408203
+Time: 2022-12-07 16:04:02.899959
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.023938894271850586
+Time: 2022-12-07 16:04:02.926786
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /users/checkout/
+ip_address: 127.0.0.1
+run_time: 0.07504773139953613
+Time: 2022-12-07 16:04:02.971459
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /img/uploads/%25Y/%25m/%25d/uploads/2022/11/20/hp-spectre-x360.jpg
+ip_address: 127.0.0.1
+run_time: 0.028767108917236328
+Time: 2022-12-07 16:04:03.041115
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /img/uploads/%25Y/%25m/%25d/uploads/2022/11/20/apple-imac-27-retina.jpg
+ip_address: 127.0.0.1
+run_time: 0.02807784080505371
+Time: 2022-12-07 16:04:03.041531
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.01703500747680664
+Time: 2022-12-07 16:04:03.114241
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /users/checkout/favicon.png
+ip_address: 127.0.0.1
+run_time: 0.01840519905090332
+Time: 2022-12-07 16:04:03.191404
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/product/?undefined
+ip_address: 127.0.0.1
+run_time: 0.1524181365966797
+Time: 2022-12-07 16:04:03.248896
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.01653599739074707
+Time: 2022-12-07 16:04:03.268803
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.03307700157165527
+Time: 2022-12-07 16:04:03.630285
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.025815963745117188
+Time: 2022-12-07 16:04:03.660355
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.019778728485107422
+Time: 2022-12-07 16:04:03.682704
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.01645493507385254
+Time: 2022-12-07 16:04:03.701365
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.03928399085998535
+Time: 2022-12-07 16:04:03.742944
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.015715837478637695
+Time: 2022-12-07 16:04:03.761059
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /users/checkout/
+ip_address: 127.0.0.1
+run_time: 0.12904095649719238
+Time: 2022-12-07 16:04:48.306503
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.03774404525756836
+Time: 2022-12-07 16:04:48.395941
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/product/?undefined
+ip_address: 127.0.0.1
+run_time: 0.18728995323181152
+Time: 2022-12-07 16:04:48.544826
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.014213085174560547
+Time: 2022-12-07 16:04:48.562536
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.034632205963134766
+Time: 2022-12-07 16:04:48.895956
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.038240909576416016
+Time: 2022-12-07 16:04:48.936946
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.019558191299438477
+Time: 2022-12-07 16:04:48.959120
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.018387794494628906
+Time: 2022-12-07 16:04:48.979536
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.018151044845581055
+Time: 2022-12-07 16:04:49.000020
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.015017032623291016
+Time: 2022-12-07 16:04:49.017530
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /users/checkout/
+ip_address: 127.0.0.1
+run_time: 0.14636802673339844
+Time: 2022-12-07 16:04:51.527709
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /img/uploads/%25Y/%25m/%25d/uploads/2022/11/20/apple-imac-27-retina.jpg
+ip_address: 127.0.0.1
+run_time: 0.025038957595825195
+Time: 2022-12-07 16:04:51.625864
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /img/uploads/%25Y/%25m/%25d/uploads/2022/11/20/hp-spectre-x360.jpg
+ip_address: 127.0.0.1
+run_time: 0.03195977210998535
+Time: 2022-12-07 16:04:51.625943
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.0195009708404541
+Time: 2022-12-07 16:04:51.695285
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /users/checkout/favicon.png
+ip_address: 127.0.0.1
+run_time: 0.017806053161621094
+Time: 2022-12-07 16:04:51.789565
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/product/?undefined
+ip_address: 127.0.0.1
+run_time: 0.14855670928955078
+Time: 2022-12-07 16:04:51.823554
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.015810012817382812
+Time: 2022-12-07 16:04:51.842554
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.03484201431274414
+Time: 2022-12-07 16:04:52.214379
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.022122859954833984
+Time: 2022-12-07 16:04:52.238682
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.01942586898803711
+Time: 2022-12-07 16:04:52.260602
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.01910090446472168
+Time: 2022-12-07 16:04:52.282054
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.016616106033325195
+Time: 2022-12-07 16:04:52.301152
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.017811298370361328
+Time: 2022-12-07 16:04:52.320695
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /users/checkout/
+ip_address: 127.0.0.1
+run_time: 0.10196995735168457
+Time: 2022-12-07 16:04:54.297254
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.0477910041809082
+Time: 2022-12-07 16:04:54.388857
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/product/?undefined
+ip_address: 127.0.0.1
+run_time: 0.1961510181427002
+Time: 2022-12-07 16:04:54.535890
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.014184951782226562
+Time: 2022-12-07 16:04:54.553810
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.027734041213989258
+Time: 2022-12-07 16:04:54.873015
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.021094083786010742
+Time: 2022-12-07 16:04:54.895905
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.01806807518005371
+Time: 2022-12-07 16:04:54.916767
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.01688694953918457
+Time: 2022-12-07 16:04:54.936705
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.017647981643676758
+Time: 2022-12-07 16:04:54.956332
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.01658320426940918
+Time: 2022-12-07 16:04:54.975068
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: DELETE
+request_path: /api/cart-item/14
+ip_address: 127.0.0.1
+run_time: 0.06992793083190918
+Time: 2022-12-07 16:05:42.600638
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /users/checkout/
+ip_address: 127.0.0.1
+run_time: 0.13433504104614258
+Time: 2022-12-07 16:05:45.512056
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.02059483528137207
+Time: 2022-12-07 16:05:45.598778
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/product/?undefined
+ip_address: 127.0.0.1
+run_time: 0.17635297775268555
+Time: 2022-12-07 16:05:45.753936
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.01892995834350586
+Time: 2022-12-07 16:05:45.777362
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.03674125671386719
+Time: 2022-12-07 16:05:46.098493
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.024778127670288086
+Time: 2022-12-07 16:05:46.125158
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.018735885620117188
+Time: 2022-12-07 16:05:46.146322
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.01840376853942871
+Time: 2022-12-07 16:05:46.167587
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.016525983810424805
+Time: 2022-12-07 16:05:46.186267
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.021514892578125
+Time: 2022-12-07 16:05:46.209849
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: DELETE
+request_path: /api/cart-item/13
+ip_address: 127.0.0.1
+run_time: 0.042887210845947266
+Time: 2022-12-07 16:05:49.730779
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /users/checkout/
+ip_address: 127.0.0.1
+run_time: 0.11099386215209961
+Time: 2022-12-07 16:05:51.064909
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.03350090980529785
+Time: 2022-12-07 16:05:51.153131
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/product/?undefined
+ip_address: 127.0.0.1
+run_time: 0.1701960563659668
+Time: 2022-12-07 16:05:51.288067
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.016424894332885742
+Time: 2022-12-07 16:05:51.308046
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.04541182518005371
+Time: 2022-12-07 16:05:51.666821
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.026867151260375977
+Time: 2022-12-07 16:05:51.696816
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.019058942794799805
+Time: 2022-12-07 16:05:51.718513
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.015810012817382812
+Time: 2022-12-07 16:05:51.736744
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.015827178955078125
+Time: 2022-12-07 16:05:51.756714
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.01633167266845703
+Time: 2022-12-07 16:05:51.776368
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/cart-item/
+ip_address: 127.0.0.1
+run_time: 0.07813882827758789
+Time: 2022-12-07 16:05:55.485858
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/cart/
+ip_address: 127.0.0.1
+run_time: 0.01634693145751953
+Time: 2022-12-07 16:05:55.504816
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/cart/
+ip_address: 127.0.0.1
+run_time: 0.01566481590270996
+Time: 2022-12-07 16:05:55.521826
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /users/checkout/
+ip_address: 127.0.0.1
+run_time: 0.10342192649841309
+Time: 2022-12-07 16:06:03.890594
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.023260831832885742
+Time: 2022-12-07 16:06:03.952363
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/product/?undefined
+ip_address: 127.0.0.1
+run_time: 0.14624810218811035
+Time: 2022-12-07 16:06:04.074517
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.0155029296875
+Time: 2022-12-07 16:06:04.093456
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /products/
+ip_address: 127.0.0.1
+run_time: 0.18480324745178223
+Time: 2022-12-07 16:06:06.081345
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.03617691993713379
+Time: 2022-12-07 16:06:06.181442
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/product/?undefined
+ip_address: 127.0.0.1
+run_time: 0.15853095054626465
+Time: 2022-12-07 16:06:06.303086
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/product/?undefined
+ip_address: 127.0.0.1
+run_time: 0.17411470413208008
+Time: 2022-12-07 16:06:06.478751
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.034799814224243164
+Time: 2022-12-07 16:06:06.801093
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /products/favicon.png
+ip_address: 127.0.0.1
+run_time: 0.03590726852416992
+Time: 2022-12-07 16:06:06.810970
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.021793127059936523
+Time: 2022-12-07 16:06:06.828911
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/product/
+ip_address: 127.0.0.1
+run_time: 0.2630429267883301
+Time: 2022-12-07 16:06:09.637305
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.03812694549560547
+Time: 2022-12-07 16:06:09.689291
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/cart/
+ip_address: 127.0.0.1
+run_time: 0.03476095199584961
+Time: 2022-12-07 16:06:09.689375
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/product/
+ip_address: 127.0.0.1
+run_time: 0.28125905990600586
+Time: 2022-12-07 16:06:13.341492
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.046527862548828125
+Time: 2022-12-07 16:06:13.404609
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/cart/
+ip_address: 127.0.0.1
+run_time: 0.041300058364868164
+Time: 2022-12-07 16:06:13.404661
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /users/checkout/
+ip_address: 127.0.0.1
+run_time: 0.1345047950744629
+Time: 2022-12-07 16:06:15.402698
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.019552946090698242
+Time: 2022-12-07 16:06:15.492014
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/product/?undefined
+ip_address: 127.0.0.1
+run_time: 0.19105219841003418
+Time: 2022-12-07 16:06:15.650321
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.03470611572265625
+Time: 2022-12-07 16:06:15.688816
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.03896498680114746
+Time: 2022-12-07 16:06:16.000867
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.023003101348876953
+Time: 2022-12-07 16:06:16.026933
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /users/checkout/
+ip_address: 127.0.0.1
+run_time: 0.15761017799377441
+Time: 2022-12-07 16:08:56.992695
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.025080204010009766
+Time: 2022-12-07 16:08:57.074316
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/product/?undefined
+ip_address: 127.0.0.1
+run_time: 0.15927410125732422
+Time: 2022-12-07 16:08:57.207853
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.015708208084106445
+Time: 2022-12-07 16:08:57.227157
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.048738956451416016
+Time: 2022-12-07 16:08:57.609852
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.0267031192779541
+Time: 2022-12-07 16:08:57.641048
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /users/checkout/
+ip_address: 127.0.0.1
+run_time: 0.14630126953125
+Time: 2022-12-07 16:09:07.988934
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /img/uploads/%25Y/%25m/%25d/uploads/2022/11/20/apple-imac-27-retina.jpg
+ip_address: 127.0.0.1
+run_time: 0.02743077278137207
+Time: 2022-12-07 16:09:08.070010
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /img/uploads/%25Y/%25m/%25d/uploads/2022/11/20/macbook-air-midnight.webp
+ip_address: 127.0.0.1
+run_time: 0.03076004981994629
+Time: 2022-12-07 16:09:08.072380
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.016654014587402344
+Time: 2022-12-07 16:09:08.163041
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/product/?undefined
+ip_address: 127.0.0.1
+run_time: 0.1838688850402832
+Time: 2022-12-07 16:09:08.329584
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.020365238189697266
+Time: 2022-12-07 16:09:08.359504
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /users/checkout/favicon.png
+ip_address: 127.0.0.1
+run_time: 0.035942792892456055
+Time: 2022-12-07 16:09:08.408941
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.029102087020874023
+Time: 2022-12-07 16:09:08.674500
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.015908241271972656
+Time: 2022-12-07 16:09:08.691950
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /users/checkout/
+ip_address: 127.0.0.1
+run_time: 0.13110017776489258
+Time: 2022-12-07 16:09:29.800511
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.019817829132080078
+Time: 2022-12-07 16:09:29.879202
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/product/?undefined
+ip_address: 127.0.0.1
+run_time: 0.14310193061828613
+Time: 2022-12-07 16:09:30.001735
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.015501976013183594
+Time: 2022-12-07 16:09:30.020745
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.04264712333679199
+Time: 2022-12-07 16:09:30.411692
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.01737499237060547
+Time: 2022-12-07 16:09:30.430750
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: DELETE
+request_path: /api/cart-item/15
+ip_address: 127.0.0.1
+run_time: 0.08492708206176758
+Time: 2022-12-07 16:09:57.883186
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /users/checkout/
+ip_address: 127.0.0.1
+run_time: 0.10919308662414551
+Time: 2022-12-07 16:09:59.467986
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.020985841751098633
+Time: 2022-12-07 16:09:59.567706
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/product/?undefined
+ip_address: 127.0.0.1
+run_time: 0.16727662086486816
+Time: 2022-12-07 16:09:59.687665
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.01653599739074707
+Time: 2022-12-07 16:09:59.708090
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.021765947341918945
+Time: 2022-12-07 16:10:00.053520
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.02414083480834961
+Time: 2022-12-07 16:10:00.080267
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/cart-item/
+ip_address: 127.0.0.1
+run_time: 0.10437893867492676
+Time: 2022-12-07 16:10:05.557144
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/cart/
+ip_address: 127.0.0.1
+run_time: 0.020688772201538086
+Time: 2022-12-07 16:10:05.581693
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/cart/
+ip_address: 127.0.0.1
+run_time: 0.017387866973876953
+Time: 2022-12-07 16:10:05.601862
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/cart/
+ip_address: 127.0.0.1
+run_time: 0.018098831176757812
+Time: 2022-12-07 16:10:05.622962
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /products/
+ip_address: 127.0.0.1
+run_time: 0.21439099311828613
+Time: 2022-12-07 16:10:11.990761
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.040518999099731445
+Time: 2022-12-07 16:10:12.105529
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/product/?undefined
+ip_address: 127.0.0.1
+run_time: 0.17630696296691895
+Time: 2022-12-07 16:10:12.236685
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/product/?undefined
+ip_address: 127.0.0.1
+run_time: 0.15081381797790527
+Time: 2022-12-07 16:10:12.389712
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.0391697883605957
+Time: 2022-12-07 16:10:12.766126
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.046813249588012695
+Time: 2022-12-07 16:10:12.766248
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /products/favicon.png
+ip_address: 127.0.0.1
+run_time: 0.023463964462280273
+Time: 2022-12-07 16:10:12.773515
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.019834280014038086
+Time: 2022-12-07 16:10:12.794264
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/product/
+ip_address: 127.0.0.1
+run_time: 0.26706981658935547
+Time: 2022-12-07 16:10:16.935756
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/cart/
+ip_address: 127.0.0.1
+run_time: 0.02866983413696289
+Time: 2022-12-07 16:10:16.975544
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.03030109405517578
+Time: 2022-12-07 16:10:16.975601
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /products/
+ip_address: 127.0.0.1
+run_time: 0.1812419891357422
+Time: 2022-12-07 16:10:21.376018
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.024183034896850586
+Time: 2022-12-07 16:10:21.446827
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/product/?undefined
+ip_address: 127.0.0.1
+run_time: 0.18264102935791016
+Time: 2022-12-07 16:10:21.603592
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.0167238712310791
+Time: 2022-12-07 16:10:21.625893
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/product/?undefined
+ip_address: 127.0.0.1
+run_time: 0.14467787742614746
+Time: 2022-12-07 16:10:21.750355
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.015161752700805664
+Time: 2022-12-07 16:10:21.770299
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.0174868106842041
+Time: 2022-12-07 16:10:21.939109
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.01671886444091797
+Time: 2022-12-07 16:10:21.957941
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /users/checkout/
+ip_address: 127.0.0.1
+run_time: 0.09623503684997559
+Time: 2022-12-07 16:10:25.990889
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.018640995025634766
+Time: 2022-12-07 16:10:26.047331
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/product/?undefined
+ip_address: 127.0.0.1
+run_time: 0.1493818759918213
+Time: 2022-12-07 16:10:26.177340
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.015861988067626953
+Time: 2022-12-07 16:10:26.198667
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.036314964294433594
+Time: 2022-12-07 16:10:26.565898
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.024811983108520508
+Time: 2022-12-07 16:10:26.593106
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /users/checkout/
+ip_address: 127.0.0.1
+run_time: 0.17885494232177734
+Time: 2022-12-07 16:11:49.984663
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.025189876556396484
+Time: 2022-12-07 16:11:50.088063
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/product/?undefined
+ip_address: 127.0.0.1
+run_time: 0.14868831634521484
+Time: 2022-12-07 16:11:50.209767
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.015092849731445312
+Time: 2022-12-07 16:11:50.228525
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.05556011199951172
+Time: 2022-12-07 16:11:50.610567
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.03719902038574219
+Time: 2022-12-07 16:11:50.652167
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: DELETE
+request_path: /api/cart-item/16
+ip_address: 127.0.0.1
+run_time: 0.044584035873413086
+Time: 2022-12-07 16:11:54.655101
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /users/checkout/
+ip_address: 127.0.0.1
+run_time: 0.11967015266418457
+Time: 2022-12-07 16:11:56.254829
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.03298211097717285
+Time: 2022-12-07 16:11:56.337930
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/product/?undefined
+ip_address: 127.0.0.1
+run_time: 0.15082979202270508
+Time: 2022-12-07 16:11:56.455064
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.01472616195678711
+Time: 2022-12-07 16:11:56.472931
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.039526939392089844
+Time: 2022-12-07 16:11:56.856220
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.020912885665893555
+Time: 2022-12-07 16:11:56.879409
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /users/checkout/
+ip_address: 127.0.0.1
+run_time: 0.15926194190979004
+Time: 2022-12-07 16:12:19.460753
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /img/uploads/%25Y/%25m/%25d/uploads/2022/11/20/microsoft-surface-studio.jpg
+ip_address: 127.0.0.1
+run_time: 0.026521921157836914
+Time: 2022-12-07 16:12:19.530377
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.017342329025268555
+Time: 2022-12-07 16:12:19.620088
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/product/?undefined
+ip_address: 127.0.0.1
+run_time: 0.15201902389526367
+Time: 2022-12-07 16:12:19.753979
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.01610708236694336
+Time: 2022-12-07 16:12:19.774027
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /users/checkout/favicon.png
+ip_address: 127.0.0.1
+run_time: 0.03013300895690918
+Time: 2022-12-07 16:12:19.845818
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.03034186363220215
+Time: 2022-12-07 16:12:20.134609
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.017098188400268555
+Time: 2022-12-07 16:12:20.153269
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /users/checkout/
+ip_address: 127.0.0.1
+run_time: 0.13359284400939941
+Time: 2022-12-07 16:12:25.778913
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.01731109619140625
+Time: 2022-12-07 16:12:25.844393
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/product/?undefined
+ip_address: 127.0.0.1
+run_time: 0.17339086532592773
+Time: 2022-12-07 16:12:25.999673
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.015171289443969727
+Time: 2022-12-07 16:12:26.018297
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.04696822166442871
+Time: 2022-12-07 16:12:26.382140
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.030138015747070312
+Time: 2022-12-07 16:12:26.415153
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /users/checkout/
+ip_address: 127.0.0.1
+run_time: 0.1370377540588379
+Time: 2022-12-07 16:12:38.471958
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.02868509292602539
+Time: 2022-12-07 16:12:38.542950
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/product/?undefined
+ip_address: 127.0.0.1
+run_time: 0.15510201454162598
+Time: 2022-12-07 16:12:38.668280
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.01499319076538086
+Time: 2022-12-07 16:12:38.686426
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.03711581230163574
+Time: 2022-12-07 16:12:39.058895
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.021259069442749023
+Time: 2022-12-07 16:12:39.082787
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /users/checkout/
+ip_address: 127.0.0.1
+run_time: 0.11646699905395508
+Time: 2022-12-07 16:13:00.267376
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.01773810386657715
+Time: 2022-12-07 16:13:00.322930
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/product/?undefined
+ip_address: 127.0.0.1
+run_time: 0.1381549835205078
+Time: 2022-12-07 16:13:00.442525
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.014734029769897461
+Time: 2022-12-07 16:13:00.460545
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.043253421783447266
+Time: 2022-12-07 16:13:00.856758
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.02653217315673828
+Time: 2022-12-07 16:13:00.885582
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /users/checkout/
+ip_address: 127.0.0.1
+run_time: 0.11187195777893066
+Time: 2022-12-07 16:13:06.899992
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.021198034286499023
+Time: 2022-12-07 16:13:06.960734
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/product/?undefined
+ip_address: 127.0.0.1
+run_time: 0.16646981239318848
+Time: 2022-12-07 16:13:07.105069
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.013900995254516602
+Time: 2022-12-07 16:13:07.122211
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.0447690486907959
+Time: 2022-12-07 16:13:07.491735
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.02453780174255371
+Time: 2022-12-07 16:13:07.518783
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /users/checkout/
+ip_address: 127.0.0.1
+run_time: 0.1561589241027832
+Time: 2022-12-07 16:13:25.731804
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.01680612564086914
+Time: 2022-12-07 16:13:25.785309
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/product/?undefined
+ip_address: 127.0.0.1
+run_time: 0.1442737579345703
+Time: 2022-12-07 16:13:25.911842
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.014239072799682617
+Time: 2022-12-07 16:13:25.929220
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.039628028869628906
+Time: 2022-12-07 16:13:26.316417
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.030792951583862305
+Time: 2022-12-07 16:13:26.349489
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /users/checkout/
+ip_address: 127.0.0.1
+run_time: 0.11346983909606934
+Time: 2022-12-07 16:13:38.096909
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.016940832138061523
+Time: 2022-12-07 16:13:38.155495
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/product/?undefined
+ip_address: 127.0.0.1
+run_time: 0.15861082077026367
+Time: 2022-12-07 16:13:38.296339
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.0163729190826416
+Time: 2022-12-07 16:13:38.316627
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.04183602333068848
+Time: 2022-12-07 16:13:38.687253
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.018358707427978516
+Time: 2022-12-07 16:13:38.707758
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /users/checkout/
+ip_address: 127.0.0.1
+run_time: 0.096771240234375
+Time: 2022-12-07 16:13:51.070435
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.01870584487915039
+Time: 2022-12-07 16:13:51.122750
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/product/?undefined
+ip_address: 127.0.0.1
+run_time: 0.14104795455932617
+Time: 2022-12-07 16:13:51.244345
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.015976905822753906
+Time: 2022-12-07 16:13:51.263959
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.03861498832702637
+Time: 2022-12-07 16:13:51.650811
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.025014638900756836
+Time: 2022-12-07 16:13:51.678267
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /products/
+ip_address: 127.0.0.1
+run_time: 0.1728651523590088
+Time: 2022-12-07 16:13:56.161281
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.02895379066467285
+Time: 2022-12-07 16:13:56.251770
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/product/?undefined
+ip_address: 127.0.0.1
+run_time: 0.15559101104736328
+Time: 2022-12-07 16:13:56.377741
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/product/?undefined
+ip_address: 127.0.0.1
+run_time: 0.12946295738220215
+Time: 2022-12-07 16:13:56.508617
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.043318986892700195
+Time: 2022-12-07 16:13:56.853637
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.05426287651062012
+Time: 2022-12-07 16:13:56.855025
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /products/favicon.png
+ip_address: 127.0.0.1
+run_time: 0.04854917526245117
+Time: 2022-12-07 16:13:56.871545
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.031004905700683594
+Time: 2022-12-07 16:13:56.891561
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.02141094207763672
+Time: 2022-12-07 16:13:56.892492
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/product/
+ip_address: 127.0.0.1
+run_time: 0.29402899742126465
+Time: 2022-12-07 16:13:58.726707
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/cart/
+ip_address: 127.0.0.1
+run_time: 0.023256778717041016
+Time: 2022-12-07 16:13:58.755581
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.02478170394897461
+Time: 2022-12-07 16:13:58.755631
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /users/checkout/
+ip_address: 127.0.0.1
+run_time: 0.09995794296264648
+Time: 2022-12-07 16:14:00.845167
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.017013072967529297
+Time: 2022-12-07 16:14:00.919196
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/product/?undefined
+ip_address: 127.0.0.1
+run_time: 0.17444872856140137
+Time: 2022-12-07 16:14:01.074935
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.01958298683166504
+Time: 2022-12-07 16:14:01.099034
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.039154767990112305
+Time: 2022-12-07 16:14:01.446731
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.022800922393798828
+Time: 2022-12-07 16:14:01.472730
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.018626689910888672
+Time: 2022-12-07 16:14:01.493483
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/order/
+ip_address: 127.0.0.1
+run_time: 0.06320810317993164
+Time: 2022-12-07 16:15:11.742441
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/order/
+ip_address: 127.0.0.1
+run_time: 0.057385921478271484
+Time: 2022-12-07 16:17:28.308060
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /favicon.ico
+ip_address: 127.0.0.1
+run_time: 0.019031047821044922
+Time: 2022-12-07 16:17:28.390210
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/cart/
+ip_address: 127.0.0.1
+run_time: 0.11220979690551758
+Time: 2022-12-07 16:20:07.081294
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/schema/swagger-ui/
+ip_address: 127.0.0.1
+run_time: 0.0643758773803711
+Time: 2022-12-07 16:21:40.068853
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/schema/
+ip_address: 127.0.0.1
+run_time: 0.09378576278686523
+Time: 2022-12-07 16:21:40.278431
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/schema/swagger-ui/
+ip_address: 127.0.0.1
+run_time: 0.07434511184692383
+Time: 2022-12-07 16:22:44.561230
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/schema/
+ip_address: 127.0.0.1
+run_time: 0.07898211479187012
+Time: 2022-12-07 16:22:44.794336
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/order-item/
+ip_address: 127.0.0.1
+run_time: 0.0394289493560791
+Time: 2022-12-07 16:22:52.346365
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/cart-item/
+ip_address: 127.0.0.1
+run_time: 0.08200192451477051
+Time: 2022-12-07 16:23:02.168764
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/order-item/
+ip_address: 127.0.0.1
+run_time: 0.12618589401245117
+Time: 2022-12-07 16:23:26.107863
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/order-item/
+ip_address: 127.0.0.1
+run_time: 0.06209397315979004
+Time: 2022-12-07 16:23:47.871762
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /users/checkout/
+ip_address: 127.0.0.1
+run_time: 0.16457295417785645
+Time: 2022-12-07 18:56:23.044748
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.028012752532958984
+Time: 2022-12-07 18:56:23.131186
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.04057168960571289
+Time: 2022-12-07 18:56:23.653099
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.024634122848510742
+Time: 2022-12-07 18:56:23.680133
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: Lamans-MacBook-Pro.local
+request_method: GET
+request_path: /api/category/
+ip_address: 127.0.0.1
+run_time: 0.019456863403320312
+Time: 2022-12-07 18:56:23.702324
+--------------------------------------------------

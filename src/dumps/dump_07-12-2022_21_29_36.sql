@@ -1508,7 +1508,9 @@ CREATE TABLE public.users_orderitem (
     created_at date NOT NULL,
     modified_at date NOT NULL,
     order_id bigint NOT NULL,
-    product_id bigint NOT NULL
+    product_id bigint NOT NULL,
+    quantity integer NOT NULL,
+    CONSTRAINT users_orderitem_quantity_check CHECK ((quantity >= 0))
 );
 
 
@@ -2364,6 +2366,12 @@ COPY public.django_admin_log (id, action_time, object_id, object_repr, action_fl
 167	2022-12-07 06:21:17.068167+00	4	lamankalbiyeva@gmail.com	3		22	1
 168	2022-12-07 06:21:17.075328+00	3	lamankalbiyeva@gmail.com	3		22	1
 169	2022-12-07 06:22:16.719499+00	5	lamankalbiyeva@gmail.com	2	[{"changed": {"fields": ["Quantity"]}}]	22	1
+170	2022-12-07 10:52:46.456448+00	10	admin@gmail.com	3		19	1
+171	2022-12-07 10:52:46.463823+00	9	admin@gmail.com	3		19	1
+172	2022-12-07 10:52:46.467633+00	8	admin@gmail.com	3		19	1
+173	2022-12-07 10:52:46.471762+00	7	admin@gmail.com	3		19	1
+174	2022-12-07 10:52:46.475377+00	6	admin@gmail.com	3		19	1
+175	2022-12-07 10:52:46.478746+00	5	admin@gmail.com	3		19	1
 \.
 
 
@@ -2540,6 +2548,7 @@ COPY public.django_migrations (id, app, name, applied) FROM stdin;
 76	core	0004_rename_mail_subscriber_email	2022-11-24 08:37:44.660853+00
 77	product	0025_product_discounted_price	2022-12-07 06:09:29.136207+00
 78	users	0005_alter_order_promo_code	2022-12-07 06:09:29.153711+00
+79	users	0006_orderitem_quantity_alter_order_status	2022-12-07 10:53:23.256654+00
 \.
 
 
@@ -2780,7 +2789,8 @@ COPY public.users_cart (id, total, created_at, modified_at, owner_id) FROM stdin
 COPY public.users_cartitem (id, quantity, added_at, modified_at, cart_id, product_id) FROM stdin;
 2	1	2022-11-25	2022-11-25	1	1
 1	1	2022-11-25	2022-11-25	1	9
-13	1	2022-12-07	2022-12-07	2	11
+17	1	2022-12-07	2022-12-07	2	8
+18	1	2022-12-07	2022-12-07	2	6
 \.
 
 
@@ -2789,12 +2799,8 @@ COPY public.users_cartitem (id, quantity, added_at, modified_at, cart_id, produc
 --
 
 COPY public.users_order (id, status, phone, email, total, products_quantity, country, city, street, building, zip, payment, promo_code, complete, created_at, modified_at, user_id) FROM stdin;
-5		0(534) 920 59 96	admin@gmail.com	1234	0	AX	Baku	cdcdcd	3	21	3	2111es	f	2022-11-19 13:55:48.19377+00	2022-11-19 13:55:48.217331+00	1
-6		0(534) 920 59 96	admin@gmail.com	1234	0	AX	wds	wsewa	12	12	2	12qws	f	2022-11-19 14:00:07.715827+00	2022-11-19 14:00:07.727764+00	1
-7		0(534) 920 59 96	admin@gmail.com	1234	0	AS	dcsc	scac	23	12	2	1wdsw	f	2022-11-19 15:41:58.349859+00	2022-11-19 15:41:58.366413+00	1
-8		23232323232	admin@gmail.com	1234	0	AL	fdfcd	cfdecfd	12	21	1	dwsxwd	f	2022-11-24 15:05:58.812109+00	2022-11-24 15:05:58.821885+00	1
-9		23456789	admin@gmail.com	1234	0	AS	xsxs	sxss	12	12	2	hvghftr	f	2022-11-24 17:00:51.077527+00	2022-11-24 17:00:51.094397+00	1
-10		23424243243	admin@gmail.com	1234	0	AL	wdd	dsxsxd	12	21	2		f	2022-11-25 08:27:02.132229+00	2022-11-25 08:27:02.148606+00	1
+11	canceled	string	user@example.com	0	2	string	string	string	3	3	3	string	t	2022-12-07 11:49:34.038661+00	2022-12-07 11:49:34.038728+00	1
+12	on_processing	+994503425622	lamankalbiyeva@gmail.com	9809.95	1	AZ	dsad	hbh	5	5	2	saxx	f	2022-12-07 11:51:41.408858+00	2022-12-07 11:51:41.408868+00	3
 \.
 
 
@@ -2802,13 +2808,8 @@ COPY public.users_order (id, status, phone, email, total, products_quantity, cou
 -- Data for Name: users_orderitem; Type: TABLE DATA; Schema: public; Owner: unistore
 --
 
-COPY public.users_orderitem (id, created_at, modified_at, order_id, product_id) FROM stdin;
-4	2022-11-19	2022-11-19	5	1
-5	2022-11-19	2022-11-19	6	1
-6	2022-11-19	2022-11-19	7	1
-7	2022-11-24	2022-11-24	8	1
-8	2022-11-24	2022-11-24	9	1
-9	2022-11-25	2022-11-25	10	1
+COPY public.users_orderitem (id, created_at, modified_at, order_id, product_id, quantity) FROM stdin;
+13	2022-12-07	2022-12-07	11	3	2
 \.
 
 
@@ -2920,7 +2921,7 @@ SELECT pg_catalog.setval('public.core_subscriber_id_seq', 5, true);
 -- Name: django_admin_log_id_seq; Type: SEQUENCE SET; Schema: public; Owner: unistore
 --
 
-SELECT pg_catalog.setval('public.django_admin_log_id_seq', 169, true);
+SELECT pg_catalog.setval('public.django_admin_log_id_seq', 175, true);
 
 
 --
@@ -2969,7 +2970,7 @@ SELECT pg_catalog.setval('public.django_content_type_id_seq', 34, true);
 -- Name: django_migrations_id_seq; Type: SEQUENCE SET; Schema: public; Owner: unistore
 --
 
-SELECT pg_catalog.setval('public.django_migrations_id_seq', 78, true);
+SELECT pg_catalog.setval('public.django_migrations_id_seq', 79, true);
 
 
 --
@@ -3067,21 +3068,21 @@ SELECT pg_catalog.setval('public.users_cart_id_seq', 2, true);
 -- Name: users_cartitem_id_seq; Type: SEQUENCE SET; Schema: public; Owner: unistore
 --
 
-SELECT pg_catalog.setval('public.users_cartitem_id_seq', 13, true);
+SELECT pg_catalog.setval('public.users_cartitem_id_seq', 18, true);
 
 
 --
 -- Name: users_order_id_seq; Type: SEQUENCE SET; Schema: public; Owner: unistore
 --
 
-SELECT pg_catalog.setval('public.users_order_id_seq', 10, true);
+SELECT pg_catalog.setval('public.users_order_id_seq', 12, true);
 
 
 --
 -- Name: users_orderitem_id_seq; Type: SEQUENCE SET; Schema: public; Owner: unistore
 --
 
-SELECT pg_catalog.setval('public.users_orderitem_id_seq', 9, true);
+SELECT pg_catalog.setval('public.users_orderitem_id_seq', 13, true);
 
 
 --

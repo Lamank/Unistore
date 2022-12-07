@@ -131,7 +131,7 @@
                 <div class="checkout-cart">
                     <div class="content">
                       {% for cart_item in cart_items %}
-                      <div class="media" data-item="{{cart_item.id}}">
+                      <div class="media" data-cart="{{cart.id}}" data-item="{{cart_item.id}}" data-product="{{cart_item.product.id}}">
                         <div class="media-left">
                           <a href="#">
                             <img class="media-object" src="{{ cart_item.product.main_image.url }}" alt="{{ cart_item.product.title }}"/>

@@ -11,17 +11,21 @@ class OrderSerializer(ModelSerializer):
 
 
 class OrderItemSerializer(ModelSerializer):
-    product = ProductSerializer(read_only=True)
-    order = OrderSerializer(read_only=True)
     class Meta:
         model = OrderItem
         fields = (
             "id",
-            # "quantity",
+            "quantity",
             "created_at",
             "modified_at",
             "order",
             "product"
         )
+    def to_representation(self, instance):
+        data = super().to_representation(instance)
+        print(data)
+        data['product'] = ProductSerializer(instance.product).data
+        data['order'] = OrderSerializer(instance.order).data
+        return data
 
     depth = 1
