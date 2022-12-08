@@ -10,7 +10,7 @@ class CheckoutOrder(forms.Form):
     COUNTRY_CHOICES = [('1', 'Azerbaijan'),('2', 'Turkey'),('3', 'USA'),]
     PAYMENT_CHOICES = [('1' ,'Cash on Delivery'), ('2' , 'Credit Card'),('3', 'Paypall')]
     reciever = forms.CharField(
-        max_length=35,
+        max_length=40,
         label='Receiver',
         widget=forms.TextInput(attrs={"placeholder":"Example Example",  'class': "form-control", 'name':'receiver'}) 
         )
@@ -18,10 +18,6 @@ class CheckoutOrder(forms.Form):
         label='Phone',
         widget=forms.TextInput(attrs={'placeholder':'+994(70)1234567',  'class': 'form-control', 'name':'phone'})
         )
-    email = forms.EmailField(
-        label='E-mail', 
-        max_length=128,
-        widget=forms.EmailInput(attrs={'name':'email', 'class':'form-control', 'placeholder':'example@gmail.com'}))
     # country = forms.ChoiceField(
     #     label='Choose country',
     #     widget=forms.Select(attrs={'class' : 'form-control select', 'id':'country'}),
