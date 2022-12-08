@@ -94,7 +94,7 @@ MIDDLEWARE = [
     # 'users.middlewares.requestLog.RequestLogMiddleware',
     'users.middlewares.blacklist.BlacklistMiddleware',
 
-    
+
 ]
 
 ROOT_URLCONF = 'unistore.urls'
