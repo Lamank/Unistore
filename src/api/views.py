@@ -1,13 +1,13 @@
 from django.contrib.auth import get_user_model
 from rest_framework import generics, status
-from rest_framework.permissions import AllowAny
+from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.response import Response
 
 from users.models import Cart, CartItem, OrderItem, Order, Wishlist
 from .serializers.register import RegisterSerializer
 from .serializers.product import *
 from .serializers.cart import CartSerializer, CartItemSerializer
-from .serializers.order import OrderSerializer, OrderItemSerializer
+from .serializers.order import OrderSerializer, OrderItemSerializer, UserSerializer
 from .serializers.blog import BlogSerializer
 from .serializers.wishlist import WishlistSerializer
 from product.models import Product, Category, Media
@@ -146,6 +146,33 @@ class OrderListCreateAPIView(generics.ListCreateAPIView):
     permission_classes = [AllowAny]
     serializer_class = OrderSerializer
 
+    def post(self, request, *args, **kwargs):
+        serializers = self.get_serializer(data=request.data)
+        if serializers.is_valid():
+            user = self.request.user
+            print("this is user ------",user)
+            order, created = Order.objects.get_or_create(
+                user=user,
+                status="on_processing",
+            )
+            
+            if not created:
+                cart = Cart.objects.get(owner=user, is_complete=False)
+
+                for item in cart.cartitem.all():
+                    OrderItem.objects.create(
+                        order=order,
+                        quantity=item.quantity,
+                        product=item.product,
+                    )
+                return Response({"Message": "Order item added successfully"})
+
+            return Response({"Message": "Order item added unsuccessfully"})
+        return Response({"Message": "Invalid data"})
+        
+
+
+
 class OrderRetrieveUpdateAPIView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Order.objects.all()
     permission_classes = [AllowAny]
@@ -153,9 +180,17 @@ class OrderRetrieveUpdateAPIView(generics.RetrieveUpdateDestroyAPIView):
 
 # order_item
 class OrderItemListCreateAPIView(generics.ListCreateAPIView):
-    queryset = OrderItem.objects.all()
-    permission_classes = [AllowAny]
+    # queryset = OrderItem.objects.all()
+    permission_classes = [IsAuthenticated]
     serializer_class = OrderItemSerializer
+
+    def get(self, request, *args, **kwargs):
+        queryset = OrderItem.objects.all()
+
+
+
+
+        
 
 class OrderItemRetrieveUpdateAPIView(generics.RetrieveUpdateDestroyAPIView):
     queryset = OrderItem.objects.all()

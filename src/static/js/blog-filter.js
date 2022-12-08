@@ -20,11 +20,11 @@ $('.tags').on('click', 'label', function(){
 });
 
 
-if (window.performance) {
-    let urlstring = window.location.href.split("?")[1];
-    urlstring = "?" + urlstring
-    fetch_function(urlstring)
-}
+// if (window.performance) {
+//     let urlstring = window.location.href.split("?")[1];
+//     urlstring = "?" + urlstring
+//     fetch_function(urlstring)
+// }
 
 function fetch_function(urlstring){
    

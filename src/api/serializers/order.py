@@ -2,6 +2,8 @@ from rest_framework.serializers import ModelSerializer
 from users.models import Order, OrderItem
 from api.serializers.product import ProductSerializer
 
+from users.models import User
+
 
 
 class OrderSerializer(ModelSerializer):
@@ -23,9 +25,13 @@ class OrderItemSerializer(ModelSerializer):
         )
     def to_representation(self, instance):
         data = super().to_representation(instance)
-        print(data)
         data['product'] = ProductSerializer(instance.product).data
         data['order'] = OrderSerializer(instance.order).data
         return data
 
     depth = 1
+
+class UserSerializer(ModelSerializer):
+    class Meta:
+        model = User
+        fields = ('id', 'name', 'email')

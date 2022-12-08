@@ -78,33 +78,9 @@ def wishlist(request):
 def checkout(request: HttpRequest) -> HttpResponse:
     
     user = request.user
-    checkout_form = CheckoutOrder(initial={'email': user.email})
+    checkout_form = CheckoutOrder(initial={'receiver': f'{user.first_name} {user.last_name}'})
     cart = get_user_cart(user.id)
-    cart_items = cart.cartitem_set.all()
-    # if request.method == 'POST':
-    #     checkout_form = request.POST
-    #     print(request.POST)
-    #     user_id = request.user
-    #     order = Order.objects.create(
-    #         user = user_id,
-    #         phone = checkout_form['phone'],
-    #         email = checkout_form['email'],
-    #         total = 5300,
-    #         country = checkout_form['country'],
-    #         city = checkout_form['city'],
-    #         street = checkout_form['street'],
-    #         building = checkout_form['building'],
-    #         zip = checkout_form['zip'],
-    #         payment = checkout_form['payment'],
-    #         promo_code = checkout_form['promo_code'],
-    #         complete = False
-    #     )
-
-    #     prod = Product.objects.all().first()
-    #     order.save()
-    #     order.products.add(prod.id)
-    #     checkout_form = CheckoutOrder(initial={'email': user.email})
-    #     return redirect("users:order-success")
+    cart_items = cart.cartitem.all()
             
     
     context = {

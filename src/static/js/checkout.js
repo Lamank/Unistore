@@ -82,7 +82,7 @@ $('#checkout-form').on('submit', function(e){
 	data = {
 		"status": "on_processing",
 		"phone": $("input[name='phone']").val(),
-		"email": $("input[name='email']").val(),
+		"receier": $("input[name='receiver']").val(),
 		"total": parseFloat(total),
 		"products_quantity": 1,
 		"country": 'AZ',
@@ -95,9 +95,7 @@ $('#checkout-form').on('submit', function(e){
 		"complete": false,
 		"user": user_id
 	}
-	prod_data ={
-		'': 'a'
-	}
+
 	console.log(data);
 	fetch(`http://127.0.0.1:8000/api/order/`,{
 	method: 'POST',
@@ -109,14 +107,7 @@ $('#checkout-form').on('submit', function(e){
 	body: JSON.stringify(data)
 	}).then((response) =>{
 		console.log(response);
-		// return fetch(`http://127.0.0.1:8000/api/order-item/`, {
-		// 	method: 'POST',
-		// 	headers:{
-		// 		'Accept': 'application/json',
-        // 		'Content-Type': 'application/json',
-		// 	},
-		// 	body: JSON.stringify()
-		// });
+	
 	});
     console.log("submitted"); 
 });

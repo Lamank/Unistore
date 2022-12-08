@@ -21,20 +21,21 @@ class Wishlist(models.Model):
         return str(self.user) + ' ' + str(self.product)
 
 class Cart(models.Model):
-    owner = models.ForeignKey('users.User', null=False, on_delete=models.CASCADE)
+    owner = models.ForeignKey('users.User', null=False, on_delete=models.CASCADE, related_name="cart")
     total = models.FloatField(null=True)
     created_at = models.DateField(auto_now_add=True)
     modified_at = models.DateField(auto_now=True)
+    is_complete = models.BooleanField(default=False)
 
     @property
     def get_cart_total(self):
-        cart_items = self.cartitem_set.all()
+        cart_items = self.cartitem.all()
         total = sum([item.get_total for item in cart_items])
         return total
 
     @property
     def get_cart_items(self):
-        cart_items = self.cartitem_set.all()
+        cart_items = self.cartitem.all()
         total = sum([item.quantity for item in cart_items])
         return total
 
@@ -42,7 +43,7 @@ class Cart(models.Model):
         return str(self.owner)
 
 class CartItem(models.Model):
-    cart = models.ForeignKey('users.Cart', on_delete=models.CASCADE)
+    cart = models.ForeignKey('users.Cart', on_delete=models.CASCADE, related_name="cartitem")
     product = models.ForeignKey('product.Product', on_delete=models.CASCADE)
     quantity = models.PositiveIntegerField()
     added_at = models.DateField(auto_now_add=True)
@@ -76,7 +77,7 @@ class Order(models.Model):
     )
     user = models.ForeignKey("users.User", null=False, blank=True, on_delete=models.CASCADE)
     phone = models.CharField(max_length=30)
-    email = models.EmailField(max_length=128)
+    receiver = models.CharField(max_length=40, null=True, blank=True)
     total = models.FloatField()
     products_quantity = models.PositiveIntegerField(
         default=0
