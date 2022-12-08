@@ -51,14 +51,14 @@ $(".title").on("click", "a", function(){
 
 
 
-// if (window.performance) {
-//     let string = window.location.href.split("?")[1];
-//     urlstring = "?" + string
+if (window.performance) {
+    let string = window.location.href.split("?")[1];
+    urlstring = "?" + string
 
-//     console.log('urlstring',urlstring.length);
+    console.log('urlstring',urlstring.length);
         
-//     fetch_function(urlstring)
-// }
+    fetch_function(urlstring)
+}
 
 function generate_url() {
     urlstring = "";
