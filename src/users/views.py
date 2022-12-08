@@ -223,3 +223,5 @@ def logout(request: HttpRequest) -> HttpResponse:
             quote_via=quote_plus,
         ),
     )
+
+

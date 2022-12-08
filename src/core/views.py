@@ -99,8 +99,8 @@ def search(request: HttpRequest) -> HttpResponse:
     query = request.GET.get("query")
     if query: 
         results_for_product = search_product(data=query) 
-        results_for_blog = searched_blog(data=query)
-        results = [results_for_product, results_for_blog]
+        # results_for_blog = searched_blog(data=query)
+        results = [results_for_product]
         print(results)
         return render(request, "core/search.html", {"results": results})
     return render(request, "core/search.html", {"results": ''})
