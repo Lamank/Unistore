@@ -3,68 +3,137 @@
 {% load i18n %}
 
 {% block head %}
-    <title>Results</title>
-    <style>
-        .cartBody {
-            display: flex;
-        
+<title>Results</title>
+<style>
+    .cartBody {
+        display: flex;
+    }
+
+    .content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content img {
+        /* width: 200px; */
+        height: 150px !important;
+    }
+
+    .main_products {
+        display: flex;
+        flex-wrap: wrap;
+        /* justify-content: space-between; */
+        gap: 20px;
+    }
+
+    .main_product {
+        background-color: white;
+        padding: 5px;
+        min-height: 350px;
+        min-width: 22%;
+    }
+
+    .productName {
+        text-align: center;
+    }
+
+    .marginFromLeftAndRight {
+        margin: 0px 50px !important;
+        font-size: 29px;
+    }
+
+    .price {
+        display: inline-block;
+        font-size: 24px;
+        line-height: 28px;
+        color: #00a1b4;
+        padding: 3px 0px;
+    }
+
+    .through {
+        text-decoration: line-through;
+        font-size: 16px;
+        line-height: 28px;
+        color: #d2441c;
+    }
+
+    .exceptFromH1 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    @media (min-width: 1200px) {
+
+        .col-lg-1,
+        .col-lg-2,
+        .col-lg-3,
+        .col-lg-4,
+        .col-lg-5,
+        .col-lg-6,
+        .col-lg-7,
+        .col-lg-8,
+        .col-lg-9,
+        .col-lg-10,
+        .col-lg-11,
+        .col-lg-12 {
+            float: none;
         }
-        .content {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .productName {
-            text-align: center;
-        }
-        .marginFromLeftAndRight {
-            margin: 0px 50px !important;
-            font-size: 29px;
-        }
-    </style>
+    }
+</style>
 {% endblock head %}
 
 {% block content %}
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6">
-                <h1>Products</h1>
-                {% for result in results.0 %}
-                <div style="background-color: white; margin: 10px auto; padding: 5px;" class="col-sm-6 col-md-4 col-lg-12 product">
-                    <div class="body cartBody">                       
-                      <div class="content">
-                        <b><h1 class="h2 productName">{{ result | title }}</h1></b>
-                        <div class="exceptFromH1">
-                        <p class="price marginFromLeftAndRight">{{ result.price }} </p>
+<div class="container">
+    <div>
+        <h1>Products</h1>
+        <div class="main_products">
+            {% for result in results.0 %}
+            <div class="main_product">
+                <div class="body cartBody">
+                    <div class="content">
+                        <h1 class="h2 productName">{{ result | title }}</h1>
                         <label class="marginFromLeftAndRight">{{ result.brand | title }} </label>
-                        <a class="marginFromLeftAndRight" href="{% url 'product:product-detail' slug=result.slug %}">Details</a>
+                        <img src={{result.main_image.url}} alt="">
+                        <div class="exceptFromH1">
+                            <div>
+                                {% if result.campaign.percent %}
+                                <p class="price">${{ result.discounted_price | floatformat:2 }}</p>
+                                <p class="price through">${{ result.price }}</p>
+                                {% else %}
+                                <p class="price">${{ result.price }}</p>
+                                {% endif %}
+                            </div>
+                            <a class="marginFromLeftAndRight"
+                                href="{% url 'product:product-detail' slug=result.slug %}">Details</a>
                         </div>
-                      </div>
-
                     </div>
-                  </div>
-                {% endfor %}
+
+                </div>
             </div>
-            
-            <div class="col-lg-6">
-                <h1>Blogs</h1>
-                {% for result in results.1 %}
-                    <div style="background-color: white; margin: 10px auto; padding: 5px;" class="col-sm-6 col-md-4 col-lg-12 product">
-                        <div class="body cartBody">                       
-                        <div class="content">
-                            <h1 class="h2 productName">{{ result | title }}</h1>
-                            <div class="exceptFromH1">
+            {% endfor %}
+        </div>
+
+        <h1>Blogs</h1>
+        <div style="display: flex; justify-content: space-between; margin-bottom: 50px;">
+            {% for result in results.1 %}
+            <div style="background-color: white; padding: 5px; max-width: 45%;" class="product">
+                <div class="body cartBody">
+                    <div class="content">
+                        <h1 class="h2 productName">{{ result | title }}</h1>
+                        <div class="exceptFromH1">
                             <p class="price marginFromLeftAndRight">{{ result.description | truncatewords:15 }} </p>
                             <label class="marginFromLeftAndRight">{{ result.tags | title }} </label>
-                            <a class="marginFromLeftAndRight" href="{% url 'blog:blog-detail' slug=result.slug %}/">Details</a>
-                            </div>
-                        </div>
-
+                            <a class="marginFromLeftAndRight"
+                                href="{% url 'blog:blog-detail' slug=result.slug %}/">Details</a>
                         </div>
                     </div>
-                {% endfor %}
+
+                </div>
             </div>
+            {% endfor %}
         </div>
     </div>
+</div>
 {% endblock content %}
