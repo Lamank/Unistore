@@ -58361,3 +58361,659 @@ ip_address: 127.0.0.1
 run_time: 0.14801573753356934
 Time: 2022-12-08 01:22:23.913748
 --------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: DESKTOP-98HT723
+request_method: GET
+request_path: /search/?query=
+ip_address: 127.0.0.1
+run_time: 0.44081759452819824
+Time: 2022-12-08 20:05:49.907407
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: DESKTOP-98HT723
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.20120906829833984
+Time: 2022-12-08 20:05:50.788085
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: DESKTOP-98HT723
+request_method: GET
+request_path: /search/?query=
+ip_address: 127.0.0.1
+run_time: 0.04164266586303711
+Time: 2022-12-08 20:05:53.386998
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: DESKTOP-98HT723
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.11523175239562988
+Time: 2022-12-08 20:05:53.552252
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: DESKTOP-98HT723
+request_method: GET
+request_path: /
+ip_address: 127.0.0.1
+run_time: 0.49848222732543945
+Time: 2022-12-08 20:07:07.035394
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: DESKTOP-98HT723
+request_method: GET
+request_path: /img/uploads/%25Y/%25m/%25d/uploads/2022/11/20/black_S4axYmI.jpeg
+ip_address: 127.0.0.1
+run_time: 0.028336763381958008
+Time: 2022-12-08 20:07:07.238201
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: DESKTOP-98HT723
+request_method: GET
+request_path: /img/uploads/%25Y/%25m/%25d/uploads/2022/11/20/sales.jpeg
+ip_address: 127.0.0.1
+run_time: 0.034147024154663086
+Time: 2022-12-08 20:07:07.246180
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: DESKTOP-98HT723
+request_method: GET
+request_path: /img/uploads/%25Y/%25m/%25d/uploads/2022/11/19/MacBook_Pro_16_3.jpg
+ip_address: 127.0.0.1
+run_time: 0.03741455078125
+Time: 2022-12-08 20:07:07.259402
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: DESKTOP-98HT723
+request_method: GET
+request_path: /img/uploads/%25Y/%25m/%25d/uploads/2022/11/20/macbook-air-midnight.webp
+ip_address: 127.0.0.1
+run_time: 0.04600191116333008
+Time: 2022-12-08 20:07:07.262407
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: DESKTOP-98HT723
+request_method: GET
+request_path: /img/uploads/%25Y/%25m/%25d/uploads/2022/11/19/lenovo-yoga.jpg
+ip_address: 127.0.0.1
+run_time: 0.040813446044921875
+Time: 2022-12-08 20:07:07.268145
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: DESKTOP-98HT723
+request_method: GET
+request_path: /img/uploads/%25Y/%25m/%25d/uploads/2022/11/20/hp-spectre-x360.jpg
+ip_address: 127.0.0.1
+run_time: 0.03965425491333008
+Time: 2022-12-08 20:07:07.313810
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: DESKTOP-98HT723
+request_method: GET
+request_path: /img/uploads/%25Y/%25m/%25d/uploads/2022/11/20/lenovo-ideacenter.jpg
+ip_address: 127.0.0.1
+run_time: 0.03839254379272461
+Time: 2022-12-08 20:07:07.333764
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: DESKTOP-98HT723
+request_method: GET
+request_path: /img/uploads/%25Y/%25m/%25d/uploads/2022/11/19/lenovo-thinkpad.webp
+ip_address: 127.0.0.1
+run_time: 0.04918837547302246
+Time: 2022-12-08 20:07:07.355323
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: DESKTOP-98HT723
+request_method: GET
+request_path: /img/uploads/%25Y/%25m/%25d/uploads/2022/11/20/asus-transformer.jpg
+ip_address: 127.0.0.1
+run_time: 0.03852677345275879
+Time: 2022-12-08 20:07:07.385273
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: DESKTOP-98HT723
+request_method: GET
+request_path: /img/uploads/%25Y/%25m/%25d/uploads/2022/11/19/dell-inspiron-2in1.jpg
+ip_address: 127.0.0.1
+run_time: 0.03763151168823242
+Time: 2022-12-08 20:07:07.388787
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: DESKTOP-98HT723
+request_method: GET
+request_path: /img/uploads/%25Y/%25m/%25d/uploads/2022/11/20/solo3-wireless.jpeg
+ip_address: 127.0.0.1
+run_time: 0.03528094291687012
+Time: 2022-12-08 20:07:07.415845
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: DESKTOP-98HT723
+request_method: GET
+request_path: /img/uploads/%25Y/%25m/%25d/uploads/2022/11/20/airPods.jpeg
+ip_address: 127.0.0.1
+run_time: 0.03866934776306152
+Time: 2022-12-08 20:07:07.424063
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: DESKTOP-98HT723
+request_method: GET
+request_path: /img/uploads/%25Y/%25m/%25d/uploads/2022/11/20/HD350bt.jpg
+ip_address: 127.0.0.1
+run_time: 0.032045841217041016
+Time: 2022-12-08 20:07:07.426792
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: DESKTOP-98HT723
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.2230079174041748
+Time: 2022-12-08 20:07:07.426792
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: DESKTOP-98HT723
+request_method: GET
+request_path: /img/uploads/%25Y/%25m/%25d/uploads/2022/11/19/headset.webp
+ip_address: 127.0.0.1
+run_time: 0.029602766036987305
+Time: 2022-12-08 20:07:07.428937
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: DESKTOP-98HT723
+request_method: GET
+request_path: /img/uploads/%25Y/%25m/%25d/uploads/2022/11/22/mac-pro_z5kmwRp.webp
+ip_address: 127.0.0.1
+run_time: 0.04938697814941406
+Time: 2022-12-08 20:07:07.639544
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: DESKTOP-98HT723
+request_method: GET
+request_path: /img/uploads/%25Y/%25m/%25d/uploads/2022/11/22/razer_8LFTxho.jpg
+ip_address: 127.0.0.1
+run_time: 0.04174399375915527
+Time: 2022-12-08 20:07:07.657421
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: DESKTOP-98HT723
+request_method: GET
+request_path: /img/uploads/%25Y/%25m/%25d/uploads/2022/11/20/apple-imac-27-retina.jpg
+ip_address: 127.0.0.1
+run_time: 0.02411055564880371
+Time: 2022-12-08 20:07:07.939772
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: DESKTOP-98HT723
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.17171740531921387
+Time: 2022-12-08 20:07:08.030424
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: DESKTOP-98HT723
+request_method: GET
+request_path: /users/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.12272167205810547
+Time: 2022-12-08 20:07:10.953720
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: DESKTOP-98HT723
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.13207483291625977
+Time: 2022-12-08 20:07:11.144302
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: DESKTOP-98HT723
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.10908198356628418
+Time: 2022-12-08 20:07:11.279394
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: DESKTOP-98HT723
+request_method: GET
+request_path: /img/uploads/%25Y/%25m/%25d/uploads/2022/11/20/Hp-desktop-22.webp
+ip_address: 127.0.0.1
+run_time: 0.026894330978393555
+Time: 2022-12-08 20:07:11.313372
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: DESKTOP-98HT723
+request_method: GET
+request_path: /img/uploads/%25Y/%25m/%25d/uploads/2022/11/20/imac-24-purple.jpeg
+ip_address: 127.0.0.1
+run_time: 0.02592778205871582
+Time: 2022-12-08 20:07:11.313372
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: DESKTOP-98HT723
+request_method: GET
+request_path: /api/product/
+ip_address: 127.0.0.1
+run_time: 0.19455170631408691
+Time: 2022-12-08 20:07:32.029858
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: DESKTOP-98HT723
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.10293722152709961
+Time: 2022-12-08 20:07:32.139768
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: DESKTOP-98HT723
+request_method: DELETE
+request_path: /api/wishlist/35
+ip_address: 127.0.0.1
+run_time: 0.8307678699493408
+Time: 2022-12-08 20:07:32.975990
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: DESKTOP-98HT723
+request_method: GET
+request_path: /users/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.0529484748840332
+Time: 2022-12-08 20:07:34.409115
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: DESKTOP-98HT723
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.10872316360473633
+Time: 2022-12-08 20:07:35.274721
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: DESKTOP-98HT723
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.15741848945617676
+Time: 2022-12-08 20:07:35.444166
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: DESKTOP-98HT723
+request_method: GET
+request_path: /products/
+ip_address: 127.0.0.1
+run_time: 0.2458345890045166
+Time: 2022-12-08 20:08:08.051661
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: DESKTOP-98HT723
+request_method: GET
+request_path: /img/uploads/%25Y/%25m/%25d/uploads/2022/11/25/black6_jKRNoWy.png
+ip_address: 127.0.0.1
+run_time: 0.03557324409484863
+Time: 2022-12-08 20:08:08.362858
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: DESKTOP-98HT723
+request_method: GET
+request_path: /img/uploads/%25Y/%25m/%25d/uploads/2022/11/20/microsoft-surface-studio.jpg
+ip_address: 127.0.0.1
+run_time: 0.02771902084350586
+Time: 2022-12-08 20:08:08.367399
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: DESKTOP-98HT723
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.0947120189666748
+Time: 2022-12-08 20:08:11.219524
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: DESKTOP-98HT723
+request_method: GET
+request_path: /users/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.05476093292236328
+Time: 2022-12-08 20:08:26.349268
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: DESKTOP-98HT723
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.12423896789550781
+Time: 2022-12-08 20:08:26.544819
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: DESKTOP-98HT723
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.14754295349121094
+Time: 2022-12-08 20:08:26.696055
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: DESKTOP-98HT723
+request_method: GET
+request_path: /products/
+ip_address: 127.0.0.1
+run_time: 1.4108099937438965
+Time: 2022-12-08 20:08:56.951631
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: DESKTOP-98HT723
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.12374997138977051
+Time: 2022-12-08 20:08:57.154183
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: DESKTOP-98HT723
+request_method: GET
+request_path: /users/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.05984187126159668
+Time: 2022-12-08 20:09:01.067217
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: DESKTOP-98HT723
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.10558795928955078
+Time: 2022-12-08 20:09:01.225741
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: DESKTOP-98HT723
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.09991049766540527
+Time: 2022-12-08 20:09:01.329926
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: DESKTOP-98HT723
+request_method: GET
+request_path: /users/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.04074406623840332
+Time: 2022-12-08 20:11:31.126059
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: DESKTOP-98HT723
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.10811281204223633
+Time: 2022-12-08 20:11:31.309868
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: DESKTOP-98HT723
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.11839604377746582
+Time: 2022-12-08 20:11:31.431812
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: DESKTOP-98HT723
+request_method: GET
+request_path: /products/
+ip_address: 127.0.0.1
+run_time: 0.1379988193511963
+Time: 2022-12-08 20:11:33.074498
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: DESKTOP-98HT723
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.13562440872192383
+Time: 2022-12-08 20:11:33.297898
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: DESKTOP-98HT723
+request_method: GET
+request_path: /products/
+ip_address: 127.0.0.1
+run_time: 0.12257075309753418
+Time: 2022-12-08 20:11:35.242608
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: DESKTOP-98HT723
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.14282894134521484
+Time: 2022-12-08 20:11:35.469889
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: DESKTOP-98HT723
+request_method: GET
+request_path: /products/
+ip_address: 127.0.0.1
+run_time: 0.1504497528076172
+Time: 2022-12-08 20:11:46.889706
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: DESKTOP-98HT723
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.12731575965881348
+Time: 2022-12-08 20:11:47.081544
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: DESKTOP-98HT723
+request_method: GET
+request_path: /products/
+ip_address: 127.0.0.1
+run_time: 0.14058399200439453
+Time: 2022-12-08 20:11:49.539664
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: DESKTOP-98HT723
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.13383865356445312
+Time: 2022-12-08 20:11:49.724874
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: DESKTOP-98HT723
+request_method: GET
+request_path: /products/
+ip_address: 127.0.0.1
+run_time: 0.15164947509765625
+Time: 2022-12-08 20:12:22.854440
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: DESKTOP-98HT723
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.13517022132873535
+Time: 2022-12-08 20:12:23.088657
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: DESKTOP-98HT723
+request_method: GET
+request_path: /products/
+ip_address: 127.0.0.1
+run_time: 0.19011759757995605
+Time: 2022-12-08 20:12:25.974347
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: DESKTOP-98HT723
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.14094781875610352
+Time: 2022-12-08 20:12:26.178689
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: DESKTOP-98HT723
+request_method: GET
+request_path: /products/
+ip_address: 127.0.0.1
+run_time: 0.1483774185180664
+Time: 2022-12-08 20:12:26.947388
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: DESKTOP-98HT723
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.1301734447479248
+Time: 2022-12-08 20:12:27.154961
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: DESKTOP-98HT723
+request_method: GET
+request_path: /
+ip_address: 127.0.0.1
+run_time: 0.16370797157287598
+Time: 2022-12-08 20:12:28.880023
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: DESKTOP-98HT723
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.19627046585083008
+Time: 2022-12-08 20:12:29.129656
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: DESKTOP-98HT723
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.1169443130493164
+Time: 2022-12-08 20:12:29.251756
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: DESKTOP-98HT723
+request_method: GET
+request_path: /products/
+ip_address: 127.0.0.1
+run_time: 0.13564658164978027
+Time: 2022-12-08 20:12:31.594654
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: DESKTOP-98HT723
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.16482305526733398
+Time: 2022-12-08 20:12:31.811717
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: DESKTOP-98HT723
+request_method: GET
+request_path: /products/
+ip_address: 127.0.0.1
+run_time: 0.14652395248413086
+Time: 2022-12-08 20:13:00.734834
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: DESKTOP-98HT723
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.1525108814239502
+Time: 2022-12-08 20:13:00.972277
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: DESKTOP-98HT723
+request_method: GET
+request_path: /api/product/
+ip_address: 127.0.0.1
+run_time: 0.20645785331726074
+Time: 2022-12-08 20:13:06.073459
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: DESKTOP-98HT723
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.17142939567565918
+Time: 2022-12-08 20:13:06.250411
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: DESKTOP-98HT723
+request_method: DELETE
+request_path: /api/wishlist/33
+ip_address: 127.0.0.1
+run_time: 0.10229802131652832
+Time: 2022-12-08 20:13:06.360059
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: DESKTOP-98HT723
+request_method: GET
+request_path: /products/
+ip_address: 127.0.0.1
+run_time: 0.15415573120117188
+Time: 2022-12-08 20:13:08.129740
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: DESKTOP-98HT723
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.143996000289917
+Time: 2022-12-08 20:13:08.358750
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: DESKTOP-98HT723
+request_method: GET
+request_path: /users/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.5806839466094971
+Time: 2022-12-08 20:13:12.963439
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: DESKTOP-98HT723
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.08873295783996582
+Time: 2022-12-08 20:13:13.133507
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: DESKTOP-98HT723
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.09495329856872559
+Time: 2022-12-08 20:13:13.231358
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: DESKTOP-98HT723
+request_method: GET
+request_path: /users/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.06890368461608887
+Time: 2022-12-08 20:13:15.446941
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: DESKTOP-98HT723
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.08535051345825195
+Time: 2022-12-08 20:13:15.576819
+--------------------------------------------------
+remote_address: 127.0.0.1
+server_hostname: DESKTOP-98HT723
+request_method: GET
+request_path: /api/wishlist/
+ip_address: 127.0.0.1
+run_time: 0.09700751304626465
+Time: 2022-12-08 20:13:15.677198
+--------------------------------------------------
