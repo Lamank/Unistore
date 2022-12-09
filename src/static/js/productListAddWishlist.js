@@ -37,7 +37,7 @@ productProductGrid.addEventListener('click', (event) => {
                         });
                             const content = await rawResponse.json();
                         
-                            console.log(JSON.parse(content));
+                            console.log(JSON.parse(JSON.parse(content)));
                         })();
 
                         indexWishlistItemCount.innerText++; 

@@ -13,6 +13,3 @@ fetch('http://127.0.0.1:8000/api/wishlist/').then((response) => response.json())
     <span id="wishlistItemCount" style="border: 1px solid #FF5C5C; border-radius: 50%; background-color: #FF5C5C; width: 22px; text-align: center; color: black; font-weight: bold;"> ${ wishlistItemCounter}</span> 
     </a>`;
 });
-
-
-

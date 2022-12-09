@@ -1,27 +1,32 @@
 const indexProductsGrid = document.querySelector('#productsGrid');
 const indexProductsNames = document.querySelectorAll('.productName');
 
-fetch('http://127.0.0.1:8000/api/wishlist/').then((response) => response.json()).then((products) => products.map(item => {
-    for (elem of indexProductsNames){
-        if (item.product.title.toLowerCase() == elem.innerText.toLowerCase()){
-            elem.offsetParent.firstElementChild.setAttribute('data-favorite', 'active');
-        }
-    }
-}));
-
-
+if (user_id != null && user_id  != 1) {
+    fetch('http://127.0.0.1:8000/api/wishlist/').then((response) => response.json()).then((products) => products.map(item => {
+        console.log(user_id + " == " + item.user);
+        if (user_id == item.user){
+            for (elem of indexProductsNames){
+                if (item.product.title.toLowerCase() == elem.innerText.toLowerCase()){
+                    elem.offsetParent.firstElementChild.setAttribute('data-favorite', 'active');
+                };
+            };
+        };
+    }));
+}
 
 indexProductsGrid.addEventListener("click", (clickEvent) => {
     let wishlistButton = clickEvent.target.closest(".favorites");
 
     if (wishlistButton){
         if (user_id != null && user_id != 1){
-            var addedProduct = clickEvent.target.parentNode.offsetParent.lastElementChild.firstElementChild.nextElementSibling.innerText;
+            var addedProduct = clickEvent.target.parentNode.offsetParent.lastElementChild.firstElementChild.innerText;
             fetch('http://127.0.0.1:8000/api/product/')
             .then((response) => response.json())
             .then((productList) => productList.map((product) => {
+                console.log(addedProduct);
                 if ( product.title.toLowerCase() == addedProduct.toLowerCase() ){
                     var indexWishlistItemCount = document.querySelector('#wishlistItemCount');
+                    console.log(clickEvent.target.parentNode.getAttribute('data-favorite') == "active");
                     if (clickEvent.target.parentNode.getAttribute('data-favorite') == "active"){
                     (async () => {
                         const rawResponse = await fetch('http://127.0.0.1:8000/api/wishlist/', {
