@@ -41,8 +41,4 @@ def get_order_details(user_id: int) -> QuerySet:
 
 def get_user_cart(user_id: int) -> QuerySet:
     cart, _ = Cart.objects.get_or_create(owner=user_id)
-    # print(cart, )
-    # print('------------',cart.cartitem_set.all())
-    # return CartItem.objects.filter(cart=cart)
-    # print('+++++++=',CartItem.objects.filter(cart=cart))
     return cart

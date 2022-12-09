@@ -15,7 +15,10 @@ urlpatterns = [
     path("login-user/", views.login_user, name="login"),
     path("auth-callback/", views.auth_callback, name="auth-callback"),
     path("logout/", views.logout, name="logout"),
-    path('password-change/', views.PasswordsChangeView.as_view(template_name="core/change-password.html"), name='password-change'),
+    path('password-change/', 
+        views.PasswordsChangeView.as_view(
+            template_name="users/password/change-password.html"), 
+        name='password-change'),
 
     path("password-reset/", views.custom_password_reset, name="password_reset"),
 
@@ -27,15 +30,10 @@ urlpatterns = [
     path('password-reset-confirm/<uidb64>/<token>/', 
         auth_views.PasswordResetConfirmView.as_view(
             template_name="users/password/password_reset_confirm.html",
-            success_url = reverse_lazy("users:password_reset_complete")), 
+            success_url = reverse_lazy("users:user-login")), 
         name='password_reset_confirm'),
-
-    path('reset-done/', 
-        views.password_reset_complete,
-        name='password_reset_complete'),     
 
     path('activate/<uidb64>/<token>', views.activate, name='activate'),
 
-    # path('password-confirm')
 
 ]

@@ -1,119 +1,116 @@
 {% extends "core/base.html" %}
-
 {% load static %}
+
 {% block head %}
-<link rel="stylesheet" href="http:////netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
-<style>
-    .form-parent {
-        width: 40%;
-        background-color: rgb(210, 215, 216);
-        border-radius: 10px;
-        height: 500px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
 
-    .form-parent form {
-        width: 80%;
-    }
+<link href="{% static 'css/carousel.css' %}" rel="stylesheet">
+<link href="{% static 'css/change-password.css' %}" rel="stylesheet">
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 
-    .form-group input {
-        border-radius: 10px;
-    }
+<link href="{% static 'css/custom-scroll/jquery.mCustomScrollbar.css' %}" rel="stylesheet">
 
-    .logo h2 {
-        text-align: center;
-        color: #3C599F;
-        font-weight: 800;
-        font-size: 40px;
-    }
+{%endblock%}
 
-    .logo:hover {
-        text-decoration: none;
-
-    }
-
-    .centered {
-        text-align: center;
-    }
-
-    .login-center {
-        display: flex;
-        justify-content: space-between;
-    }
-</style>
-{% endblock %}
 {% block content %}
-<section class="ftco-section contact-section register" style="margin: 60px auto 50px;">
+<!-- <br><br> -->
+<!-- <h1>Change Password</h1> -->
+{% csrf_token %}
+<!-- {{ form.as_p }} -->
+<!-- FORM -->
+<div class="changePassword">
     <div class="container">
-        <div class="row block-9" style="display: flex; justify-content: center;">
-            <div class="form-parent">
-                <form action="" class="bg-light p-5 contact-form" method="post">
-                    {% csrf_token %}
-                    <a class="center logo" href="/">
-                        <h2>
-                            Unistore
-                        </h2>
-
-                    </a>
-                    <div class="form-group">
+        <div class="changePasswordMain">
+            <div class="changePasswordTop">
+                <h2>Register</h2>
+            </div>
+            <form method="POST">
+                {% csrf_token %}
+                <div class="changePasswordBottom" onSubmit={handleSubmit(onSubmit)}>
+                    <div>
+                        
                         {{form.first_name}}
-                        {{form.first_name.errors}}
+                        {% comment %} <input type="password" name="old_password" placeholder="Enter old password" autocomplete="current-password" autofocus="" required="" id="id_old_password"> {% endcomment %}
+                        {% for error in form.first_name.errors %}
+                        <li class="text-danger">
+                            {{error}}
+                        </li>
+                        {% endfor %}
                     </div>
-                    <div class="form-group">
+                    <div>
+                        
                         {{form.last_name}}
-                        {{form.last_name.errors}}
+                        {% comment %} <input type="password" name="new_password1" placeholder="Enter new password" autocomplete="new-password" required="" id="id_new_password1"> {% endcomment %}
+                        {% for error in form.last_name.errors %}
+                        <li class="text-danger">
+                            {{error}}
+                        </li>
+                        {% endfor %}
                     </div>
-                    <div class="form-group">
+                    <div>
+                    
                         {{form.username}}
-                       
-                        {{form.username.errors}}
+                        {% comment %} <input type="password" name="new_password2" placeholder="Confirm new password" autocomplete="new-password" required="" id="id_new_password2"> {% endcomment %}
+                        {% for error in form.username.errors %}
+                        <li class="text-danger">
+                            {{error}}
+                        </li>
+                        {% endfor %}
                     </div>
-                    <div class="form-group">
+                    <div>
+                    
                         {{form.email}}
-                        {% comment %} <input type="text" class="form-control" placeholder="Username" name="username"
-                            autofocus="" autocapitalize="none" autocomplete="username" maxlength="150" required=""
-                            id="id_username"> {% endcomment %}
-                        {{form.email.errors}}
+                        {% comment %} <input type="password" name="new_password2" placeholder="Confirm new password" autocomplete="new-password" required="" id="id_new_password2"> {% endcomment %}
+                        {% for error in form.email.errors %}
+                        <li class="text-danger">
+                            {{error}}
+                        </li>
+                        {% endfor %}
                     </div>
-                    <div class="form-group">
+                    <div>
+                        
                         {{form.password1}}
-                        {% comment %} <input type="password" name="password" class="form-control" placeholder="Password"
-                            autocomplete="current-password" required="" id="id_password"> {% endcomment %}
-
+                        {% comment %} <input type="password" name="new_password2" placeholder="Confirm new password" autocomplete="new-password" required="" id="id_new_password2"> {% endcomment %}
+                        {% for error in form.password1.errors %}
+                        <li class="text-danger">
+                            {{error}}
+                        </li>
+                        {% endfor %}
                     </div>
-                    <div class="form-group">
-
+                    <div>
+                        
                         {{form.password2}}
-                        {% comment %} <input type="password" name="password" class="form-control"
-                            placeholder="Confirm Password" autocomplete="current-password" required="" id="id_password">
-                        {% endcomment %}
+                        {% comment %} <input type="password" name="new_password2" placeholder="Confirm new password" autocomplete="new-password" required="" id="id_new_password2"> {% endcomment %}
                         {% for error in form.password2.errors %}
                         <li class="text-danger">
                             {{error}}
                         </li>
                         {% endfor %}
                     </div>
-                    <div class="centered">
-
-                        <div class="form-group">
-                            <input type="submit" value="Sign up" class="btn btn-primary py-3 px-5" style="width: 100%;">
-
-                        </div>
-                        <div class="form-group">
-                            <a href="/users/user-login" class="">Have already an account? Login here</a>
-                        </div>
-
+                    <button type="submit">
+                        Sign Up
+                    </button>
+                    <div>
+                        <a href="/users/user-login" class="">Have already an account? Login here</a>
                     </div>
+                </div>
+            </form>
 
-                </form>
-
-
-
-            </div>
+        </div>
+        <div class="svg">
+            <img src="{% static 'img/password/password.png' %}" />
         </div>
     </div>
-</section>
+</div>
+{% endblock content %}
 
-{% endblock %}
+
+{%block footer%}
+<script type="text/javascript" src="{% static 'js/carousel.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/jquery.touchSwipe.min.js' %}"></script>
+
+<script type="text/javascript" src="{% static 'js/custom-scroll/jquery.mCustomScrollbar.concat.min.js' %}"></script>
+
+
+<script type="text/javascript" src="{% static 'js/jquery-ui-1.11.4.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/jquery.ui.touch-punch.js' %}"></script>
+{%endblock%}

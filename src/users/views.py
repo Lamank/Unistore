@@ -11,7 +11,6 @@ from django.template.loader import render_to_string
 from django.contrib.sites.shortcuts import get_current_site
 from django.utils.encoding import force_bytes, force_str
 from django.http import HttpRequest, HttpResponse
-from django.contrib.auth.views import PasswordChangeView
 from django.contrib.auth.forms import PasswordChangeForm, PasswordResetForm
 from django.http import HttpResponse
 from django.db.models.query_utils import Q
@@ -67,8 +66,6 @@ def custom_password_reset(request):
 	password_reset_form = PasswordResetForm()
 	return render(request=request, template_name="users/password/password_reset.html", context={"password_reset_form":password_reset_form})
 
-def password_reset_complete(request):
-    return render(request=request, template_name="users/password/password_reset_complete.html")
 
 @login_required(login_url='/users/user-login/')
 def wishlist(request):
