@@ -134,10 +134,10 @@ if (_pj.in_es6("products", window.location.href)) {
                             fetch('http://127.0.0.1:8000/api/cart-item').then((response) => response.json())
                               .then((data) => data.map(cartItem => {
                                 fetch('http://127.0.0.1:8000/api/cart/').then(response => response.json()).then(cart => cart.map(userCart => {
-                                  console.log("IF " + userCart.id + " == " + cartItem.cart);
-                                  if (userCart.id ==  cartItem.cart){
-                                    console.log("IF " + cartItem.product + " == " + elemData.id);
-                                    if (cartItem.product === elemData.id){
+                                  console.log("IF " + userCart.id + " == " + cartItem.cart.id);
+                                  if (userCart.id ==  cartItem.cart.id){
+                                    console.log("IF " + cartItem.product.id + " == " + elemData.id);
+                                    if (cartItem.product.id === elemData.id){
                                       (async () => {
                                           await fetch(`http://127.0.0.1:8000/api/cart-item/${cartItem.id}`, {
                                           method: 'DELETE',
