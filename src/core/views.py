@@ -98,8 +98,8 @@ def subscribe(request: HttpRequest):
 def search(request: HttpRequest) -> HttpResponse:
     query = request.GET.get("query")
     if query: 
-        results_for_product = search_product(data=query) 
-        results = [results_for_product]
+        results= search_product(data=query) 
+       
         print(results)
         return render(request, "core/search.html", {"results": results})
     return render(request, "core/search.html", {"results": ''})

@@ -368,7 +368,7 @@
 		position: relative;
 		display: block;
 		width: 100%;
-		height: auto;
+		min-height: 750px;
 		background-color: #fff;
 	}
 

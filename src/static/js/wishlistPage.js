@@ -72,9 +72,10 @@ productsRow.addEventListener("click", (clickEvent) => {
                                     const rawResponse = await fetch(`http://127.0.0.1:8000/api/wishlist/${item.id}`, {
                                       method: 'DELETE',
                                     });
-                                    const content = await rawResponse.json();
+                                    console.log(this.innerText);
+                                    // const content = await rawResponse.json();
                                   
-                                    console.log(content);
+                                    // console.log(content);
                                     console.log("WISHLIST PRODUCT DELETED");
                                   })();
                                   console.log(indexWishlistItemCount);

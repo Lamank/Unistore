@@ -29,6 +29,7 @@ class ProductListCreateView(generics.ListCreateAPIView):
     permission_classes = [AllowAny]
     serializer_class = ProductSerializer
 
+
     def get(self, *args, **kwargs):
         queryset = product_list()
 

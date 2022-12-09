@@ -151,6 +151,10 @@ function fetch_function(urlstring){
             if (wishProductNames[0].parentNode != null){
                 for (product of wishProductNames) {
                     if (item.product.title.toLowerCase() == product.innerText.toLowerCase()) {
+                        console.log('Product ------', product.innerText);
+                        console.log('offset---------',product.offsetParent);
+                        console.log( 'firstchild---------',product.offsetParent.firstElementChild);
+                        
                         product.offsetParent.firstElementChild.setAttribute('data-favorite', 'active');
                     }
                 }

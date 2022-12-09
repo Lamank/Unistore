@@ -65,7 +65,7 @@
         flex-direction: column;
     }
 
-    @media (min-width: 1200px) {
+  @media (min-width: 1200px) {
 
         .col-lg-1,
         .col-lg-2,
@@ -81,16 +81,18 @@
         .col-lg-12 {
             float: none;
         }
-    }
+    } 
 </style>
 {% endblock head %}
 
 {% block content %}
 <div class="container">
     <div>
-        <h1>Products</h1>
+        <hr> <hr>
+        <h1 class="text-center">Products</h1>
         <div class="main_products">
-            {% for result in results.0 %}
+            
+            {% for result in results %}
             <div class="main_product">
                 <div class="body cartBody">
                     <div class="content">
@@ -115,26 +117,6 @@
             </div>
             {% endfor %}
         </div>
-
-        <!-- <h1>Blogs</h1>
-        <div style="display: flex; justify-content: space-between; margin-bottom: 50px;">
-            {% for result in results.1 %}
-            <div style="background-color: white; padding: 5px; max-width: 45%;" class="product">
-                <div class="body cartBody">
-                    <div class="content">
-                        <h1 class="h2 productName">{{ result | title }}</h1>
-                        <div class="exceptFromH1">
-                            <p class="price marginFromLeftAndRight">{{ result.description | truncatewords:15 }} </p>
-                            <label class="marginFromLeftAndRight">{{ result.tags | title }} </label>
-                            <a class="marginFromLeftAndRight"
-                                href="{% url 'blog:blog-detail' slug=result.slug %}/">Details</a>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            {% endfor %}
-        </div> -->
     </div>
 </div>
 {% endblock content %}
