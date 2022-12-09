@@ -21,6 +21,7 @@
     <div class="container">
         <div class="changePasswordMain">
             <div class="changePasswordTop">
+                <p id="register-message"></p>
                 <h2>Register</h2>
             </div>
             <form method="POST">
@@ -92,6 +93,8 @@
                     <div>
                         <a href="/users/user-login" class="">Have already an account? Login here</a>
                     </div>
+                    
+                    
                 </div>
             </form>
 
@@ -113,4 +116,6 @@
 
 <script type="text/javascript" src="{% static 'js/jquery-ui-1.11.4.js' %}"></script>
 <script type="text/javascript" src="{% static 'js/jquery.ui.touch-punch.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/register.js' %}"></script>
+
 {%endblock%}

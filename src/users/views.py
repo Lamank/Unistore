@@ -1,5 +1,4 @@
-from multiprocessing import context
-# from turtle import delay
+import ast
 from typing import Optional
 
 from django.shortcuts import redirect, render
@@ -10,26 +9,23 @@ from django.core.mail import BadHeaderError
 from django.template.loader import render_to_string
 from django.contrib.sites.shortcuts import get_current_site
 from django.utils.encoding import force_bytes, force_str
-from django.http import HttpRequest, HttpResponse
+from django.http import HttpRequest, HttpResponse, JsonResponse
 from django.contrib.auth.forms import PasswordChangeForm, PasswordResetForm
-from django.http import HttpResponse
 from django.db.models.query_utils import Q
 from django.contrib.auth.tokens import default_token_generator
 from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth import login , get_user_model
+from django.contrib.auth import login , get_user_model, authenticate
 from django.conf import settings
 from urllib.parse import urlencode, quote_plus
 from authlib.integrations.django_client import OAuth
 
-from users.models import Order
 from users.forms import CheckoutOrder, RegisterForm
 from users.token import account_activation_token
 from users.services.user import create_user_if_not_exist
 from tasks.tasks import activation_mail, reset_password_mail
 from users.services.user import create_cart_after_user_registered, get_order_details, get_user_cart
 from users.forms import LoginForm
-from product.models import Product
 
 
 UserModel = get_user_model()
@@ -110,29 +106,30 @@ def order_success(request: HttpRequest) -> HttpResponse:
 
 def register(request: HttpRequest) -> HttpResponse:
     register_form = RegisterForm()
-    if request.method == "POST":
+    if request.META.get("HTTP_X_REQUESTED_WITH") == "XMLHttpRequest" and request.method == "POST":
         register_form = RegisterForm(request.POST)
-        if 'username' in request.POST:
-            if register_form.is_valid():
-                user = register_form.save(commit=False)
-                user.is_active = False
-                user.save()
-                # to get the domain of the current site
-                current_site = get_current_site(request).domain
-                mail_subject = 'Activation link has been sent to your email id'
-                context = {
-                    'user': user,  
-                    'domain': current_site,  
-                    'uid':urlsafe_base64_encode(force_bytes(user.pk)),  
-                    'token':account_activation_token.make_token(user),
-                    'protocol': "https" if request.is_secure() else "http",
-                }
-                to_email = register_form.cleaned_data['email']
-                message = render_to_string('users/acc_active_email.html', context)
-                activation_mail.send_activate_email_mail.delay(mail_subject=mail_subject, message=message, to_email=to_email)
-                return HttpResponse(
-                    f'Please <b>{user.first_name} {user.last_name}</b> confirm your email address to complete the registration.<b>Note:</b> Check your spam folder.'
-                    )
+        
+        if register_form.is_valid():
+            user = register_form.save(commit=False)
+            user.is_active = False
+            user.save()
+            # to get the domain of the current site
+            current_site = get_current_site(request).domain
+            mail_subject = 'Activation link has been sent to your email id'
+            info = {"pk": user.pk, "password": register_form.cleaned_data['password1']}
+            context = {
+                'user': user,  
+                'domain': current_site,  
+                'uid':urlsafe_base64_encode(force_bytes(info)),  
+                'token':account_activation_token.make_token(user),
+                'protocol': "https" if request.is_secure() else "http",
+            }
+            to_email = register_form.cleaned_data['email']
+            message = render_to_string('users/acc_active_email.html', context)
+            activation_mail.send_activate_email_mail.delay(mail_subject=mail_subject, message=message, to_email=to_email)
+            message = f'Please {user.first_name} {user.last_name} confirm your email address to complete the registration. Note: Check your spam folder.'
+                
+            return JsonResponse({'message': message})
     contex ={
         'form' : register_form
     }
@@ -142,8 +139,9 @@ def register(request: HttpRequest) -> HttpResponse:
 
 def activate(request: HttpRequest, uidb64, token) -> HttpResponse:
     try:
-        uid = force_str(urlsafe_base64_decode(uidb64))
-        user = UserModel.objects.get(pk=uid)  
+        data = force_str(urlsafe_base64_decode(uidb64))
+        data = ast.literal_eval(data)
+        user = UserModel.objects.get(pk=data['pk'])  
     except:  
         user = None
     
@@ -151,9 +149,11 @@ def activate(request: HttpRequest, uidb64, token) -> HttpResponse:
         user.is_active = True
         user.save()
         create_cart_after_user_registered(user=user)
-        
-        # return HttpResponse('Thank you for your email confirmation. Now you can <a href="/users/user-login/">login your account</a>') 
-        return redirect(reverse('users:user-login'))
+        new_user = authenticate(username=user.username,
+                                password=data['password'])
+      
+        login(request, new_user)
+        return redirect(reverse('core:home'))
     else:
         return HttpResponse('Activation link is invalid!') 
 
