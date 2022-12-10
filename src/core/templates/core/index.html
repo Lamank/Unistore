@@ -55,12 +55,12 @@
             <div class="content">
               <div class="outside-content">
                 <div class="inside-content">
-                  <div class="container align-right ">
+                  <div class="container">
 
-                    <!-- <h1 class="h3 colorful blue hidden-xs">{{ first_campaign.percent }}</h1>  -->
+                     <h1 class="h2 colorful blue hidden-xs">{{ first_campaign.description }}</h1>  
 
                     <hr class="offset-sm">
-                    <h2 class="h1 lg upp colorful blue" style="width: 450px">{{ first_campaign.description }}</h2>
+                    <h2 class="h1 lg upp colorful blue">{{ first_campaign| title }}</h2>
                     <hr class="offset-md">
                     <hr class="offset-md">
                     <a href="/products/?campaign={{ first_campaign.id }}" data-value="{{ first_campaign.id }}" rel="nofollow" class="btn btn-primary btn-lg black campaign"> {% trans "More"%} </a>

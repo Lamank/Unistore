@@ -10,8 +10,8 @@
   }
 #campaign_image {
     position: absolute;
-    top: -37px;
-    right: -8px;
-    height: 117px !important; 
-    width: 100px !important;
-  }
+    top: -4px;
+    right: -3px;
+    height: 75px !important;
+    width: 75px !important;
+}

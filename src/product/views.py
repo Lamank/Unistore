@@ -33,7 +33,7 @@ class ProductListView(ListView):
         context['tags'] = get_product_tag()
         context['manufacturers'] = get_product_brand()
         context['sizes'] = get_product_screen_size().exclude(size = None)
-        context["campaign"] = get_campaigns().filter(id=2).first()
+        context["campaign"] = get_campaigns().filter(id=5).first()
         context['max'] = self.queryset.aggregate(Max("price"))
 
         return context

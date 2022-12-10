@@ -100,7 +100,7 @@ function fetch_function(urlstring){
             for(let i = 0; i < data.length; i ++){
                 let img = ""
                 let percent = ""
-                if (data[i]["campaign"] && data[i]["campaign"]['name'] == "Black Friday" ) {
+                if (data[i]["campaign"] && data[i]["campaign"]['id'] == 5 ) {
                     img = `<img src="${ data[i]["campaign"].extra_image }" id="campaign_image" alt="${ data[i].title }"> `
                 } 
                 if(data[i]['discounted_price'] != 0.0){

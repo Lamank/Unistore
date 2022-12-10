@@ -21,7 +21,7 @@ def home(request: HttpRequest) -> HttpResponse:
     object_list = product_list()
     blogs = last_six_blogs()[:2]
     popular_prods = get_popular_products()[:3]
-    first_campaign = get_campaigns().filter(id=2).first()
+    first_campaign = get_campaigns().filter(id=5).first()
     third_campaign = get_campaigns().filter(id=4).first()
     subscriber_form = SubscribeToNewsletter()
  
