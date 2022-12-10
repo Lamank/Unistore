@@ -2,7 +2,7 @@ var cart = document.querySelector("#cart");
 var productCountInBasket = document.querySelector(".label");
 var productCounter = 0;
 var _pj;
-
+var addToCartBtn = ''
 
 function _pj_snippets(container) {
   function in_es6(left, right) {
@@ -53,9 +53,6 @@ if (_pj.in_es6("products", window.location.href)) {
     
       if(product1) {
         console.log(event.target);
-    
-    
-    
         console.log("CLICKED ON A ADD TO CART BUTTON");
         var product = event.target.parentElement.firstElementChild.textContent;
         console.log(product);
@@ -147,34 +144,32 @@ if (_pj.in_es6("products", window.location.href)) {
                                     }
                                   }
                                 }));
-                                }));
-    
-                            
+                                }));    
                             console.log(basket);
                             localStorage.setItem("basket", JSON.stringify(basket));
                             console.log(getProductCountInBasket(basket));
                             productCountInBasket.lastChild.textContent = ` ${getProductCountInBasket(basket) }\n    `;
-                            prodNames.forEach(item => {
-                              if (removedItemTitle.toLowerCase() === item.innerHTML.toLowerCase()){
-                                if ( item.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.innerHTML == "Added" ){
+                            prodNames.forEach(prodName => {
+                              if (removedItemTitle.toLowerCase() === prodName.innerHTML.toLowerCase()){
+                                addToCartBtn = prodName.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling;
+                                addToCartBtn = addToCartBtn.innerText === "Added" ? addToCartBtn : addToCartBtn.nextElementSibling;
+                                if ( addToCartBtn != null && addToCartBtn.innerText == "Added" ){
                                   console.log("ENTERS IF");
-                                  item.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.innerHTML = "Add to Cart";
-                                  item.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.disabled = false;
+                                  addToCartBtn.innerHTML = " Add to Cart";
+                                  addToCartBtn.disabled = false;
                                 }
                                 else {
-                                  item.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.disabled = false;
-                                  item.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.innerText = "Add to Cart";
-                                }
-                              }
+                                  addToCartBtn = prodName.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.
+                                  nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling;
+                                    addToCartBtn.disabled = false;
+                                    addToCartBtn.innerText = "Add to Cart";                                  
+                                };
+                              };
                             });
-                          }
-    
+                          };
                         }));
-                    
-    
                   };
               }));
-              console.log('================================');
               if (user_id != null && user_id != 1) {
                 fetch('http://127.0.0.1:8000/api/cart/').then(response => response.json()).then(cart => cart.map(cartData => {
                     if (cartData.owner === user_id) {
@@ -210,13 +205,9 @@ if (_pj.in_es6("products", window.location.href)) {
                 console.log("THIS IS EXECUTE FIRST THAN LOCALSTORAGE");
                 window.location.replace("http://127.0.0.1:8000/users/register");
               }
-             
             };          
           }));
-      } 
-    
-    
-    
+      };  
       });
   }
 
@@ -237,7 +228,6 @@ if (_pj.in_es6("products", window.location.href)) {
           product = el.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling
         .previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.textContent;
         }
-        
         console.log("PRODUCT DETAIL PAGE TO GET THE PRODUCT NAME");
       };
       console.log(product);
@@ -305,10 +295,10 @@ if (_pj.in_es6("products", window.location.href)) {
                           fetch('http://127.0.0.1:8000/api/cart-item').then((response) => response.json())
                             .then((data) => data.map(cartItem => {
                               fetch('http://127.0.0.1:8000/api/cart/').then(response => response.json()).then(cart => cart.map(userCart => {
-                                console.log("IF " + userCart.id + " == " + cartItem.cart);
-                                if (userCart.id ==  cartItem.cart){
-                                  console.log("IF " + cartItem.product + " == " + elemData.id);
-                                  if (cartItem.product === elemData.id){
+                                console.log("IF " + userCart.id + " == " + cartItem.cart.id);
+                                if (userCart.id ==  cartItem.cart.id){
+                                  console.log("IF " + cartItem.product.id + " == " + elemData.id);
+                                  if (cartItem.product.id === elemData.id){
                                     (async () => {
                                         await fetch(`http://127.0.0.1:8000/api/cart-item/${cartItem.id}`, {
                                         method: 'DELETE',
@@ -319,39 +309,31 @@ if (_pj.in_es6("products", window.location.href)) {
                                 }
                               }));
                               }));
-  
-                          
                           console.log(basket);
                           localStorage.setItem("basket", JSON.stringify(basket));
                           console.log(getProductCountInBasket(basket));
                           productCountInBasket.lastChild.textContent = ` ${getProductCountInBasket(basket) }\n    `;
                           prodNames.forEach(item => {
                             if (removedItemTitle.toLowerCase() === item.innerHTML.toLowerCase()){
-                              if ( item.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.innerHTML == "Added" ){
+                              addToCartBtn = item.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling;
+                              if ( addToCartBtn.innerHTML == "Added" ){
                                 console.log("ENTERS IF");
-                                item.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.innerHTML = "Add to Cart";
-                                item.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.disabled = false;
+                                addToCartBtn.innerHTML = "Add to Cart";
+                                addToCartBtn.disabled = false;
                               }
                               else {
-                                if (item.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.innerText == "Added"){
-                                  item.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.disabled = false;
-                                  item.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.innerText = " Add to cart";    
-                                }
-                                else if (item.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.innerText == "Added"){
-                                  item.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.disabled = false;
-                                  item.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.innerText = " Add to cart";       
-                                }
-                              }
-                            }
+                                addToCartBtn = item.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.
+                                nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling;
+                                addToCartBtn = addToCartBtn.innerText == "Added" ? addToCartBtn : addToCartBtn.nextElementSibling;
+                                addToCartBtn.disabled = false;
+                                addToCartBtn.innerText = " Add to cart";
+                              };
+                            };
                           });
-                        }
-  
+                        };
                       }));
-                  
-  
                 };
             }));
-            console.log('================================');
             if (user_id != null && user_id != 1) {
               fetch('http://127.0.0.1:8000/api/cart/').then(response => response.json()).then(cart => cart.map(cartData => {
                   if (cartData.owner === user_id) {
@@ -386,11 +368,9 @@ if (_pj.in_es6("products", window.location.href)) {
             else {
               console.log("THIS IS EXECUTE FIRST THAN LOCALSTORAGE");
               window.location.replace("http://127.0.0.1:8000/users/register");
-            }
-           
+            };
           };          
         }));
     }));
   };
-
-  }
+};

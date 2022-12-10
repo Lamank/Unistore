@@ -1,21 +1,16 @@
 var productCountInBasket = document.querySelector(".label");
 const delay = ms => new Promise(res => setTimeout(res, ms));
 const user_id = JSON.parse(document.getElementById('user_id').textContent);
+var cartRemovedProduct = "";
 
 (async () => {
   await delay(500);
   var productNames = document.querySelectorAll(".productName");
   console.log("USER_ID: " + user_id);
-  // console.log(productNames);
 
-
-  // console.log(basket);
   if (basket == null) {
     basket = [];
   }
-
-
-  
 
   if (user_id != null && user_id != 1){
     console.log("USER IS AUTHENTICATED");
@@ -24,35 +19,31 @@ const user_id = JSON.parse(document.getElementById('user_id').textContent);
     basket.forEach(product => {
       if (product.user_id === user_id){
         counter++;
-        // console.log(product.user_id + " " + product.title + " " + user_id);
-        // console.log(counter);
         fetch('http://127.0.0.1:8000/api/category/').then((response) => response.json())
         .then((data) => data.map((category) => {
-
             if (category.id == product.category.id){
-
               productNames.forEach(productName => {
                 console.log(productName);
                   if (productName.innerHTML.toLowerCase() === product.title.toLowerCase() && _pj.in_es6("products", window.location.href) ) {
-                    if (productName.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling != null)
+                    const btnBox = productName.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling;
+                    addToCartBtn = btnBox.innerText === " Add to cart" ? btnBox : btnBox.nextElementSibling;
+                    console.log(addToCartBtn);
+                    if (addToCartBtn != null)
                     {
-                      if (productName.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.innerText === " Add to cart"){
-                        productName.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.disabled = true;
-                        productName.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.innerText = "Added";
-                      }
-                    }
-
-                }
+                      addToCartBtn.disabled = true;
+                      addToCartBtn.innerText = "Added";
+                    };
+                };
             });
-            let percent = ""
+            let percent = "";
             if(product.discounted_price === 0.0){
-              percent =  `<p class="price">${product.price} </p>`
+              percent =  `<p class="price">${product.price} </p>`;
              
             }else{
               percent = `
               <p class="price ">${Number(product.discounted_price).toFixed(2)}</p> 
-              `
-            }
+              `;
+            };
               cart.firstChild.firstChild.innerHTML += `
               <div class="media">
                 <div class="media-left">
@@ -82,19 +73,14 @@ const user_id = JSON.parse(document.getElementById('user_id').textContent);
               </div>`;
             }
             productDataCountInBasket = basket.length;
-            // console.log(productDataCountInBasket);
-            // console.log(counter);
             productCountInBasket.lastChild.textContent = ` ${counter}\n    `;
-          
-        }));}
-    });
-  
+        }));
+      }});
   }
   else {
     productCountInBasket.lastChild.textContent = ` ${0}\n    `;
-  }
+  };
 })();
- 
 
 function removeObjectWithId(arr, id) {
   const objWithIdIndex = arr.findIndex((obj) => obj.id === id);
@@ -103,42 +89,26 @@ function removeObjectWithId(arr, id) {
   return arr;
 }
 
-
 if (_pj.in_es6("products", window.location.href)){
   function removeFromCart(element){
     var productNames = document.querySelectorAll(".productName");
-    // console.log(productNames);
     var removedProduct = element.parentElement.previousElementSibling.firstElementChild.innerHTML;
-    // console.log(removedProduct);
-    // var basket = JSON.parse(localStorage.getItem("basket"));
-    // console.log(basket);
-    // console.log(removedProduct);
     localStorage.removeItem("basket");
     productNames.forEach(product => {
-      // console.log(product);
-      // console.log(85);
       if (removedProduct.toLowerCase() == product.innerHTML.toLocaleLowerCase()){
         console.log(window.location.href);
-        // console.log("86");
-        if ( product.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.disabled == true ){
-          product.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.disabled = false;
-          product.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.innerHTML = "Add to Cart";
-        }
-        else {
-          console.log("PRODUCT DETAIL PAGE REMOVE BTN CLICKED");
-          console.log(product.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.innerText);
-          console.log(product.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.innerText);
-          if (product.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.innerText == "Added"){
-            product.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.disabled = false;
-            product.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.innerText = " Add to cart";    
-          }
-          else if (product.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.innerText == "Added"){
-            product.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.disabled = false;
-            product.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.innerText = " Add to cart";       
-          }
-        }
-
-  
+        cartRemovedProduct = product.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling;
+        
+        if (cartRemovedProduct.disabled == true)
+        {cartRemovedProduct = cartRemovedProduct;}
+        else if (cartRemovedProduct.nextElementSibling.disabled == true)
+        {cartRemovedProduct = cartRemovedProduct.nextElementSibling;}
+        else if(cartRemovedProduct.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.disabled == true)
+        {cartRemovedProduct = cartRemovedProduct.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling;}
+        else {cartRemovedProduct = cartRemovedProduct.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling}
+        
+        cartRemovedProduct.disabled = false;
+        cartRemovedProduct.innerHTML = "Add to Cart";
         basket.forEach(prod => {
           console.log(91);
           console.log(prod.title);
@@ -194,8 +164,8 @@ if (_pj.in_es6("products", window.location.href)){
                   fetch('http://127.0.0.1:8000/api/cart/').then(response => response.json()).then(cart => cart.map(userCart => {
                     console.log("IF " + userCart.id + " == " + cartItem.cart.id);
                     if (userCart.id ==  cartItem.cart.id){
-                      console.log("IF " + cartItem.product + " == " + prod.id);
-                      if (cartItem.product === prod.id){
+                      console.log("IF " + cartItem.product.id + " == " + prod.id);
+                      if (cartItem.product.id === prod.id){
                         (async () => {
                             await fetch(`http://127.0.0.1:8000/api/cart-item/${cartItem.id}`, {
                             method: 'DELETE',
@@ -260,9 +230,6 @@ else {
         productCountInBasket.lastChild.textContent = ` ${productDataCountInBasket}\n    `;
       }
     });
-      
     });
-  
   }
 }
-
