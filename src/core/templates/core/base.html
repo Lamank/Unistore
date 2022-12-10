@@ -30,7 +30,14 @@
   {% endblock %}
 
   <style>
-    .clearfix:before, .clearfix:after, .dl-horizontal dd:before, .dl-horizontal dd:after, .container:before, .container:after, .container-fluid:before, .container-fluid:after, .row:before, .row:after, .form-horizontal .form-group:before, .form-horizontal .form-group:after, .btn-toolbar:before, .btn-toolbar:after, .btn-group-vertical > .btn-group:before, .btn-group-vertical > .btn-group:after, .nav:before, .nav:after, .navbar:before, .navbar:after, .navbar-header:before, .navbar-header:after, .navbar-collapse:before, .navbar-collapse:after, .pager:before, .pager:after, .panel-body:before, .panel-body:after, .modal-header:before, .modal-header:after, .modal-footer:before, .modal-footer:after{
+    .nav:before,
+    .nav:after,
+    .navbar:before,
+    .navbar:after,
+    .navbar-header:before,
+    .navbar-header:after,
+    .navbar-collapse:before,
+    .navbar-collapse:after {
       content: none !important;
     }
 
@@ -41,9 +48,9 @@
     }
 
     @media only screen and (min-width: 1000px) {
-      .wishlistContainer > .product {
+      .wishlistContainer>.product {
         max-width: 25% !important;
-      }  
+      }
     }
 
     .pagination {
@@ -85,10 +92,11 @@
 
   <nav class="navbar navbar-default">
     <div class="container">
-     
-      <div id="navbar" class="navbar-collapse collapse" style="display: flex !important; justify-content: space-between; padding: 0;">
-       
-  
+
+      <div id="navbar" class="navbar-collapse collapse"
+        style="display: flex !important; justify-content: space-between; padding: 0;">
+
+
         <ul class="nav navbar-nav navbar-left">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
@@ -100,9 +108,10 @@
             </button>
             <a class="navbar-brand" href="{% url 'core:home' %}"> <i class="ion-cube"></i> Unistore</a>
           </div>
-          <li 
-          {% if "blog" not in request.path and "products" not in request.path and "users" not in request.path and "contact" not in request.path %} class="active" {% else %} class="" {% endif %}>
-          <a href="{% url 'core:home' %}"> {% trans "Home" %}</a></li>
+          <li
+            {% if "blog" not in request.path and "products" not in request.path and "users" not in request.path and "contact" not in request.path %}
+            class="active" {% else %} class="" {% endif %}>
+            <a href="{% url 'core:home' %}"> {% trans "Home" %}</a></li>
           <li {% if "blog" in request.path %} class="active" {% else %} class="" {% endif %}>
             <a href="{% url 'blog:blog' %}">{% trans "Blog" %}</a></li>
 
@@ -150,14 +159,15 @@
           <li class="dropdown">
             <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
               aria-expanded="false">
-                {% if request.user.username == 'admin' %} Admin
-                {% else %}
-                {{ request.user.first_name|title}} {{ request.user.last_name|title}}
-                {% endif %} <span class="caret"></span></a>
+              {% if request.user.username == 'admin' %} Admin
+              {% else %}
+              {{ request.user.first_name|title}} {{ request.user.last_name|title}}
+              {% endif %} <span class="caret"></span></a>
             <ul class="dropdown-menu">
               <li><a href="{% url 'users:password-change' %}">{% trans "Password Change" %}</a></li>
               <li><a href="{% url 'users:checkout' %}">{% trans "Checkout" %}</a></li>
-              <li id="favoritesPageLiTag" style="display: flex;"><a href="{% url 'users:wishlist' %}">{% trans "Favorites" %} </a></li>
+              <li id="favoritesPageLiTag" style="display: flex;"><a
+                  href="{% url 'users:wishlist' %}">{% trans "Favorites" %} </a></li>
               <li><a href="{% url 'users:logout' %}">{% trans "Logout" %} </a></li>
             </ul>
           </li>
@@ -168,7 +178,8 @@
               {{ request.user.first_name|title}} {{ request.user.last_name|title}}
               {% endif %}
             </strong></span>
-          <li><a href="/users/logout/"> <i class="ion-android-person"></i> {% trans "Logout" %} </a></li> {% endcomment %}
+          <li><a href="/users/logout/"> <i class="ion-android-person"></i> {% trans "Logout" %} </a></li>
+          {% endcomment %}
           {% else %}
           <li>
             <a href="{% url 'users:register' %}"> <i class="ion-person"></i> Registration</a>
@@ -241,7 +252,7 @@
           <h1 class="h4">{% trans "Information" %} <i class="ion-plus-round hidden-sm hidden-md hidden-lg"></i> </h1>
           <div class="list-group">
             <a href="{% url 'core:about' %}" class="list-group-item">About</a>
-          </div> 
+          </div>
         </div>
         <div class="col-sm-3 col-md-2">
           <h1 class="h4">{% trans "Products" %} <i class="ion-plus-round hidden-sm hidden-md hidden-lg"></i> </h1>
@@ -270,9 +281,9 @@
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
               <li><a href="/"> <img src="{% static 'img/flags/gb.png' %}" alt="Eng" />
-                {% trans "English" %}</a></li>
-              <li><a href="/az/"> <img src="{% static 'img/flags/az.png' %}" alt="Az" /> 
-                {% trans "Azerbaijani" %}</a></li> 
+                  {% trans "English" %}</a></li>
+              <li><a href="/az/"> <img src="{% static 'img/flags/az.png' %}" alt="Az" />
+                  {% trans "Azerbaijani" %}</a></li>
 
 
               {% comment %} {% for language in languages %}
@@ -280,11 +291,11 @@
                   language.name_local }} </a></li>
               {% endfor %} {% endcomment %}
 
-              
+
             </ul>
           </div>
           <hr class="offset-xs">
-{% comment %} 
+          {% comment %}
           <div class="dropdown">
             <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown"
               aria-haspopup="true" aria-expanded="false">
@@ -361,10 +372,10 @@
 
                 <form class="join" method="post">
 
-                  <!-- {% csrf_token %}
-                  {{ user_registration_form }} -->
+                  {% csrf_token %}
+                  {{ user_registration_form }}
 
-                  <!-- <input type="text" name="name" value="" placeholder="Name" required="" class="form-control" />
+                  <input type="text" name="name" value="" placeholder="Name" required="" class="form-control" />
                   <br>
 
                   <input type="email" name="email" value="" placeholder="E-mail" required="" class="form-control" />
@@ -376,7 +387,7 @@
 
                   <input type="text" name="confirm" value="" placeholder="Password again" required=""
                     class="form-control" />
-                  <br> -->
+                  <br>
 
                   <button type="submit" class="btn btn-primary btn-sm">Ok</button> &nbsp;&nbsp;
                   <a href="#">Terms ></a>
@@ -460,7 +471,7 @@
   <script src="{% static 'js/api.js' %}"></script>
   <script src="{% static 'js/basket.js' %}"></script>
   <script src="{% static 'js/subscriber.js' %}"></script>
- 
+
   <script src="{% static 'js/product-filter.js' %}"></script>
   <script src="{% static 'js/wishlistItemCount.js' %}"></script>
 
