@@ -1178,6 +1178,7 @@
 
 			.checkout form .group {
 				margin-top: 20px;
+				min-height: 50px;
 			}
 
 			.checkout form button[type="submit"] {
