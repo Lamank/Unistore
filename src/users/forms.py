@@ -9,7 +9,7 @@ User = get_user_model()
 class CheckoutOrder(forms.Form):
     COUNTRY_CHOICES = [('1', 'Azerbaijan'),('2', 'Turkey'),('3', 'USA'),]
     PAYMENT_CHOICES = [('1' ,'Cash on Delivery'), ('2' , 'Credit Card'),('3', 'Paypall')]
-    reciever = forms.CharField(
+    receiver = forms.CharField(
         max_length=40,
         label='Receiver',
         widget=forms.TextInput(attrs={"placeholder":"Example Example",  'class': "form-control", 'name':'receiver'}) 

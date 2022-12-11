@@ -31,9 +31,9 @@
         <div class="row">
             <div class="col-md-7">
                   <div class="row group">
-                    <div class="col-sm-4"><h2 class="h4">{{form.reciever.label}}</h2></div>
+                    <div class="col-sm-4"><h2 class="h4">{{form.receiver.label}}</h2></div>
                     <div class="col-sm-8"> 
-                      {{form.reciever}}
+                      {{form.receiver}}
 
                       {% comment %} <input type="text" class="form-control" name="receiver" value="John Doe" required="" placeholder="" /> {% endcomment %}
                     </div>
@@ -162,7 +162,7 @@
                 <hr class="offset-md">
                 <div class="row">
                     <div class="col-xs-6 col-md-4">
-                        <h2 class="h4 no-margin total">Total: $ <span>{{cart.get_cart_total}}</span></h2>
+                        <h2 class="h4 no-margin total">Total: $ <span>{{cart.get_cart_total | floatformat:2}}</span></h2>
                     </div>
                     <div class="col-md-4 hidden-xs">
                     </div>

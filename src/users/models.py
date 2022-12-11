@@ -76,18 +76,18 @@ class Order(models.Model):
         through='users.OrderItem',
     )
     user = models.ForeignKey("users.User", null=False, blank=True, on_delete=models.CASCADE)
-    phone = models.CharField(max_length=30)
-    receiver = models.CharField(max_length=40, null=True, blank=True)
+    phone = models.CharField(max_length=255)
+    receiver = models.CharField(max_length=255, null=True, blank=True)
     total = models.FloatField()
     products_quantity = models.PositiveIntegerField(
         default=0
     )
-    country = models.CharField(max_length=100, null=False)
-    city = models.CharField(max_length=100, null=False)
+    country = models.CharField(max_length=255, null=False)
+    city = models.CharField(max_length=255, null=False)
     street = models.CharField(max_length=200)
     building = models.IntegerField()
     zip = models.IntegerField()
-    payment = models.CharField(max_length=100)
+    payment = models.CharField(max_length=255)
     promo_code = models.CharField(max_length=10, null=True, blank=True, default=None)
     complete = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True)

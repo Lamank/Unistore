@@ -26,7 +26,8 @@ from users.services.user import create_user_if_not_exist
 from tasks.tasks import activation_mail, reset_password_mail
 from users.services.user import create_cart_after_user_registered, get_order_details, get_user_cart
 from users.forms import LoginForm
-
+from product.models import Product
+from users.models import Order, Cart, OrderItem
 
 UserModel = get_user_model()
 
@@ -74,7 +75,52 @@ def checkout(request: HttpRequest) -> HttpResponse:
     checkout_form = CheckoutOrder(initial={'receiver': f'{user.first_name} {user.last_name}'})
     cart = get_user_cart(user.id)
     cart_items = cart.cartitem.all()
-            
+    if request.META.get("HTTP_X_REQUESTED_WITH") == "XMLHttpRequest" and request.method == "POST":
+        
+        user_id = request.user
+        print(
+                request.POST['phone'],
+                request.POST['receiver'],
+                request.POST['total'],
+                request.POST['country'],
+                request.POST['products_quantity'],
+                request.POST['city'],
+                request.POST['street'],
+                request.POST['payment'],
+                request.POST['promo_code'],
+        )
+        order = Order.objects.create(
+            user = user_id,
+            phone = request.POST['phone'],
+            receiver = request.POST['receiver'],
+            total = request.POST['total'],
+            country = request.POST['country'],
+            products_quantity = request.POST['products_quantity'],
+            city = request.POST['city'],
+            street = request.POST['street'],
+            building = request.POST['building'],
+            zip = request.POST['zip'],
+            payment = request.POST['payment'],
+            promo_code = request.POST['promo_code'],
+            complete = False,
+            status = 'on_processing',
+        )
+        print("everything is okay!")
+        order.save()
+        cart = Cart.objects.get(owner=user, is_complete=False)
+
+        for item in cart.cartitem.all():
+            OrderItem.objects.create(
+                order=order,
+                quantity=item.quantity,
+                product=item.product,
+            )
+        cart.cartitem.all().delete()
+        
+        # prod = Product.objects.all().first()
+        
+        # order.products.add(prod.id)
+        return JsonResponse({'message': 'Success'})
     
     context = {
         'form': checkout_form,

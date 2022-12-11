@@ -66,6 +66,8 @@ def pre_save_receiver(sender, instance, *args, **kwargs):
     if instance.campaign:
         discounted_price = instance.price - (instance.price * instance.campaign.percent)/100
         instance.discounted_price = round(discounted_price, 2)
+    else:
+        instance.discounted_price = 0.0
 pre_save.connect(pre_save_receiver, sender=Product)
 
 
