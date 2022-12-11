@@ -62,7 +62,7 @@ var cartRemovedProduct = "";
                       <button class="btn btn-default btn-sm" type="button" data-action="minus"><i
                           class="ion-minus-round"></i></button>
                     </span>
-                    <input type="text" class="form-control input-sm" placeholder="Qty" value="1" readonly="">
+                    <input type="text" class="form-control input-sm" placeholder="Qty" value="${product.quantity}" readonly="">
                     <span class="input-group-btn">
                       <button class="btn btn-default btn-sm" type="button" data-action="plus"><i
                           class="ion-plus-round"></i></button>
