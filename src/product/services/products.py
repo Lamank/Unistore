@@ -32,7 +32,7 @@ def get_reviews(product_id: int) -> QuerySet:
 
 def search_product(data: str) -> QuerySet:
     data_list = data.split()
-    searching_prods = Product.objects.filter(reduce(operator.or_, (Q(title__icontains=data) | Q(processor__contains = data) |Q(description__icontains=data) for data in data_list)))
+    searching_prods = Product.objects.filter(reduce(operator.or_, (Q(title__icontains=data) | Q(operating_system__icontains=data) | Q(processor__contains = data) |Q(description__icontains=data) for data in data_list)))
 
     return searching_prods
 

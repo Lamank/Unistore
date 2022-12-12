@@ -89,7 +89,6 @@ def checkout(request: HttpRequest) -> HttpResponse:
             building = request.POST['building'],
             zip = request.POST['zip'],
             payment = request.POST['payment'],
-            promo_code = request.POST['promo_code'],
             complete = False,
             status = 'on_processing',
         )

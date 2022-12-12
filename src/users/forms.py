@@ -52,11 +52,7 @@ class CheckoutOrder(forms.Form):
             'value': 'Cash on Delivery'}),
         choices=PAYMENT_CHOICES,
     )
-    promo_code = forms.CharField(
-        required=False,
-        label='Promo Code',
-        max_length=10,
-        widget=forms.TextInput(attrs={'class': "form-control", 'name':'promo'}) )
+
 
 class RegisterForm(UserCreationForm):
 

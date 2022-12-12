@@ -99,7 +99,8 @@ def search(request: HttpRequest) -> HttpResponse:
     query = request.GET.get("query")
     if query: 
         results= search_product(data=query) 
-       
-        print(results)
-        return render(request, "core/search.html", {"results": results})
+        if results:
+            return render(request, "core/search.html", {"results": results})
+        else:
+             return render(request, "core/search.html", {"data": "There is "})
     return render(request, "core/search.html", {"results": ''})

@@ -171,7 +171,6 @@ $('#checkout-form').on('submit', function (e) {
 		"building": parseInt($("input[name='building']").val()),
 		"zip": parseInt($("input[name='zip']").val()),
 		"payment": 2,
-		"promo_code": $("input[name='promo_code']").val(),
 		"complete": false,
 		"csrfmiddlewaretoken": csrf
 	}

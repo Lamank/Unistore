@@ -87,7 +87,6 @@ class Order(models.Model):
     building = models.IntegerField()
     zip = models.IntegerField()
     payment = models.CharField(max_length=255)
-    promo_code = models.CharField(max_length=10, null=True, blank=True, default=None)
     complete = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True)
     modified_at = models.DateTimeField(auto_now=True)
