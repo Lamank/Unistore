@@ -1,7 +1,6 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth import get_user_model
-from django_countries.fields import CountryField
 
 User = get_user_model()
 
@@ -17,14 +16,6 @@ class CheckoutOrder(forms.Form):
     phone = forms.CharField(
         label='Phone',
         widget=forms.TextInput(attrs={'placeholder':'+994(70)1234567',  'class': 'form-control', 'name':'phone'})
-        )
-    # country = forms.ChoiceField(
-    #     label='Choose country',
-    #     widget=forms.Select(attrs={'class' : 'form-control select', 'id':'country'}),
-    #     choices=COUNTRY_CHOICES,
-    # )
-    country = CountryField(blank_label='Select Country').formfield(
-        widget=forms.Select(attrs={'class' : 'form-control select', 'id':'country'})
         )
     city = forms.CharField(
         label='City', 

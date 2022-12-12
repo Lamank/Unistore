@@ -8,13 +8,15 @@ $('.filter-checkbox, #slider-price').on('click', function(){
     _filterObj.max_price = $( "#slider-price" ).slider( "values", 1 );
     var _filterKey = $(this).find('input').data('filter');
     var _inputStatus = $(this).find('input');
- 
+    console.log(_inputStatus);
     if(!_inputStatus.attr("checked")){
+        console.log('if', _inputStatus.attr("checked"));
         _inputStatus.attr("checked", "checked");
     }
-    else{
-        _inputStatus.removeAttr("checked");
-    }
+    // else{
+    //     console.log('else', _inputStatus.attr("checked"));
+    //     _inputStatus.removeAttr("checked");
+    // }
     
     _filterObj[_filterKey] = Array.from($('input[data-filter=' + _filterKey + ']:checked' )).map(function(el){
         return el.value;

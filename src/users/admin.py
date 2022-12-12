@@ -45,14 +45,14 @@ class CartItemModelAdmin(admin.ModelAdmin):
     
     
 class OrderModelAdmin(admin.ModelAdmin):
-    list_display = ['user', 'country', 'city', 'created_at']
-    list_display_links = ['user', 'country', 'city', 'created_at']
+    list_display = ['user', 'city', 'created_at']
+    list_display_links = ['user', 'city', 'created_at']
     readonly_fields: Sequence[str]
     readonly_fields = ("created_at",)
-    list_filter = ("created_at", "user", "country", "city")
+    list_filter = ("created_at", "user", "city")
     empty_value_display = 'unknown'
     search_fields: Sequence[str]
-    search_fields = ["user__username", "country"]
+    search_fields = ["user__username",]
     
 class OrderItemModelAdmin(admin.ModelAdmin):
     list_display = ['order', 'product', 'created_at']

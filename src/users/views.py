@@ -3,7 +3,7 @@ from typing import Optional
 
 from django.shortcuts import redirect, render
 from django.urls import reverse_lazy, reverse
-from django.http import HttpRequest, HttpResponse
+from django.http import HttpRequest, HttpResponse, HttpResponseRedirect
 from django.contrib.auth.views import PasswordChangeView, LoginView
 from django.core.mail import BadHeaderError
 from django.template.loader import render_to_string
@@ -78,23 +78,11 @@ def checkout(request: HttpRequest) -> HttpResponse:
     if request.META.get("HTTP_X_REQUESTED_WITH") == "XMLHttpRequest" and request.method == "POST":
         
         user_id = request.user
-        print(
-                request.POST['phone'],
-                request.POST['receiver'],
-                request.POST['total'],
-                request.POST['country'],
-                request.POST['products_quantity'],
-                request.POST['city'],
-                request.POST['street'],
-                request.POST['payment'],
-                request.POST['promo_code'],
-        )
         order = Order.objects.create(
             user = user_id,
             phone = request.POST['phone'],
             receiver = request.POST['receiver'],
             total = request.POST['total'],
-            country = request.POST['country'],
             products_quantity = request.POST['products_quantity'],
             city = request.POST['city'],
             street = request.POST['street'],
@@ -120,7 +108,8 @@ def checkout(request: HttpRequest) -> HttpResponse:
         # prod = Product.objects.all().first()
         
         # order.products.add(prod.id)
-        return JsonResponse({'message': 'Success'})
+        return JsonResponse({'status': 1, 'success': '/users/order-success'})
+        # return HttpResponseRedirect('/users/order-success')
     
     context = {
         'form': checkout_form,

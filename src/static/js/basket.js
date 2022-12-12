@@ -47,7 +47,7 @@ var cartRemovedProduct = "";
               cart.firstChild.firstChild.innerHTML += `
               <div class="media">
                 <div class="media-left">
-                  <a href="${product.slug}">
+                  <a href="/products/${product.slug}">
                     <img class="media-object" src="${product.main_image}" alt="${product.title}" />
                   </a>
                 </div>

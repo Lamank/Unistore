@@ -82,7 +82,6 @@ class Order(models.Model):
     products_quantity = models.PositiveIntegerField(
         default=0
     )
-    country = models.CharField(max_length=255, null=False)
     city = models.CharField(max_length=255, null=False)
     street = models.CharField(max_length=200)
     building = models.IntegerField()
