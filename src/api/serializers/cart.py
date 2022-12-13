@@ -17,7 +17,6 @@ class CartItemSerializer(ModelSerializer):
 
     def to_representation(self, instance):
         data = super().to_representation(instance)
-        print(data)
         data['product'] = ProductSerializer(instance.product).data
         data['cart'] = CartSerializer(instance.cart).data
         return data

@@ -1,3 +1,4 @@
+from urllib import request
 from django.contrib.auth import get_user_model
 from rest_framework import generics, status
 from rest_framework.permissions import AllowAny, IsAuthenticated
@@ -151,7 +152,6 @@ class OrderListCreateAPIView(generics.ListCreateAPIView):
         serializers = self.get_serializer(data=request.data)
         if serializers.is_valid():
             user = self.request.user
-            print("this is user ------",user)
             order, created = Order.objects.get_or_create(
                 user=user,
                 status="on_processing",
@@ -171,9 +171,6 @@ class OrderListCreateAPIView(generics.ListCreateAPIView):
             return Response({"Message": "Order item added unsuccessfully"})
         return Response({"Message": "Invalid data"})
         
-
-
-
 class OrderRetrieveUpdateAPIView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Order.objects.all()
     permission_classes = [AllowAny]
