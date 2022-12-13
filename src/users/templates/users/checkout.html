@@ -6,170 +6,233 @@
 
 
 
-    <link href="{% static 'css/carousel.css' %}" rel="stylesheet">
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-   
-    <link href="{% static 'css/custom-scroll/jquery.mCustomScrollbar.css' %}" rel="stylesheet">
+<link href="{% static 'css/carousel.css' %}" rel="stylesheet">
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 
-  
-
-    {% endblock %}
-    {% block content %}
+<link href="{% static 'css/custom-scroll/jquery.mCustomScrollbar.css' %}" rel="stylesheet">
 
 
-    <div class="white">
-        <div class="container checkout">
-            <h1>Checkout order</h1>
-            <hr class="offset-sm">
-        </div>
-    </div>
-    <hr class="offset-md">
 
-    <div class="container checkout">
-        <form action="" id="checkout-form" method="post">
-          {% csrf_token %}
-        <div class="row">
-            <div class="col-md-7">
-                  <div class="row group">
-                    <div class="col-sm-4"><h2 class="h4">{{form.receiver.label}}</h2></div>
-                    <div class="col-sm-8"> 
-                      {{form.receiver}}
+{% endblock %}
+{% block content %}
 
-                      {% comment %} <input type="text" class="form-control" name="receiver" value="John Doe" required="" placeholder="" /> {% endcomment %}
-                    </div>
-                  </div>
 
-                  <div class="row group">
-                    <div class="col-sm-4"><h2 class="h4">{{form.phone.label}}</h2></div>
-                    <div class="col-sm-8">
-                      {{form.phone}}
-                       {% comment %} <input type="text" class="form-control" name="phone" value="+45 (555) 8546-25-77" required="" placeholder="" /> {% endcomment %}
-                      </div>
-                  </div>
-
-                  <div class="group">
-                    <div class="row">
-                      <div class="col-sm-4">
-                        <h2 class="h4">{{form.city.label}}</h2>
-                        {{form.city}}
-                      </div>
-                      <div class="col-sm-4">
-                        <h2 class="h4">{{form.street.label}}</h2>
-                        {{form.street}}
-                      </div>
-                      <div class="col-sm-2">
-                        <h2 class="h4">{{form.building.label}}</h2>
-                        {{form.building}}
-                      </div>
-                      <div class="col-sm-2">
-                        <h2 class="h4">{{form.zip.label}}</h2>
-                        {{form.zip}}
-                      </div>
-                    </div>
-                  </div>
-                  <br>
-                  <br>
-
-                  <div class="row group">
-                    <div class="col-sm-4"><h2 class="h4">{{form.payment.label}}</h2></div>
-                    <div class="col-sm-8">
-                      <div class="group-select justify" tabindex='1'>
-                       {{form.payment}} 
-                           {% comment %} <input class="form-control select" id="payment" name="payment" value="Cash on Delivery" placeholder="" required="" />
-                            
-                           <ul class="dropdown">
-                            <li data-value="Cash on Delivery">Cash on Delivery</li>
-                            <li data-value="Credit Card">Credit Card</li>
-                            <li data-value="Paypall">Paypall</li>  
-                          </ul>   {% endcomment %}
-                          {% comment %} {{form.payment.errors}} {% endcomment %}
-                          <div class="arrow bold"><i class="ion-chevron-down"></i></div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <hr class="offset-lg visible-xs visible-sm">
-                  <hr class="offset-lg visible-xs">
-            </div>
-
-            <div class="col-md-5 white">
-                <hr class="offset-md visible-xs visible-sm">
-                <div class="checkout-cart">
-                    <div class="content">
-                      {% for cart_item in cart_items %}
-                      <div class="media" data-cart="{{cart.id}}" data-item="{{cart_item.id}}" data-product="{{cart_item.product.id}}">
-                        <div class="media-left">
-                          <a href="#">
-                            <img class="media-object" src="{{ cart_item.product.main_image.url }}" alt="{{ cart_item.product.title }}"/>
-                          </a>
-                        </div>
-                        <div class="media-body">
-                          <h2 class="h4 media-heading">{{ cart_item.product.title | title}}</h2>
-                          <label>{{ cart_item.product.category | title}}</label>
-                          {% if cart_item.product.campaign.percent %}
-                            <p>$ <span class="item-price">{{ cart_item.product.discounted_price | floatformat:2 }}</span></p> 
-                            {% else %}
-                            <p>$ <span class="item-price">{{ cart_item.product.price }}</span></p>
-                          {% endif %}
-                          <p>Total: $ <span class="subtotal-price">{{ cart_item.get_total }}</span></p>
-                        </div>
-                        <div class="controls">
-                          <div class="input-group">
-                            <span class="input-group-btn">
-                              <button class="btn btn-default btn-sm" type="button" data-action="minus"><i class="ion-minus-round"></i></button>
-                            </span>
-                            <input type="text" class="form-control input-sm" placeholder="Qty" id="quantity" value="{{cart_item.quantity}}" readonly="">
-                            <span class="input-group-btn">
-                              <button class="btn btn-default btn-sm" type="button" data-action="plus"><i class="ion-plus-round"></i></button>
-                            </span>
-                          </div><!-- /input-group -->
-
-                          <a href="#remove"> <i class="ion-trash-b"></i> Remove </a>
-                        </div>
-                      </div>
-                      {% endfor %}
-                      
-
-                    </div>
-                </div>
-                <hr class="offset-md visible-xs visible-sm">
-            </div>
-
-            <hr class="offset-lg hidden-xs">
-
-            <div class="col-sm-12 white">
-                <hr class="offset-md">
-                <div class="row">
-                    <div class="col-xs-6 col-md-4">
-                        <h2 class="h4 no-margin total">Total: $ <span>{{cart.get_cart_total | floatformat:2}}</span></h2>
-                    </div>
-                    <div class="col-md-4 hidden-xs">
-                    </div>
-                    <div class="col-xs-6 col-md-4">
-                        <button class="btn btn-primary pull-right" id="confirm" type="submit">Confirm order</button>
-                    </div>
-                </div>
-                <hr class="offset-md">
-            </div>
-
-        </div>
-        </form>
-    </div>
-
-    <hr class="offset-lg">
+<div class="white">
+  <div class="container checkout">
+    <h1>Checkout order</h1>
     <hr class="offset-sm">
-    {%endblock%}
+  </div>
+</div>
+<hr class="offset-md">
+
+<div class="container checkout">
+  <form action="" id="checkout-form" method="post">
+    {% csrf_token %}
+    <div class="row">
+      <div class="col-md-7">
+        <div class="row group">
+          <div class="col-sm-4">
+            <h2 class="h4">{{form.receiver.label}}</h2>
+          </div>
+          <div class="col-sm-8">
+            {{form.receiver}}
+          </div>
+        </div>
+
+        <div class="row group">
+          <div class="col-sm-4">
+            <h2 class="h4">{{form.phone.label}}</h2>
+          </div>
+          <div class="col-sm-8">
+            {{form.phone}}
+          </div>
+        </div>
+
+        <div class="group">
+          <div class="row">
+            <div class="col-sm-4">
+              <h2 class="h4">{{form.city.label}}</h2>
+              {{form.city}}
+            </div>
+            <div class="col-sm-4">
+              <h2 class="h4">{{form.street.label}}</h2>
+              {{form.street}}
+            </div>
+            <div class="col-sm-2">
+              <h2 class="h4">{{form.building.label}}</h2>
+              {{form.building}}
+            </div>
+            <div class="col-sm-2">
+              <h2 class="h4">{{form.zip.label}}</h2>
+              {{form.zip}}
+            </div>
+          </div>
+        </div>
+        <br>
+        <br>
+
+        <div class="row group">
+          <div class="col-sm-4">
+            <h2 class="h4">{{form.payment.label}}</h2>
+          </div>
+          <div class="col-sm-8">
+            <div class="group-select justify" tabindex='1'>
+              {{form.payment}}
+              {% comment %} <input class="form-control select" id="payment" name="payment" value="Cash on Delivery"
+                placeholder="" required="" />
+
+              <ul class="dropdown">
+                <li data-value="Cash on Delivery">Cash on Delivery</li>
+                <li data-value="Credit Card">Credit Card</li>
+                <li data-value="Paypall">Paypall</li>
+              </ul> {% endcomment %}
+              {% comment %} {{form.payment.errors}} {% endcomment %}
+              <div class="arrow bold"><i class="ion-chevron-down"></i></div>
+            </div>
+          </div>
+        </div>
+        <div id="paypal-button-container"></div>
+
+        <hr class="offset-lg visible-xs visible-sm">
+        <hr class="offset-lg visible-xs">
+      </div>
+
+      <div class="col-md-5 white">
+        <hr class="offset-md visible-xs visible-sm">
+        <div class="checkout-cart">
+          <div class="content">
+            {% for cart_item in cart_items %}
+            <div class="media" data-cart="{{cart.id}}" data-item="{{cart_item.id}}"
+              data-product="{{cart_item.product.id}}">
+              <div class="media-left">
+                <a href="#">
+                  <img class="media-object" src="{{ cart_item.product.main_image.url }}"
+                    alt="{{ cart_item.product.title }}" />
+                </a>
+              </div>
+              <div class="media-body">
+                <h2 class="h4 media-heading">{{ cart_item.product.title | title}}</h2>
+                <label>{{ cart_item.product.category | title}}</label>
+                {% if cart_item.product.campaign.percent %}
+                <p>$ <span class="item-price">{{ cart_item.product.discounted_price | floatformat:2 }}</span></p>
+                {% else %}
+                <p>$ <span class="item-price">{{ cart_item.product.price }}</span></p>
+                {% endif %}
+                <p>Total: $ <span class="subtotal-price">{{ cart_item.get_total }}</span></p>
+              </div>
+              <div class="controls">
+                <div class="input-group">
+                  <span class="input-group-btn">
+                    <button class="btn btn-default btn-sm" type="button" data-action="minus"><i
+                        class="ion-minus-round"></i></button>
+                  </span>
+                  <input type="text" class="form-control input-sm" placeholder="Qty" id="quantity"
+                    value="{{cart_item.quantity}}" readonly="">
+                  <span class="input-group-btn">
+                    <button class="btn btn-default btn-sm" type="button" data-action="plus"><i
+                        class="ion-plus-round"></i></button>
+                  </span>
+                </div><!-- /input-group -->
+
+                <a href="#remove"> <i class="ion-trash-b"></i> Remove </a>
+              </div>
+            </div>
+            {% endfor %}
 
 
-    {%block footer%}
-   
-   
-    <script src="{% static 'js/checkout.js' %}"></script>
+          </div>
+        </div>
+        <hr class="offset-md visible-xs visible-sm">
+      </div>
 
-    <script type="text/javascript" src="{% static 'js/custom-scroll/jquery.mCustomScrollbar.concat.min.js' %}"></script>
+      <hr class="offset-lg hidden-xs">
 
-    <script type="text/javascript" src="{% static 'js/jquery-ui-1.11.4.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/jquery.ui.touch-punch.js' %}"></script>
+      <div class="col-sm-12 white">
+        <hr class="offset-md">
+        <div class="row">
+          <div class="col-xs-6 col-md-4">
+            <h2 class="h4 no-margin total">Total: $ <span>{{cart.get_cart_total | floatformat:2}}</span></h2>
+          </div>
+          <div class="col-md-4 hidden-xs">
+          </div>
+          <div class="col-xs-6 col-md-4">
+            <button class="btn btn-primary pull-right" id="confirm" type="submit">Confirm order</button>
+          </div>
+        </div>
+        <hr class="offset-md">
+      </div>
+
+    </div>
+  </form>
+</div>
+
+<hr class="offset-lg">
+<hr class="offset-sm">
+{%endblock%}
 
 
-    {%endblock%}
+{%block footer%}
+
+
+<script src="{% static 'js/checkout.js' %}"></script>
+
+<script type="text/javascript" src="{% static 'js/custom-scroll/jquery.mCustomScrollbar.concat.min.js' %}"></script>
+
+<script type="text/javascript" src="{% static 'js/jquery-ui-1.11.4.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/jquery.ui.touch-punch.js' %}"></script>
+
+
+<script src="https://www.paypal.com/sdk/js?client-id=test&currency=USD&intent=capture&enable-funding=venmo"
+  data-sdk-integration-source="integrationbuilder"></script>
+<script>
+  const paypalButtonsComponent = paypal.Buttons({
+    // optional styling for buttons
+    // https://developer.paypal.com/docs/checkout/standard/customize/buttons-style-guide/
+    style: {
+      color: "blue",
+      shape: "rect",
+      layout: "vertical",
+      height: 40,
+    },
+
+    // set up the transaction
+    createOrder: (data, actions) => {
+      // pass in any options from the v2 orders create call:
+      // https://developer.paypal.com/api/orders/v2/#orders-create-request-body
+      const createOrderPayload = {
+        purchase_units: [
+          {
+            amount: {
+              value: "88.44"
+            }
+          }
+        ]
+      };
+
+      return actions.order.create(createOrderPayload);
+    },
+
+    // finalize the transaction
+    onApprove: (data, actions) => {
+      const captureOrderHandler = (details) => {
+        const payerName = details.payer.name.given_name;
+        console.log('Transaction completed');
+      };
+
+      return actions.order.capture().then(captureOrderHandler);
+    },
+
+    // handle unrecoverable errors
+    onError: (err) => {
+      console.error('An error prevented the buyer from checking out with PayPal');
+    }
+  });
+
+  paypalButtonsComponent
+    .render("#paypal-button-container")
+    .catch((err) => {
+      console.error('PayPal Buttons failed to render');
+    });
+</script>
+
+{%endblock%}
