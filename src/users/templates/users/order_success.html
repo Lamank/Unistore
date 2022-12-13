@@ -1,47 +1,81 @@
+{% extends "core/base.html" %}
 
-    {% extends "core/base.html" %}
+{% load static %}
 
-    {% load static %}
+{% block head %}
+<link href="{% static 'css/order-success.css' %}" rel="stylesheet">
+{% endblock head%}
+{% block content %}
 
-    {% block head %}
-    <link href="{% static 'css/order-success.css' %}" rel="stylesheet">
-    {% endblock head%}
-    {% block content %}
-    
-    <section id="order-success">
-        <div class="background row">
-            <div class="col">
-                <img id="success-img" src="{% static 'img/bars/success.png' %}" alt="">
-                <h2>Thank You</h2>
-                <p class="success-message">Payment is Successfully proccessed and your order is on the way</p>
-                
+<div class="order_confirmed">
+    <div class="order_container">
+        <div class="order_image_part">
+            <img src="https://png.pngtree.com/png-vector/20190228/ourmid/pngtree-check-mark-icon-design-template-vector-isolated-png-image_711429.jpg"
+                alt="order_success_image"></div>
+        <div class="order_info_1">
+            <h2>Your Order Confirmed!</h2>
+            <p>Hi Laman,</p>
+            <span>Your order has been confirmed and will be shipping soon.</span>
+        </div>
+        <ul class="order_info_2">
+            <li>
+                <p>Order Date</p>
+                <span>18 March, 2021</span>
+            </li>
+            <li>
+                <p>Order Number</p>
+                <span>#41</span>
+            </li>
+            <li>
+                <p>Payment</p>
+                <span>Visa -4699</span>
+            </li>
+            <li>
+                <p>Address</p>
+                <span>8502 Preston Road</span>
+            </li>
+        </ul>
+        <div class="order_products">
+            <div class="order_product"><img
+                    src="https://cdn.thewirecutter.com/wp-content/media/2022/07/laptop-under-500-2048px-acer-1.jpg?auto=webp&quality=75&width=320"
+                    alt="">
+                <div class="product_name">
+                    <p>Lorem ipsum dolor sit amet.</p>
+                    <span>Lorem, ipsum.</span>
+                </div>
+                <p>Qty 1</p>
+                <p class="order_total">$199</p>
             </div>
-            <hr>
-            <div class="col">
-                <p class="order-id">Your order number is <span>#{{ detail.id }}</span></p>
-            </div>
-            <hr>
-            <div class="col order-table">
-                <table>
-                    <tr>
-                        <td>Order Total: </td>
-                        <td class="info">{{ detail.total }}</td>
-                        
-                    </tr>
-                    <tr>
-                        <td>Payment method: </td>
-                        <td class="info">{{ payment }}</td>
-                        
-                    </tr>
-                </table>
-            </div>
-            <div class="col buttons">
-                <a href="{% url 'product:product-list' %}" class="btn-continue">Continue shopping</a>
+            <div class="order_product"><img
+                    src="https://cdn.thewirecutter.com/wp-content/media/2022/07/laptop-under-500-2048px-acer-1.jpg?auto=webp&quality=75&width=320"
+                    alt="">
+                <div class="product_name">
+                    <p>Lorem ipsum dolor sit amet.</p>
+                    <span>Lorem, ipsum.</span>
+                </div>
+                <p>Qty 1</p>
+                <p class="order_total">$199</p>
             </div>
         </div>
-    </section>
+        <div class="order_total">
+            <div>
+                <p>Payment Total</p>
+                <span>$234235</span>
+            </div>
+            <div>
+                <p>Payment Method</p>
+                <span>Credit Card</span>
+            </div>
+        </div>
+        <div class="order_last">
+            <p>We'll send you shipping confirmation when your item(s) are on the way! We appreciate your bisiness,
+                and hope you enjoy your purchase.</p>
+            <span>Thank you!</span>
+        </div>
+    </div>
+</div>
 
-    {% endblock content %}
-    {% block footer %}
- 
-    {% endblock footer %}
+{% endblock content %}
+{% block footer %}
+
+{% endblock footer %}
