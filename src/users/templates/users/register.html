@@ -12,11 +12,6 @@
 {%endblock%}
 
 {% block content %}
-<!-- <br><br> -->
-<!-- <h1>Change Password</h1> -->
-{% csrf_token %}
-<!-- {{ form.as_p }} -->
-<!-- FORM -->
 <div class="changePassword">
     <div class="container">
         <div class="changePasswordMain">
@@ -24,74 +19,36 @@
                 <p id="register-message"></p>
                 <h2>Register</h2>
             </div>
-            <form method="POST">
+            <form method="POST" id="registerForm" action="{% url 'users:register' %}">
                 {% csrf_token %}
                 <div class="changePasswordBottom" onSubmit={handleSubmit(onSubmit)}>
                     <div>
-                        
                         {{form.first_name}}
-                        {% comment %} <input type="password" name="old_password" placeholder="Enter old password" autocomplete="current-password" autofocus="" required="" id="id_old_password"> {% endcomment %}
-                        {% for error in form.first_name.errors %}
-                        <li class="text-danger">
-                            {{error}}
-                        </li>
-                        {% endfor %}
                     </div>
                     <div>
-                        
                         {{form.last_name}}
-                        {% comment %} <input type="password" name="new_password1" placeholder="Enter new password" autocomplete="new-password" required="" id="id_new_password1"> {% endcomment %}
-                        {% for error in form.last_name.errors %}
-                        <li class="text-danger">
-                            {{error}}
-                        </li>
-                        {% endfor %}
                     </div>
                     <div>
-                    
                         {{form.username}}
-                        {% comment %} <input type="password" name="new_password2" placeholder="Confirm new password" autocomplete="new-password" required="" id="id_new_password2"> {% endcomment %}
-                        {% for error in form.username.errors %}
-                        <li class="text-danger">
-                            {{error}}
-                        </li>
-                        {% endfor %}
+                       <ul style="margin: auto 0; max-width: 400px;"></ul>
                     </div>
                     <div>
-                    
                         {{form.email}}
-                        {% comment %} <input type="password" name="new_password2" placeholder="Confirm new password" autocomplete="new-password" required="" id="id_new_password2"> {% endcomment %}
-                        {% for error in form.email.errors %}
-                        <li class="text-danger">
-                            {{error}}
-                        </li>
-                        {% endfor %}
+                       <ul style="margin: auto 0; max-width: 400px;"></ul>
                     </div>
                     <div>
-                        
                         {{form.password1}}
-                        {% comment %} <input type="password" name="new_password2" placeholder="Confirm new password" autocomplete="new-password" required="" id="id_new_password2"> {% endcomment %}
-                        {% for error in form.password1.errors %}
-                        <li class="text-danger">
-                            {{error}}
-                        </li>
-                        {% endfor %}
+                       <ul style="margin: auto 0; max-width: 400px;"></ul>
                     </div>
                     <div>
-                        
                         {{form.password2}}
-                        {% comment %} <input type="password" name="new_password2" placeholder="Confirm new password" autocomplete="new-password" required="" id="id_new_password2"> {% endcomment %}
-                        {% for error in form.password2.errors %}
-                        <li class="text-danger">
-                            {{error}}
-                        </li>
-                        {% endfor %}
+                       <ul style="margin: auto 0; max-width: 400px;"></ul>
                     </div>
                     <button type="submit">
                         Sign Up
                     </button>
                     <div>
-                        <a href="/users/user-login" class="">Have already an account? Login here</a>
+                        <a href="{% url 'users:user-login' %}" class="">Have already an account? Login here</a>
                     </div>
                     
                     

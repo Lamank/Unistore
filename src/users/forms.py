@@ -1,5 +1,6 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
+from users.backends import EmailBackend
 from django.contrib.auth import get_user_model
 
 User = get_user_model()
@@ -89,10 +90,30 @@ class LoginForm(AuthenticationForm):
     class Meta:
         
         model = User
-        fields = ["email", "password"]
+        fields = ["username", "password"]
         widgets = {
-            "email": forms.EmailInput(attrs={
+            "username": forms.EmailInput(attrs={
                 'class': 'form-control',
                 'placeholder': 'E-mail',
             }),
         }
+    def clean(self):
+        username = self.cleaned_data.get('username')
+        password = self.cleaned_data.get('password')
+
+        if username is not None and password:
+            backend = EmailBackend()
+            self.user_cache = backend.authenticate(self.request, username=username, password=password)
+            if self.user_cache is None:
+                raise self.get_invalid_login_error()
+            else:
+                self.confirm_login_allowed(self.user_cache)
+
+        return self.cleaned_data
+        
+    def confirm_login_allowed(self, user):
+        if not user.is_active:
+            raise forms.ValidationError(
+                ("Please confirm your email so you can log in."),
+                code='inactive',
+            )

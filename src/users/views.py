@@ -3,29 +3,29 @@ from typing import Optional
 
 from django.shortcuts import redirect, render
 from django.urls import reverse_lazy, reverse
-from django.http import HttpRequest, HttpResponse, HttpResponseRedirect
+from django.http import HttpRequest, HttpResponse, JsonResponse
 from django.contrib.auth.views import PasswordChangeView, LoginView
 from django.core.mail import BadHeaderError
 from django.template.loader import render_to_string
 from django.contrib.sites.shortcuts import get_current_site
 from django.utils.encoding import force_bytes, force_str
-from django.http import HttpRequest, HttpResponse, JsonResponse
 from django.contrib.auth.forms import PasswordChangeForm, PasswordResetForm
 from django.db.models.query_utils import Q
 from django.contrib.auth.tokens import default_token_generator
 from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth import login , get_user_model, authenticate
+from django.contrib.auth import login, get_user_model, authenticate
 from django.conf import settings
 from urllib.parse import urlencode, quote_plus
 from authlib.integrations.django_client import OAuth
 
-from users.forms import CheckoutOrder, RegisterForm
+from users.forms import CheckoutOrder, RegisterForm, LoginForm
 from users.token import account_activation_token
-from users.services.user import create_user_if_not_exist
 from tasks.tasks import activation_mail, reset_password_mail
-from users.services.user import create_cart_after_user_registered, get_order_details, get_user_cart
-from users.forms import LoginForm
+from users.services.user import (
+    create_cart_after_user_registered, 
+    get_order_details, get_user_cart, 
+    create_user_if_not_exist)
 from product.models import Product
 from users.models import Order, Cart, OrderItem
 
@@ -136,7 +136,6 @@ def order_success(request: HttpRequest) -> HttpResponse:
 
     return render(request, 'users/order_success.html', context=context)
 
-#######################################################################################################################
 
 def register(request: HttpRequest) -> HttpResponse:
     register_form = RegisterForm()
@@ -162,8 +161,16 @@ def register(request: HttpRequest) -> HttpResponse:
             message = render_to_string('users/acc_active_email.html', context)
             activation_mail.send_activate_email_mail.delay(mail_subject=mail_subject, message=message, to_email=to_email)
             message = f'Please {user.first_name} {user.last_name} confirm your email address to complete the registration. Note: Check your spam folder.'
-                
-            return JsonResponse({'message': message})
+            data = {
+                'success': True,
+                'message': message
+            }    
+            return JsonResponse(data)
+        else:
+            data = {
+                'error': register_form.errors
+            } 
+            return JsonResponse(data)
     contex ={
         'form' : register_form
     }
