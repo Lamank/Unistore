@@ -1,5 +1,5 @@
 from django import forms
-from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm, UsernameField
 from users.backends import EmailBackend
 from django.contrib.auth import get_user_model
 
@@ -86,29 +86,30 @@ class RegisterForm(UserCreationForm):
 
 
 class LoginForm(AuthenticationForm):
-    username = forms.CharField(label='Email / Username')
-    class Meta:
+    username = UsernameField(widget=forms.TextInput(attrs={"autofocus": True}))
+    # class Meta:
         
-        model = User
-        fields = ["username", "password"]
-        widgets = {
-            "username": forms.EmailInput(attrs={
-                'class': 'form-control',
-                'placeholder': 'E-mail',
-            }),
-        }
+    #     model = User
+    #     fields = ["username", "password"]
+    #     widgets = {
+    #         "username": forms.TextInput(attrs={
+    #             'class': 'form-control',
+    #             'placeholder': 'E-mail',
+    #         }),
+    #     }
+
     def clean(self):
         username = self.cleaned_data.get('username')
         password = self.cleaned_data.get('password')
-
+        print(username, password)
         if username is not None and password:
             backend = EmailBackend()
             self.user_cache = backend.authenticate(self.request, username=username, password=password)
+            print(self.user_cache)
             if self.user_cache is None:
                 raise self.get_invalid_login_error()
             else:
                 self.confirm_login_allowed(self.user_cache)
-
         return self.cleaned_data
         
     def confirm_login_allowed(self, user):

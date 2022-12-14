@@ -45,6 +45,7 @@
                 <h2>Login</h2>
             </div>
             <form action="{% url 'users:user-login' %}" method="POST">
+                {{form.none_field_errors}}
                 {% csrf_token %}
                 <div class="changePasswordBottom" onSubmit={handleSubmit(onSubmit)}>
                     <div>
@@ -62,7 +63,7 @@
                         <label>Password</label>
                         <input type="password" name="password" class="form-control" placeholder="Enter your Password"
                             autocomplete="current-password" required="" id="id_password">
-                        {% for error in form.password1.errors %}
+                        {% for error in form.password.errors %}
                         <li class="text-danger">
                             {{error}}
                         </li>
