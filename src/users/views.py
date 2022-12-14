@@ -35,6 +35,10 @@ class LoginView(LoginView):
     form_class = LoginForm
     template_name = 'users/login.html'
 
+    def form_invalid(self, form) -> HttpResponse:
+        print('here', form.errors)
+        return super().form_invalid(form)
+
 def custom_password_reset(request):
 	if request.method == "POST":
 		password_reset_form = PasswordResetForm(request.POST)
@@ -88,8 +92,6 @@ def checkout(request: HttpRequest) -> HttpResponse:
             street = request.POST['street'],
             building = request.POST['building'],
             zip = request.POST['zip'],
-            payment = request.POST['payment'],
-            complete = False,
             status = 'on_processing',
         )
         print("everything is okay!")
@@ -123,15 +125,11 @@ def checkout(request: HttpRequest) -> HttpResponse:
 def order_success(request: HttpRequest) -> HttpResponse:
     user_id = request.user.id
     order_detail = get_order_details(user_id)
-    payment_choices = [('1', 'Cash on Delivery'), ('2', 'Credit Card'),('3', 'Paypall')]
-    for method in payment_choices:
-        if str(order_detail.payment) == method[0]:
-            payment = method[1]
-            break
-
+    order_items = order_detail.orderitem_set.all()
+   
     context = {
-        'detail': order_detail,
-        'payment': payment
+        'order': order_detail,
+        'order_items': order_items,
     }
 
     return render(request, 'users/order_success.html', context=context)

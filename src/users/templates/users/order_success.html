@@ -1,47 +1,74 @@
+{% extends "core/base.html" %}
 
-    {% extends "core/base.html" %}
+{% load static %}
 
-    {% load static %}
+{% block head %}
+<link href="{% static 'css/order-success.css' %}" rel="stylesheet">
+{% endblock head%}
+{% block content %}
 
-    {% block head %}
-    <link href="{% static 'css/order-success.css' %}" rel="stylesheet">
-    {% endblock head%}
-    {% block content %}
-    
-    <section id="order-success">
-        <div class="background row">
-            <div class="col">
-                <img id="success-img" src="{% static 'img/bars/success.png' %}" alt="">
-                <h2>Thank You</h2>
-                <p class="success-message">Payment is Successfully proccessed and your order is on the way</p>
-                
+<div class="order_confirmed">
+    <div class="order_container">
+        <div class="order_info_1">
+            <div class="order_image_part">
+                <h2>Your Order Confirmed!</h2>
+                <img src="https://png.pngtree.com/png-vector/20190228/ourmid/pngtree-check-mark-icon-design-template-vector-isolated-png-image_711429.jpg"
+                    alt="order_success_image"></div>
+            
+            <p>Hi {{ request.user.first_name }}, Your order has been confirmed and will be shipping soon.</p>
+        </div>
+        <ul class="order_info_2">
+            <li>
+                <p>Order Date</p>
+                <span>{{ order.created_at }}</span>
+            </li>
+            <li>
+                <p>Order Number</p>
+                <span>#{{ order.id }}</span>
+            </li>
+           
+            <li>
+                <p>Address</p>
+                <span>{{ order.city }}, {{ order.street }}</span>
+            </li>
+        </ul>
+        
+        <div class="order_products">
+            {% for item in order_items %}   
+                <div class="order_product">
+                    <img src="{{ item.product.main_image.url }}"
+                    alt="{{ item.product }}">
+                    <div class="product_name">
+                        <p>{{ item.product | title }}</p>
+                        <span>{{ item.product.category | title }}</span>
+                    </div>
+                    <p>Qty {{ item.quantity }}</p>
+                    <p class="order_total">${{item.get_total}}</p>
+                    
+                </div>
+            {% endfor %}
+        
+            
+        </div>
+        <div class="order_total">
+            <div>
+                <p>Payment Total</p>
+                <span>$ {{ order.total }}</span>
             </div>
-            <hr>
-            <div class="col">
-                <p class="order-id">Your order number is <span>#{{ detail.id }}</span></p>
-            </div>
-            <hr>
-            <div class="col order-table">
-                <table>
-                    <tr>
-                        <td>Order Total: </td>
-                        <td class="info">{{ detail.total }}</td>
-                        
-                    </tr>
-                    <tr>
-                        <td>Payment method: </td>
-                        <td class="info">{{ payment }}</td>
-                        
-                    </tr>
-                </table>
-            </div>
-            <div class="col buttons">
-                <a href="{% url 'product:product-list' %}" class="btn-continue">Continue shopping</a>
+            <div>
+                <p>Payment Method</p>
+                <span>{{ order.payment | title }}</span>
             </div>
         </div>
-    </section>
+        <div class="order_last">
+            <p>We'll send you shipping confirmation when your item(s) are on the way! We appreciate your bisiness,
+                and hope you enjoy your purchase.</p>
+            <span>Thanks for choosing us!</span>
+        </div>
+    </div>
+</div>
 
-    {% endblock content %}
-    {% block footer %}
- 
-    {% endblock footer %}
+{% endblock content %}
+{% block footer %}
+
+{% endblock footer %}

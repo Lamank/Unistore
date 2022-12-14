@@ -108,54 +108,8 @@ function patch_fecth(cartItemID, quantity) {
 	});
 }
 
-
-
-// $('#checkout-form').on('submit', function(e){
-// 	e.preventDefault();
-
-// 	// console.log();
-// 	const user_id = JSON.parse(document.getElementById('user_id').textContent);
-// 	var csrf = $("input[name='csrfmiddlewaretoken']").val();
-// 	var total = Number($('.total span').text()).toFixed(2);
-
-// 	data = {
-// 		"status": "on_processing",
-// 		"phone": $("input[name='phone']").val(),
-// 		"receiver": $("input[name='receiver']").val(),
-// 		"total": parseFloat(total),
-// 		"products_quantity": 1,
-// 		"country": 'AZ',
-// 		"city": $("input[name='city']").val(),
-// 		"street": $("input[name='street']").val(),
-// 		"building": parseInt($("input[name='building']").val()),
-// 		"zip": parseInt($("input[name='zip']").val()),
-// 		"payment": 2,
-// 		"promo_code": $("input[name='promo_code']").val(),
-// 		"complete": false,
-// 	}
-
-// 	console.log(data);
-// 	// var url = 'http://127.0.0.1:8000/api/order/';
-// 	var url = 'http://127.0.0.1:8000/users/checkout/'
-// 	fetch(url,{
-// 	method: 'POST',
-// 	headers: {
-// 		'Accept': 'application/json',
-//         'Content-Type': 'application/json',
-//         'X-Requested-With': 'XMLHttpRequest',
-// 		'X-CSRFToken': csrf,
-// 	},
-// 	body: JSON.stringify(data)
-// 	}).then((response) =>{
-// 		console.log(response);
-
-// 	});
-//     console.log("submitted"); 
-// });
-
-
-$('#checkout-form').on('submit', function (e) {
-	e.preventDefault();
+function sumbitForm(){
+	// e.preventDefault();
 
 	var csrf = $("input[name='csrfmiddlewaretoken']").val();
 	var total = Number($('.total span').text()).toFixed(2);
@@ -170,13 +124,10 @@ $('#checkout-form').on('submit', function (e) {
 		"street": $("input[name='street']").val(),
 		"building": parseInt($("input[name='building']").val()),
 		"zip": parseInt($("input[name='zip']").val()),
-		"payment": 2,
-		"complete": false,
 		"csrfmiddlewaretoken": csrf
 	}
 
 	console.log(data);
-	// var url = 'http://127.0.0.1:8000/api/order/';
 	var url = 'http://127.0.0.1:8000/users/checkout/'
 	localStorage.removeItem("basket");
 	productCountInBasket.lastChild.textContent = 0;
@@ -192,4 +143,56 @@ $('#checkout-form').on('submit', function (e) {
 		}
 
 	});
-});
+};
+
+
+var total = Number($('.total span').text()).toFixed(2);
+  const paypalButtonsComponent = paypal.Buttons({
+    // optional styling for buttons
+    // https://developer.paypal.com/docs/checkout/standard/customize/buttons-style-guide/
+    style: {
+      color: "black",
+      shape: "rect",
+      layout: "vertical",
+      height: 40,
+    },
+
+    // set up the transaction
+    createOrder: (data, actions) => {
+      // pass in any options from the v2 orders create call:
+      // https://developer.paypal.com/api/orders/v2/#orders-create-request-body
+      const createOrderPayload = {
+        purchase_units: [
+          {
+            amount: {
+              value: parseFloat(total).toFixed(2)
+            }
+          }
+        ]
+      };
+
+      return actions.order.create(createOrderPayload);
+    },
+
+    // finalize the transaction
+    onApprove: (data, actions) => {
+      const captureOrderHandler = (details) => {
+        const payerName = details.payer.name.given_name;
+		sumbitForm()
+        console.log('Transaction completed');
+      };
+
+      return actions.order.capture().then(captureOrderHandler);
+    },
+
+    // handle unrecoverable errors
+    onError: (err) => {
+      console.error('An error prevented the buyer from checking out with PayPal');
+    }
+  });
+
+  paypalButtonsComponent
+    .render("#paypal-button-container")
+    .catch((err) => {
+      console.error('PayPal Buttons failed to render');
+    });

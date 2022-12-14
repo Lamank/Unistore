@@ -86,7 +86,7 @@ class Order(models.Model):
     street = models.CharField(max_length=200)
     building = models.IntegerField()
     zip = models.IntegerField()
-    payment = models.CharField(max_length=255)
+    payment = models.CharField(max_length=100, default='PayPal')
     complete = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True)
     modified_at = models.DateTimeField(auto_now=True)
@@ -101,5 +101,13 @@ class OrderItem(models.Model):
     created_at = models.DateField(auto_now_add=True)
     modified_at = models.DateField(auto_now=True)
 
+    @property
+    def get_total(self):
+        if self.product.discounted_price != 0.0:
+            total = round((self.product.discounted_price * self.quantity), 2)
+        else:
+            total = round((self.product.price * self.quantity), 2)
+        return total
+        
     def __str__(self) -> str:
         return str(self.order)

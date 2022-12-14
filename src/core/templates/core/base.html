@@ -111,7 +111,7 @@
           <li
             {% if "blog" not in request.path and "products" not in request.path and "users" not in request.path and "contact" not in request.path %}
             class="active" {% else %} class="" {% endif %}>
-            <a href="{% url 'core:home' %}"> {% trans "Home" %}</a></li>
+            <a href="{% url 'core:home' %}"> {% trans 'Home' %}</a></li>
           <li {% if "blog" in request.path %} class="active" {% else %} class="" {% endif %}>
             <a href="{% url 'blog:blog' %}">{% trans "Blog" %}</a></li>
 

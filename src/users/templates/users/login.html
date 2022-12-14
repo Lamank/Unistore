@@ -45,7 +45,7 @@
                 <h2>Login</h2>
             </div>
             <form action="{% url 'users:user-login' %}" method="POST">
-                {{form.none_field_errors}}
+                {{form.non_field_errors }}
                 {% csrf_token %}
                 <div class="changePasswordBottom" onSubmit={handleSubmit(onSubmit)}>
                     <div>
@@ -84,11 +84,11 @@
                     <div>
                         <div>
                             <a href="{% url 'users:login' %}" class="social"><i
-                                class="fa fa-facebook social-login fb-color"></i></a>
-                        <a href="{% url 'users:login' %}" class="social"><i
-                                class="fa fa-google-plus social-login google-color"></i></a>
+                                    class="fa fa-facebook social-login fb-color"></i></a>
+                            <a href="{% url 'users:login' %}" class="social"><i
+                                    class="fa fa-google-plus social-login google-color"></i></a>
                         </div>
-                       
+
                     </div>
 
 

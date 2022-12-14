@@ -8,7 +8,7 @@ User = get_user_model()
 
 class CheckoutOrder(forms.Form):
     COUNTRY_CHOICES = [('1', 'Azerbaijan'),('2', 'Turkey'),('3', 'USA'),]
-    PAYMENT_CHOICES = [('1' ,'Cash on Delivery'), ('2' , 'Credit Card'),('3', 'Paypall')]
+   
     receiver = forms.CharField(
         max_length=40,
         label='Receiver',
@@ -44,17 +44,6 @@ class CheckoutOrder(forms.Form):
             attrs={'class': "form-control", 
             'name':'zip', 
             'min':0}))
-    payment = forms.ChoiceField(
-        label='Payment',
-        widget=forms.Select(attrs={
-            'class' : 'form-control select', 
-            'id':'payment', 
-            'name': 'payment',
-            'value': 'Cash on Delivery'}),
-        choices=PAYMENT_CHOICES,
-    )
-
-
 class RegisterForm(UserCreationForm):
 
     class Meta:

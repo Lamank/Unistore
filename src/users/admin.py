@@ -1,11 +1,12 @@
 from typing import Sequence
 from django.contrib import admin
 from django.contrib.auth import get_user_model
+from django.contrib.auth.admin import UserAdmin
 from users import models
 
 User = get_user_model()
 
-class UserModelAdmin(admin.ModelAdmin):
+class UserModelAdmin(UserAdmin):
     list_display = ['email', 'username',]
     list_display = ["first_name", "last_name", "username", "is_staff"]
     list_display_links = ["first_name", "last_name", "username",]

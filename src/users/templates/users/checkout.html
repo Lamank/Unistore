@@ -71,28 +71,6 @@
         <br>
         <br>
 
-        <div class="row group">
-          <div class="col-sm-4">
-            <h2 class="h4">{{form.payment.label}}</h2>
-          </div>
-          <div class="col-sm-8">
-            <div class="group-select justify" tabindex='1'>
-              {{form.payment}}
-              {% comment %} <input class="form-control select" id="payment" name="payment" value="Cash on Delivery"
-                placeholder="" required="" />
-
-              <ul class="dropdown">
-                <li data-value="Cash on Delivery">Cash on Delivery</li>
-                <li data-value="Credit Card">Credit Card</li>
-                <li data-value="Paypall">Paypall</li>
-              </ul> {% endcomment %}
-              {% comment %} {{form.payment.errors}} {% endcomment %}
-              <div class="arrow bold"><i class="ion-chevron-down"></i></div>
-            </div>
-          </div>
-        </div>
-        <div id="paypal-button-container"></div>
-
         <hr class="offset-lg visible-xs visible-sm">
         <hr class="offset-lg visible-xs">
       </div>
@@ -156,7 +134,8 @@
           <div class="col-md-4 hidden-xs">
           </div>
           <div class="col-xs-6 col-md-4">
-            <button class="btn btn-primary pull-right" id="confirm" type="submit">Confirm order</button>
+            <div id="paypal-button-container"></div>
+            <!-- <button class="btn btn-primary pull-right" id="paypal-button-container" type="button">Confirm order</button> -->
           </div>
         </div>
         <hr class="offset-md">
@@ -174,7 +153,7 @@
 {%block footer%}
 
 
-<script src="{% static 'js/checkout.js' %}"></script>
+
 
 <script type="text/javascript" src="{% static 'js/custom-scroll/jquery.mCustomScrollbar.concat.min.js' %}"></script>
 
@@ -182,57 +161,10 @@
 <script type="text/javascript" src="{% static 'js/jquery.ui.touch-punch.js' %}"></script>
 
 
-<script src="https://www.paypal.com/sdk/js?client-id=AXaD4hFBFaEmobkzBaGhxIQQBGnVUjfr_Mh9rqYleaw802O4hz_GwZFuOJCCacZavBUTWeJaa7gZDOix&currency=USD&intent=capture&enable-funding=venmo"
+<script 
+src="https://www.paypal.com/sdk/js?client-id=Ae0CEVS3yB5MqbNcyADTeZ-wV_OEUKiOZjXKiBVrJE7hQYLRaeNu4yEne1wsT7iBKGqIN0A5_ISwDBZ2&currency=USD&intent=capture&disable-funding=credit,card"
   data-sdk-integration-source="integrationbuilder"></script>
-<script>
-  const paypalButtonsComponent = paypal.Buttons({
-    // optional styling for buttons
-    // https://developer.paypal.com/docs/checkout/standard/customize/buttons-style-guide/
-    style: {
-      color: "blue",
-      shape: "rect",
-      layout: "vertical",
-      height: 40,
-    },
+<script src="{% static 'js/checkout.js' %}"></script>
 
-    // set up the transaction
-    createOrder: (data, actions) => {
-      // pass in any options from the v2 orders create call:
-      // https://developer.paypal.com/api/orders/v2/#orders-create-request-body
-      const createOrderPayload = {
-        purchase_units: [
-          {
-            amount: {
-              value: "0.02"
-            }
-          }
-        ]
-      };
-
-      return actions.order.create(createOrderPayload);
-    },
-
-    // finalize the transaction
-    onApprove: (data, actions) => {
-      const captureOrderHandler = (details) => {
-        const payerName = details.payer.name.given_name;
-        console.log('Transaction completed');
-      };
-
-      return actions.order.capture().then(captureOrderHandler);
-    },
-
-    // handle unrecoverable errors
-    onError: (err) => {
-      console.error('An error prevented the buyer from checking out with PayPal');
-    }
-  });
-
-  paypalButtonsComponent
-    .render("#paypal-button-container")
-    .catch((err) => {
-      console.error('PayPal Buttons failed to render');
-    });
-</script>
 
 {%endblock%}

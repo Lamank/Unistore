@@ -51,12 +51,9 @@ $(".title").on("click", "a", function(){
 
 
 
-if (window.performance) {
+if (window.performance && window.location.href.includes('products') ){
     let string = window.location.href.split("?")[1];
     urlstring = "?" + string
-
-    console.log('urlstring',urlstring.length);
-        
     fetch_function(urlstring)
 }
 
