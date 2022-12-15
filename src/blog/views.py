@@ -1,6 +1,8 @@
+import json
 from django.http.request import HttpRequest
-from django.http.response import HttpResponse
+from django.http.response import HttpResponse, JsonResponse
 from django.shortcuts import render
+from django.utils.timesince import timesince
 from django.views import generic
 from django.shortcuts import redirect
 from blog.forms import BlogCommentForm
@@ -32,7 +34,7 @@ def detail_blog(request: HttpRequest, slug) -> HttpResponse:
 
         parent_obj = None
         try:
-            parent_id = int(request.POST.get("parent"))
+            parent_id = int(request.POST.get("parent_id"))
         except:
             parent_id = None
         if parent_id:
@@ -44,9 +46,16 @@ def detail_blog(request: HttpRequest, slug) -> HttpResponse:
         new_comment.parent = parent_obj
         new_comment.email = request.user.email
         new_comment.author = request.user
-        new_comment.comment = request.POST.get("comment")
         new_comment.save()
+     
         comment_form = BlogCommentForm()
+        child_comment ={
+            'username': (new_comment.author.username).capitalize(),
+            'body': (new_comment.comment).capitalize(),
+            'timestamp': timesince(new_comment.created_at)
+        }
+      
+        return JsonResponse({'new_comment': child_comment})
 
     context = {"blog": blog, "description": description, "media": media, "comments": comments, "form": comment_form}
     return render(request, "blog/detail_blog.html", context=context)

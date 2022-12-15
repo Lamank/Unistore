@@ -90,10 +90,13 @@
               <p>
                 {{comment.comment | capfirst}}  
               </p>
-              <p style="font-size: 16px;">
-                {% if comment.children.count > 0%}
-                {{comment.children.count }} Comment{% if comment.children.count > 1 %}s {% endif %}  |
-                {% endif %}
+              <p style="font-size: 16px;" class="countChildComment">
+                
+                  {% if comment.children.count > 0 %}
+                  <span>{{comment.children.count }} </span> Comment{% if comment.children.count > 1 %}s {% endif %}  |
+                  {% endif %}
+               
+               
                 {% if request.user.is_authenticated %}
                 <a href="#" class="comment-reply-btn">Reply</a>
                 {% endif %}
@@ -103,7 +106,7 @@
            
             <div class="comment-reply" style="display: none;">
               {% for child_comment in comment.children %}
-              <blockquote style="margin-bottom: 10px;">
+              <blockquote class="childComment" style="margin-bottom: 10px;">
                 <div style="font-size: 17px; margin: 5px 0;">
                   <div >
                     <label style="font-size: 18px;">{{child_comment.author.username|title}} </label>
@@ -119,12 +122,14 @@
 
               </blockquote>
               {%endfor%}
+              
               <div class="container-fluid">
-                <form class="join" id="form-comment" method="post">
+                <form class="join" class="child-form" action="{% url "blog:blog-detail" slug=blog.slug %}" method="POST">
                   {% csrf_token %}
                   <div class="row">
                     <div class="col-sm-10">
                       {{form.comment}}
+                      
                       <br>
                     </div>
                     
@@ -150,14 +155,14 @@
           <button class="btn btn-default btn-sm" data-toggle="modal" data-target="#Modal-Comment"> 
             <i class="ion-chatbox-working"></i> Add comment
           </button>
-        {% else %}
+          {% else %}
           <button class="btn btn-default btn-sm" id="comment_btn"> 
             <i class="ion-chatbox-working"></i> Add comment
 
           </button>
           <div class="alert alert-info" id="info-register" style="display: none;" role="alert">
             You must register to write a comment. Please
-            <a href="/users/register/" class="alert-link">Register</a>
+            <a href="{% url 'users:register' %}" class="alert-link">Register</a>
           </div>
         {% endif %}
         </div>
@@ -180,7 +185,7 @@
       </div>
       <div class="modal-body">
         <div class="container-fluid">
-          <form class="join comment-form" id="comment-form" action="" method="post">
+          <form class="join comment-form" id="comment-form" action="{% url "blog:blog-detail" slug=blog.slug %}" method="POST">
             {% csrf_token %}
             <div class="row">
               <div class="col-sm-12">
@@ -209,52 +214,5 @@
   <script src="https://code.jquery.com/jquery-3.5.1.js" 
           integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" 
             crossorigin="anonymous"></script>
-<script type="text/javascript">
-  
-  $('.comment-reply-btn').click(function (event) {
-
-    event.preventDefault();
-    console.log($(this).parent().parent().next(".comment-reply"));
-    $(this).parent().parent().next(".comment-reply").fadeToggle();
-  });
-
-  $('#comment_btn').click(function() {
-    $('#comment_btn').hide();
-    $('#info-register').show();
-  });
-
-  {% comment %} $(document).on('submit','#comment-form',function(e){
-    e.preventDefault();
-    $.ajax({
-        type:'POST',
-        url:'{% url "blog:blog-detail" slug=blog.slug %}',
-        data:
-        {
-            comment:$("#comment").val(),
-            parent:$('#parent').val(),
-            csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val()
-        },
-        success:function(){
-                  alert('Saved');
-                    }
-      })
-  });  
-
-  $(document).on('submit','#form-comment',function(e){
-    e.preventDefault();
-    $.ajax({
-        type:'POST',
-        url:'{% url "blog:blog-detail" slug=blog.slug  %}',
-        data:
-        {
-            comment:$("#comment").val(),
-            parent:$('#parent').val(),
-            csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val()
-        },
-      })
-  });   {% endcomment %}
-</script>
-
-
-
+  <script src="{% static 'js/detail_blog.js' %}"></script>
 {%endblock%}
