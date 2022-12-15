@@ -11,7 +11,12 @@
 
 <link href="{% static 'css/custom-scroll/jquery.mCustomScrollbar.css' %}" rel="stylesheet">
 
-
+<style>
+  .custom_scroll {
+    overflow-y: scroll;
+    height: 355px;
+  }
+</style>
 
 {% endblock %}
 {% block content %}
@@ -75,7 +80,7 @@
         <hr class="offset-lg visible-xs">
       </div>
 
-      <div class="col-md-5 white">
+      <div class="col-md-5 white custom_scroll">
         <hr class="offset-md visible-xs visible-sm">
         <div class="checkout-cart">
           <div class="content">

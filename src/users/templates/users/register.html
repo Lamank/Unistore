@@ -19,9 +19,10 @@
                 <p id="register-message"></p>
                 <h2>Register</h2>
             </div>
-            <form method="POST" id="registerForm" action="{% url 'users:register' %}">
-                {% csrf_token %}
+            
                 <div class="changePasswordBottom" onSubmit={handleSubmit(onSubmit)}>
+                    <form method="POST" id="registerForm" action="{% url 'users:register' %}">
+                        {% csrf_token %}
                     <div>
                         {{form.first_name}}
                     </div>
@@ -51,9 +52,12 @@
                         <a href="{% url 'users:user-login' %}" class="">Have already an account? Login here</a>
                     </div>
                     
-                    
+                </form>
+                <div class="svg">
+                    <img style="width: 350px; height: 350px" src="{% static 'ionicons-2.0.1/png/icon/password-login.svg' %}" />
+                </div> 
                 </div>
-            </form>
+            
 
         </div>
         {% comment %} <div class="svg">

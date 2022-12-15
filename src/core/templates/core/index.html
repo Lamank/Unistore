@@ -195,7 +195,9 @@
                   <div class="col-sm-6 col-md-3 product">
                     <div class="body">
 
-                          <a href="#favorites" class="favorites" data-favorite="inactive"><i class="ion-ios-heart-outline"></i></a>
+                          <a href="#favorites" class="favorites" data-favorite="inactive">
+                            <img class="heart-fav" src="{% static 'ionicons-2.0.1/png/icon/red-heart1.png' %}" alt="">
+                          </a>
 
                       <a href="{% url 'product:product-detail' slug=obj.slug %}" class="image-height"><img src="{{ obj.main_image.url }}" alt="{{ obj.title }}"/></a>
 

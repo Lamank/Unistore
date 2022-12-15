@@ -146,7 +146,7 @@ function sumbitForm(){
 };
 
 
-var total = Number($('.total span').text()).toFixed(2);
+
   const paypalButtonsComponent = paypal.Buttons({
     // optional styling for buttons
     // https://developer.paypal.com/docs/checkout/standard/customize/buttons-style-guide/
@@ -156,9 +156,10 @@ var total = Number($('.total span').text()).toFixed(2);
       layout: "vertical",
       height: 40,
     },
-
+	
     // set up the transaction
     createOrder: (data, actions) => {
+		var total = Number($('.total span').text()).toFixed(2);
       // pass in any options from the v2 orders create call:
       // https://developer.paypal.com/api/orders/v2/#orders-create-request-body
       const createOrderPayload = {

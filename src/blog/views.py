@@ -55,7 +55,7 @@ def detail_blog(request: HttpRequest, slug) -> HttpResponse:
             'timestamp': timesince(new_comment.created_at)
         }
       
-        return JsonResponse({'new_comment': child_comment})
+        # return JsonResponse({'new_comment': child_comment})
 
     context = {"blog": blog, "description": description, "media": media, "comments": comments, "form": comment_form}
     return render(request, "blog/detail_blog.html", context=context)

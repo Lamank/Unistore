@@ -56,20 +56,6 @@
         {{ tag.name | title }}
       </label>
       {%endfor%}
-     <!-- 
-     <label class="btn btn-default btn-sm">
-        <input type="radio" name="options" id="option2"> Desktops
-      </label>
-    
-      <label class="btn btn-default btn-sm">
-        <input type="radio" name="options" id="option3"> Laptops
-      </label>
-      <label class="btn btn-default btn-sm">
-        <input type="radio" name="options" id="option4"> Tablets
-      </label>
-      <label class="btn btn-default btn-sm">
-        <input type="radio" name="options" id="option5"> Hybrids
-      </label> -->
     </div>
   </div>
 </div>
@@ -98,30 +84,7 @@
                 <input class="fltr-checkbox" type="checkbox" name="checkbox" data-filter="category" value="{{ category.id }}">
               </div>
             {% endfor %}
-            
-            <!-- <div class="checkbox-group" data-status="inactive">
-              <div class="checkbox"><i class="ion-android-done"></i></div>
-              <div class="label" data-value="Desktops">Desktops</div>
-              <input type="checkbox" name="checkbox" value="">
-            </div>
-
-            <div class="checkbox-group" data-status="inactive">
-              <div class="checkbox"><i class="ion-android-done"></i></div>
-              <div class="label" data-value="Laptops">Laptops</div>
-              <input type="checkbox" name="checkbox" value="">
-            </div>
-
-            <div class="checkbox-group" data-status="inactive">
-              <div class="checkbox"><i class="ion-android-done"></i></div>
-              <div class="label" data-value="Tablets">Tablets</div>
-              <input type="checkbox" name="checkbox" value="">
-            </div>
-
-            <div class="checkbox-group" data-status="inactive">
-              <div class="checkbox"><i class="ion-android-done"></i></div>
-              <div class="label" data-value="Hybrid">Hybrids</div>
-              <input type="checkbox" name="checkbox" value="">
-            </div> -->
+    
           </div>
         </div>
 
@@ -197,42 +160,6 @@
 
       <div class="products">
         <div class="row" id="filtered_products">
-      
-          {% for product in object_list %}
-          
-          <div class="col-sm-6 col-md-4 product">
-            <div class="body parent">
-              <a href="#favorites" class="favorites" data-favorite="inactive"><i class="ion-ios-heart-outline"></i></a>
-              
-              
-              <a href="{% url 'product:product-detail' slug=product.slug %}" class="image-height " id="prod_image">
-
-                <img src="{{ product.main_image.url }}"  alt="{{product}}"> 
-              </a>
-              {% if product.campaign.id == 5 %} 
-              <img src="{{ campaign.extra_image.url }}" id="campaign_image" alt="{{product}}"> 
-              {% endif %}
-               
-              <div class="content">
-                <h1 class="h3 productName">{{ product | title }}</h1>
-                {% comment %} <p class="price">{{ product.price }}</p> {% endcomment %}
-                {% if product.campaign.percent %}
-                <p class="price ">${{ product.discounted_price | floatformat:2 }}</p> 
-                <p class="price through">${{ product.price }}</p>
-                {% else %}
-                <p class="price">${{ product.price }}</p>
-                {% endif %}
-                <label>{{ product.brand.name | title }} </label>
-                <a href="{% url 'product:product-detail' slug=product.slug %}">
-                  <button class="btn btn-link" formaction=""> <i class="ion-android-open"></i> Details</button>
-                </a>
-                <button class="btn btn-primary btn-sm rounded addToCart"> <i class="ion-bag"></i> Add to cart</button>
-              </div>
-            </div>
-          </div>
-         
-          
-          {% endfor %}
           
         </div>
       </div>
