@@ -70,30 +70,6 @@
               </div>
             </div>
           </div>
-          
-          {% comment %} <div class="item" data-marker="2">
-            <img src="{{ second_campaign.image.url }}" alt="Background" class="background hidden-xs hidden-sm"/>
-            <img src="{{ second_campaign.image.url }}" alt="Background" class="background visible-sm"/>
-            <img src="{{ second_campaign.image.url }}" alt="Background" class="background visible-xs"/>
-
-            <div class="content">
-              <div class="outside-content">
-                <div class="inside-content">
-                  <div class="container ">
-
-                    <h1 class="h3 colorful blue hidden-xs">{{ second_campaign.description }}</h1>
-                    <hr class="offset-sm">
-
-                    <h2 class="h1 lg upp colorful blue">{{ second_campaign }}</h2>
-                    <hr class="offset-md">
-                    <hr class="offset-md">
-                    <a href="/products/prod5" rel="nofollow" class="btn btn-primary btn-lg black"> {% trans "View products" %} </a>
-                    
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> {% endcomment %}
 
           <div class="item" data-marker="2">
             <img src="{{ third_campaign.image.url }}" alt="Background" class="background hidden-xs hidden-sm"/>
@@ -125,7 +101,6 @@
         <ul class="markers">
           <li data-marker="1" data-style="white" class="active"></li>
           <li data-marker="2" data-style="white"></li>
-          {% comment %} <li data-marker="3" data-style="white"></li> {% endcomment %}
         </ul>
 
       </div>
@@ -196,7 +171,7 @@
                     <div class="body">
 
                           <a href="#favorites" class="favorites" data-favorite="inactive">
-                            <img class="heart-fav" src="{% static 'ionicons-2.0.1/png/icon/red-heart1.png' %}" alt="">
+                            <!-- <img class="heart-fav" src="{% static 'ionicons-2.0.1/png/icon/empty-heart.png' %}" alt=""> -->
                           </a>
 
                       <a href="{% url 'product:product-detail' slug=obj.slug %}" class="image-height"><img src="{{ obj.main_image.url }}" alt="{{ obj.title }}"/></a>

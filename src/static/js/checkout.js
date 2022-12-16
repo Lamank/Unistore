@@ -108,6 +108,10 @@ function patch_fecth(cartItemID, quantity) {
 	});
 }
 
+function urlReturn(url){
+	return window.location.assign(url)
+}
+
 function sumbitForm(){
 	// e.preventDefault();
 
@@ -118,7 +122,7 @@ function sumbitForm(){
 		"status": "on_processing",
 		"phone": $("input[name='phone']").val(),
 		"receiver": $("input[name='receiver']").val(),
-		"total": parseFloat(total),
+		"total": total,
 		"products_quantity": 1,
 		"city": $("input[name='city']").val(),
 		"street": $("input[name='street']").val(),
@@ -129,8 +133,7 @@ function sumbitForm(){
 
 	console.log(data);
 	var url = 'http://127.0.0.1:8000/users/checkout/'
-	localStorage.removeItem("basket");
-	productCountInBasket.lastChild.textContent = 0;
+	
 	$.ajax({
 		type: "POST",
 		url: url,
@@ -138,13 +141,46 @@ function sumbitForm(){
 		dataType: 'json',
 		success: function(response){
 			if(response.status == 1){ 
-               	window.location.assign(response.success)
+               	window.location.assign(response.success);
+				localStorage.removeItem("basket");
+				productCountInBasket.lastChild.textContent = 0;
             }
+			else{
+				alert("Error: " + response.error);
+				setTimeout(() => urlReturn(url), 500);
+			}
 		}
 
 	});
 };
 
+
+function checkTotal(){
+	var csrf = $("input[name='csrfmiddlewaretoken']").val();
+	var total = Number($('.total span').text()).toFixed(2);
+
+	data = {
+		"total": total,
+		"csrfmiddlewaretoken": csrf
+	}
+
+	console.log(data);
+	var url = 'http://127.0.0.1:8000/users/checkout/'
+	
+	$.ajax({
+		type: "POST",
+		url: url,
+		data: data,
+		dataType: 'json',
+		success: function(response){
+			if(response.status == 0){
+				alert("Error: " + response.error);
+				setTimeout(() => urlReturn(url), 500);
+			}
+		}
+
+	});
+}
 
 
   const paypalButtonsComponent = paypal.Buttons({
@@ -171,7 +207,7 @@ function sumbitForm(){
           }
         ]
       };
-
+	  checkTotal()
       return actions.order.create(createOrderPayload);
     },
 
@@ -180,7 +216,6 @@ function sumbitForm(){
       const captureOrderHandler = (details) => {
         const payerName = details.payer.name.given_name;
 		sumbitForm()
-        console.log('Transaction completed');
       };
 
       return actions.order.capture().then(captureOrderHandler);

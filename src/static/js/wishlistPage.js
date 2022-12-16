@@ -12,7 +12,7 @@ if (user_id != null)
                 `
                 <div class="col-sm-6 col-md-4 product">
                     <div class="body">
-                        <a href="#favorites" class="favorites" data-favorite="active"><i class="ion-ios-heart-outline"></i></a>
+                        <a href="#favorites" class="favorites" data-favorite="active"></a>
                         <a href="/products/${item.product.slug}"><img src="${item.product.main_image}" alt="${item.product.title}"/></a>
 
                         <div class="content align-center">
@@ -35,13 +35,14 @@ productsRow.addEventListener("click", (clickEvent) => {
 
     if (wishlistButton){
         if (user_id != null && user_id != 1){
-            var addedProduct = clickEvent.target.parentNode.offsetParent.lastElementChild.firstElementChild.nextElementSibling.innerText;
+            var addedProduct = clickEvent.target.parentNode.lastElementChild.firstElementChild.nextElementSibling.innerText;
             fetch('http://127.0.0.1:8000/api/product/')
             .then((response) => response.json())
             .then((productList) => productList.map((product) => {
                 if ( product.title.toLowerCase() == addedProduct.toLowerCase() ){
                     var indexWishlistItemCount = document.querySelector('#wishlistItemCount');
-                    if (clickEvent.target.parentNode.getAttribute('data-favorite') == "inactive"){
+                    if (clickEvent.target.getAttribute('data-favorite') == "inactive"){
+                        console.log('this is click event', clickEvent.target);
                     (async () => {
                         const rawResponse = await fetch('http://127.0.0.1:8000/api/wishlist/', {
                           method: 'POST',
@@ -56,9 +57,9 @@ productsRow.addEventListener("click", (clickEvent) => {
                             }
                         )
                     });
-                        const content = await rawResponse.json();
+                        // const content = await rawResponse.json();
                       
-                        console.log(JSON.parse(content));
+                        // console.log(JSON.parse(content));
                       })();
                       indexWishlistItemCount.innerText++;
                     }
@@ -67,12 +68,13 @@ productsRow.addEventListener("click", (clickEvent) => {
                         fetch('http://127.0.0.1:8000/api/wishlist/').then((response) => response.json()).then((list) => list.map(item => {
                             console.log(item.user + "==" + user_id + "&&" + item.product.id + "==" + product.id);
                             if (item.user == user_id && item.product.id == product.id) {
+                                console.log(this);
                                 console.log("DELETE REQUEST SENDED");
                                 (async () => {
                                     const rawResponse = await fetch(`http://127.0.0.1:8000/api/wishlist/${item.id}`, {
                                       method: 'DELETE',
                                     });
-                                    console.log(this.innerText);
+                                    // console.log(this.innerText);
                                     // const content = await rawResponse.json();
                                   
                                     // console.log(content);

@@ -94,6 +94,12 @@ class Order(models.Model):
     def __str__(self) -> str:
         return str(str(self.user))
 
+    @property
+    def get_order_total(self):
+        cart_items = self.orderitem.all()
+        total = sum([item.get_total for item in cart_items])
+        return total
+
 class OrderItem(models.Model):
     order = models.ForeignKey('users.Order', on_delete=models.CASCADE)
     product = models.ForeignKey('product.Product', on_delete=models.CASCADE)

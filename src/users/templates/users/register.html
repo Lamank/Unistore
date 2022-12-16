@@ -20,7 +20,7 @@
                 <h2>Register</h2>
             </div>
             
-                <div class="changePasswordBottom" onSubmit={handleSubmit(onSubmit)}>
+                <div class="changePasswordBottom">
                     <form method="POST" id="registerForm" action="{% url 'users:register' %}">
                         {% csrf_token %}
                     <div>

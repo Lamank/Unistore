@@ -7,20 +7,19 @@ productProductGrid.addEventListener('click', (event) => {
     {
         if (user_id != null && user_id != 1)
         {
-            var wishProduct = event.target.parentNode.parentNode.lastElementChild.firstElementChild.innerText;
+            var wishProduct = event.target.parentNode.lastElementChild.firstElementChild.innerText;
             fetch('http://127.0.0.1:8000/api/product/')
             .then((response) => response.json())
             .then((productList) => productList.map((product) => {
                 if ( product.title.toLowerCase() == wishProduct.toLowerCase() ){
                     var indexWishlistItemCount = document.querySelector('#wishlistItemCount');
-                    if (event.target.parentNode.getAttribute('data-favorite') == "inactive"){
-                        event.target.parentNode.setAttribute('data-favorite', 'active');
+                    if (event.target.getAttribute('data-favorite') == "inactive"){
+                        event.target.setAttribute('data-favorite', 'active');
                     }
                     else {
-                        event.target.parentNode.setAttribute('data-favorite', 'inactive');
+                        event.target.setAttribute('data-favorite', 'inactive');
                     }
-                    if (event.target.parentNode.getAttribute('data-favorite') == "active"){
-                        console.log("POST REQUEST SENDED");
+                    if (event.target.getAttribute('data-favorite') == "active"){
                         (async () => {
                             const rawResponse = await fetch('http://127.0.0.1:8000/api/wishlist/', {
                             method: 'POST',
@@ -35,24 +34,22 @@ productProductGrid.addEventListener('click', (event) => {
                                 }
                             )
                         });
-                            const content = await rawResponse.json();
+                            // const content = await rawResponse.json();
                         
-                            console.log(JSON.parse(JSON.parse(content)));
+                            // console.log(JSON.parse(JSON.parse(content)));
                         })();
 
                         indexWishlistItemCount.innerText++; 
                     }
                     else {
-                        console.log("DELETE REQUEST SENDED");
                         fetch('http://127.0.0.1:8000/api/wishlist/').then((response) => response.json()).then((list) => list.map(item => {
                             if (item.user == user_id && item.product.id == product.id) {
-                                console.log("DELETE REQUEST SENDED");
+
                                 (async () => {
                                     const rawResponse = await fetch(`http://127.0.0.1:8000/api/wishlist/${item.id}`, {
                                       method: 'DELETE',
                                     });
 
-                                    console.log("WISHLIST PRODUCT DELETED");
                                   })();
                                   indexWishlistItemCount.innerText--;
                             }

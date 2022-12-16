@@ -8,7 +8,6 @@ $('.filter-checkbox, #slider-price').on('click', function(){
     _filterObj.max_price = $( "#slider-price" ).slider( "values", 1 );
     var _filterKey = $(this).find('input').data('filter');
     var _inputStatus = $(this).find('input');
-    console.log(_inputStatus);
     if(!_inputStatus.attr("checked")){
         _inputStatus.attr("checked", "checked");
     }
@@ -25,7 +24,7 @@ $('.filter-checkbox, #slider-price').on('click', function(){
 });
 
 $('.tags').on('click', 'li', function(){
-
+    $(this).parent().prev().find('span').text($(this).find('a').text())
     _filterObj.order = $(this).find('a').attr('data-filter');
     _filterObj.value = $(this).find('a').attr('data-value');
     fetch_function(generate_url());
@@ -43,7 +42,6 @@ $(".title").on("click", "a", function(){
 
     children.each(function() {
         $(this).find("input").removeAttr("checked");
-        console.log($(this).find("input").attr("checked"));
     });
     fetch_function(generate_url());
 
@@ -64,7 +62,6 @@ function generate_url() {
         urlstring+=`&${key}=${value}`
     };
 
-    console.log(_filterObj);
     urlstring = urlstring.replace(urlstring.charAt(0), "?");
     history.pushState(
         null,
@@ -76,20 +73,17 @@ function generate_url() {
 function campaign(){
     if(window.location.href.includes("?campaign=")){
         let value = window.location.href.split("?", 10)[1]
-        // console.log(campaign.slice(-1));
         value = value.split("=")
         _filterObj.campaign = value[1]
-        // console.log();
-        // urlstring = "&";
+   
     }
 }
 function fetch_function(urlstring){
    
     fetch(`http://127.0.0.1:8000/api/product/${urlstring}`)     
-    // fetch(urlstring)  
     .then((response) =>{
         return response.json();
-    } )
+    })
     .then((data) => {
         let htmlString = "";
         $("#filtered_products").html('');
@@ -114,7 +108,7 @@ function fetch_function(urlstring){
                 `
                 <div class="col-sm-6 col-md-4 product parent">
                 <div class="body " id="prod_image">
-                  <a href="#favorites" class="favorites" data-favorite="inactive"><i class="ion-ios-heart-outline"></i></a>
+                  <a href="#favorites" class="favorites" data-favorite="inactive"></a>
                   <a href="${ data[i].slug }/" class="image-height" >
                     
                     <img src="${ data[i].main_image }"  alt="${ data[i].title }"> 
@@ -143,14 +137,10 @@ function fetch_function(urlstring){
         $("#filtered_products").html(htmlString)
     }).then(responseJson => {
         var wishProductNames = document.querySelectorAll(".productName");
-        // console.log(wishProductNames);
         fetch('http://127.0.0.1:8000/api/wishlist/').then((response) => response.json()).then(wishItem => wishItem.map(item => {
             if (wishProductNames[0].parentNode != null){
                 for (product of wishProductNames) {
                     if (item.product.title.toLowerCase() == product.innerText.toLowerCase()) {
-                        // console.log('Product ------', product.innerText);
-                        // console.log('offset---------',product.offsetParent);
-                        // console.log( 'firstchild---------',product.offsetParent.firstElementChild);
                         if (product.offsetParent != null){
                             product.offsetParent.firstElementChild.setAttribute('data-favorite', 'active');
                         }

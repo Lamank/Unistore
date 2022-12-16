@@ -19,15 +19,16 @@ indexProductsGrid.addEventListener("click", (clickEvent) => {
 
     if (wishlistButton){
         if (user_id != null && user_id != 1){
-            var addedProduct = clickEvent.target.parentNode.offsetParent.lastElementChild.firstElementChild.innerText;
+            var addedProduct = clickEvent.target.parentNode.lastElementChild.firstElementChild.innerText;
+           
             fetch('http://127.0.0.1:8000/api/product/')
             .then((response) => response.json())
             .then((productList) => productList.map((product) => {
-                console.log(addedProduct);
+               
                 if ( product.title.toLowerCase() == addedProduct.toLowerCase() ){
                     var indexWishlistItemCount = document.querySelector('#wishlistItemCount');
-                    console.log(clickEvent.target.parentNode.getAttribute('data-favorite') == "active");
-                    if (clickEvent.target.parentNode.getAttribute('data-favorite') == "active"){
+                    
+                    if (clickEvent.target.getAttribute('data-favorite') == "active"){
                     (async () => {
                         const rawResponse = await fetch('http://127.0.0.1:8000/api/wishlist/', {
                           method: 'POST',
@@ -42,9 +43,9 @@ indexProductsGrid.addEventListener("click", (clickEvent) => {
                             }
                         )
                     });
-                        const content = await rawResponse.json();
+                        // const content = await rawResponse.json();
                       
-                        console.log(JSON.parse(content));
+                        // console.log(JSON.parse(content));
                       })();
 
                       indexWishlistItemCount.innerText++; 
@@ -52,13 +53,12 @@ indexProductsGrid.addEventListener("click", (clickEvent) => {
                     else {
                         fetch('http://127.0.0.1:8000/api/wishlist/').then((response) => response.json()).then((list) => list.map(item => {
                             if (item.user == user_id && item.product.id == product.id) {
-                                console.log("DELETE REQUEST SENDED");
+                                
                                 (async () => {
                                     const rawResponse = await fetch(`http://127.0.0.1:8000/api/wishlist/${item.id}`, {
                                       method: 'DELETE',
                                     });
 
-                                    console.log("WISHLIST PRODUCT DELETED");
                                   })();
                                   indexWishlistItemCount.innerText--;
                             }

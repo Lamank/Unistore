@@ -1,5 +1,7 @@
 $("#register-message").hide();
 $("#registerForm").on('submit',  function(e) {
+ 
+  console.log($(this).serialize());
     e.preventDefault();
     $.ajax({
         type: $(this).attr('method'),
@@ -13,7 +15,8 @@ $("#registerForm").on('submit',  function(e) {
                 $("#register-message").html(`<div class='alert alert-success'>${response['message']}</div>`);
             } 
             if(response['errors']) {
-                $(`input`).next('ul').html(" ");
+                $('input').next('ul').html(" ");
+                console.log(response.data);
                 for(error_key in response['errors']){
                     if(error_key === $(`input[name=${error_key}]`).attr('name')){
                         $(`input[name=${error_key}]`).next('ul').html(" ");

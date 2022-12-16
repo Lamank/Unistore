@@ -76,7 +76,6 @@ def faq(request: HttpRequest) -> HttpResponse:
     return render(request, 'core/faq.html')
 
 
-
 def subscribe(request: HttpRequest):
     
     subscriber_form = SubscribeToNewsletter()
@@ -91,7 +90,6 @@ def subscribe(request: HttpRequest):
                     )
                 message = "Congratulation!! You subscribed successfully"
                 return JsonResponse({'message': message})
-            
             
 
 

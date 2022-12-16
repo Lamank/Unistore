@@ -80,7 +80,10 @@ def checkout(request: HttpRequest) -> HttpResponse:
     cart = get_user_cart(user.id)
     cart_items = cart.cartitem.all()
     if request.META.get("HTTP_X_REQUESTED_WITH") == "XMLHttpRequest" and request.method == "POST":
-        
+
+        if cart.get_cart_total != float(request.POST['total']):
+            return JsonResponse({'status': 0, 'error': 'You must be pay correct amount!'})
+
         user_id = request.user
         order = Order.objects.create(
             user = user_id,
@@ -94,7 +97,6 @@ def checkout(request: HttpRequest) -> HttpResponse:
             zip = request.POST['zip'],
             status = 'on_processing',
         )
-        print("everything is okay!")
         order.save()
         cart = Cart.objects.get(owner=user, is_complete=False)
 
@@ -105,12 +107,12 @@ def checkout(request: HttpRequest) -> HttpResponse:
                 product=item.product,
             )
         cart.cartitem.all().delete()
-        
-        # prod = Product.objects.all().first()
-        
-        # order.products.add(prod.id)
+    
+    
         return JsonResponse({'status': 1, 'success': '/users/order-success'})
-        # return HttpResponseRedirect('/users/order-success')
+       
+           
+            
     
     context = {
         'form': checkout_form,
@@ -141,7 +143,9 @@ def register(request: HttpRequest) -> HttpResponse:
         register_form = RegisterForm(request.POST)
         
         if register_form.is_valid():
+            print(1)
             user = register_form.save(commit=False)
+            print(2)
             user.is_active = False
             user.save()
             # to get the domain of the current site
@@ -166,8 +170,8 @@ def register(request: HttpRequest) -> HttpResponse:
             return JsonResponse(data)
         else:
             data = {
-                'error': register_form.errors
-            } 
+                'errors': register_form.errors
+            }
             return JsonResponse(data)
     contex ={
         'form' : register_form
