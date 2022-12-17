@@ -92,10 +92,9 @@
               </p>
               <p style="font-size: 16px;" class="countChildComment">
                 
-                  {% if comment.children.count > 0 %}
-                  <span>{{comment.children.count }} </span> Comment{% if comment.children.count > 1 %}s {% endif %}  |
-                  {% endif %}
-               
+                {% if comment.children.count > 0 %}
+                <span>{{comment.children.count }} </span> Comment{% if comment.children.count > 1 %}s {% endif %}  |
+                {% endif %}
                
                 {% if request.user.is_authenticated %}
                 <a href="#" class="comment-reply-btn">Reply</a>

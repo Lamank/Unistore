@@ -10,13 +10,13 @@ $("#registerForm").on('submit',  function(e) {
         dataType: 'json',
         success: function (response) {
             if(response['success']) {
+                $('input').next('ul').html(" ");
                 $("#register-message").show();
                 $('#registerForm').trigger("reset");
                 $("#register-message").html(`<div class='alert alert-success'>${response['message']}</div>`);
             } 
             if(response['errors']) {
                 $('input').next('ul').html(" ");
-                console.log(response.data);
                 for(error_key in response['errors']){
                     if(error_key === $(`input[name=${error_key}]`).attr('name')){
                         $(`input[name=${error_key}]`).next('ul').html(" ");

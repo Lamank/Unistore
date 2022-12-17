@@ -300,7 +300,7 @@
       {% for product in similar_products %}
         <div class="col-sm-4 col-md-3 product">
           <div class="body parent">
-            <a href="#favorites" class="favorites" data-favorite="inactive"><i class="ion-ios-heart-outline"></i></a>
+            <a href="#favorites" class="favorites" data-favorite="inactive"></a>
            
             <a href="{% url 'product:product-detail' slug=product.slug %}" id="prod_image">
 

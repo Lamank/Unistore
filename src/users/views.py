@@ -81,7 +81,8 @@ def checkout(request: HttpRequest) -> HttpResponse:
     cart_items = cart.cartitem.all()
     if request.META.get("HTTP_X_REQUESTED_WITH") == "XMLHttpRequest" and request.method == "POST":
 
-        if cart.get_cart_total != float(request.POST['total']):
+        if round(cart.get_cart_total, 2) != float(request.POST['total']):
+
             return JsonResponse({'status': 0, 'error': 'You must be pay correct amount!'})
 
         user_id = request.user

@@ -164,7 +164,6 @@ function checkTotal(){
 		"csrfmiddlewaretoken": csrf
 	}
 
-	console.log(data);
 	var url = 'http://127.0.0.1:8000/users/checkout/'
 	
 	$.ajax({
